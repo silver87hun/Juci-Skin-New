@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="134">
+  <defaultcontrol always="true">450</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <left>-20</left>
+    <top>100</top>
+  </coordinates>
+  <controls>
+ 
+    <control type="group">
+<!--  			<control type="image">
+        <right>-100</right>
+        <top>-100</top>
+        <width>1920</width>
+        <height>1080</height>
+		<texture>mask_black50.png</texture>
+		</control> -->
+	      <!--  <control type="image">
+        <right>-200</right>
+        <top>0</top>
+        <width>550</width>
+        <height>550</height>
+        <texture flipx="true" border="5">black.jpeg</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
+	  <control type="multiimage">
+        <left>350r</left>
+        <top></top>
+        <width>950</width>
+        <height>750</height>
+				
+
+ 			 <visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+             	 <timeperimage>8000</timeperimage>
+				<randomize>true</randomize> 
+				 <fadetime>4000</fadetime>
+                  <imagepath background="true">walls</imagepath>
+                <visible>!Skin.HasSetting(cleanHome) | !Skin.HasSetting(homeNoClock)</visible>
+                <visible>!Skin.HasSetting(themelighthorz)</visible>
+                <visible>!Skin.HasSetting(originalcirrusclock)</visible>
+            </control> 
+     <!--  <animation effect="slide" start="400,0" end="0,0" time="900" tween="back" easing="inout">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="400,0" time="900" tween="back" easing="inout">WindowClose</animation>
+
+		<control type="image">
+        <right>-200</right>
+        <top>0</top>
+        <width>550</width>
+        <height>50</height>
+		<texture>mask_black20.png</texture>
+		</control>
+				<control type="image">
+        <right>-200</right>
+        <top>0</top>
+        <width>550</width>
+        <height>330</height>
+		<texture>mask_black20.png</texture>
+		</control>
+		
+						<control type="image">
+        <right>-200</right>
+        <top>0</top>
+        <width>550</width>
+        <height>330</height>
+		<texture>mask_black20.png</texture>
+		</control>
+ 				<control type="image">
+        <right>-200</right>
+        <top>330</top>
+        <width>550</width>
+        <height>380</height>
+		<texture>white.jpg</texture>
+        </control> -->
+   		<control type="image">
+			  	  			<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="150" delay="200" tween="sine" easing="in" time="2000" />
+                        <effect type="slide" start="0" end="150" delay="400" tween="cubic" easing="out" time="1300" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="150" end="0" delay="50" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="150" end="0" delay="200" tween="cubic" easing="out" time="1000" />
+                    </animation>
+            <left>450r</left>
+            <top>0</top>
+            <width>1</width>
+            <height>550</height>
+            <texture>separator_vertical.png</texture>
+          </control>
+<!-- 		    		<control type="image">
+            <left>275r</left>
+            <top>0</top>
+            <width>200</width>
+            <height>1</height>
+            <texture>separator.png</texture>
+          </control> 
+		  		    		<control type="image">
+            <left>275r</left>
+            <top>50</top>
+            <width>200</width>
+            <height>1</height>
+            <texture>separator.png</texture>
+          </control>  -->
+		  		    		<control type="image">
+									  	  	  			<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="150" delay="200" tween="sine" easing="in" time="1000" />
+                        <effect type="slide" start="0" end="150" delay="400" tween="cubic" easing="out" time="1000" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="150" end="0" delay="50" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="150" end="0" delay="200" tween="cubic" easing="out" time="1000" />
+                    </animation>
+            <left>425r</left>
+            <top>340</top>
+            <width>200</width>
+            <height>1</height>
+            <texture>separator.png</texture>
+          </control> 
+<!-- 		  		<control type="image">
+					  	  			<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="150" delay="200" tween="sine" easing="in" time="1000" />
+                        <effect type="slide" start="0" end="150" delay="400" tween="cubic" easing="out" time="1000" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="150" end="0" delay="50" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="150" end="0" delay="200" tween="cubic" easing="out" time="1000" />
+                    </animation>
+            <left>420r</left>
+            <top>15</top>
+            <width>25</width>
+            <height>25</height>
+            <texture>nyil_bal.png</texture>
+          </control>  -->
+<!-- 		  <control type="label">
+		  	  	  			<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="150" delay="200" tween="sine" easing="in" time="1000" />
+                        <effect type="slide" start="0" end="150" delay="400" tween="cubic" easing="out" time="1000" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="150" end="0" delay="50" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="150" end="0" delay="200" tween="cubic" easing="out" time="1000" />
+                    </animation>
+            <left>475r</left>
+            <top>5</top>
+            <width>300</width>
+            <height>40</height>
+            <font>Charms-Date4</font>
+			<textcolor>white</textcolor>
+			<label>1036</label>			
+            <align>center</align>
+            <aligny>center</aligny>
+          </control> -->
+      <control type="image">
+	  	  			<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="150" delay="200" tween="sine" easing="in" time="2000" />
+                        <effect type="slide" start="0" end="150" delay="400" tween="cubic" easing="out" time="1300" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="150" end="0" delay="50" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="150" end="0" delay="200" tween="cubic" easing="out" time="1000" />
+                    </animation>
+        <left>415r</left>
+        <top>60</top>
+        <width>180</width>
+        <height>280</height>
+        <aspectratio align="center">keep</aspectratio>
+        <fadetime>IconCrossfadeTime</fadetime>
+        <texture>$INFO[ListItem.Icon]</texture>
+        <!-- <bordertexture border="10">mask_black20.png</bordertexture> -->
+        <bordersize>8</bordersize>
+      </control>
+      <control type="list" id="450">
+	  			<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="150" delay="300" tween="sine" easing="in" time="2300" />
+                        <effect type="slide" start="0" end="150" delay="500" tween="cubic" easing="out" time="1600" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="150" end="0" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="150" end="0" delay="300" tween="cubic" easing="out" time="1000" />
+                    </animation>
+        <right>0</right>
+        <top>340</top>
+        <width>500</width>
+        <height>360</height>
+        <onup>450</onup>
+        <onleft>Dialog.Close(Favourites)</onleft>
+        <onright>450</onright>
+        <ondown>450</ondown>
+        <pagecontrol>-</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="40">
+          <!-- <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>370</width>
+            <height>40</height>
+            <texture border="5">menuitemNF.png</texture>
+          </control> -->
+          <control type="label">
+            <left>25</left>
+            <top>0</top>
+            <width>300</width>
+            <height>40</height>
+            <font>Keyboard-Label</font>
+						<textcolor>grey</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <selectedcolor>selected</selectedcolor>
+            <info>ListItem.Label</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="40">
+          		
+
+<!-- 		  <control type="image">
+            <left>15</left>
+            <top>0</top>
+            <width>320</width>
+            <height>40</height>
+            <visible>!Control.HasFocus(450)</visible>
+              <texture>mask_black50.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control> -->
+<!--          <control type="image">
+            <left>15</left>
+            <top>0</top>
+            <width>320</width>
+            <height>40</height>
+            <visible>Control.HasFocus(450)</visible>
+            <texture>mask_black90.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control> -->
+          <control type="label">
+            <left>25</left>
+            <top>0</top>
+            <width>300</width>
+            <height>40</height>
+            <font>Keyboard-Label</font>
+			<textcolor>white</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <selectedcolor>selected</selectedcolor>
+            <info>ListItem.Label</info>
+          </control>
+        </focusedlayout>
+      </control>
+	  
+ 	  	         <!--   <control type="image">
+            <left>930</left>
+            <top>720</top>
+            <width>450</width>
+            <height>10</height>
+            <texture>mask_black50.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+       <control type="label">
+        <description>Page label</description>
+        <left>920</left>
+        <top>15</top>
+        <width>350</width>
+        <height>30</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <font>Charms-Label</font>
+        <textcolor>grey2</textcolor>
+        <label>([COLOR=grey]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=grey]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+      </control> 
+ -->
+    </control>
+  </controls>
+</window>

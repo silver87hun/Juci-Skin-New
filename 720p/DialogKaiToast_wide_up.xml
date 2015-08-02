@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="107">
+	<animation effect="slide" start="0,0" end="0,200" tween="back" time="100">WindowOpen</animation>
+    <animation effect="slide" start="0,200" end="0,0" tween="back" time="100">WindowClose</animation>
+<!-- 	<animation effect="slide" start="0,0" end="10,0" time="100">WindowOpen</animation>
+    <animation effect="slide" start="10,0" end="0,0" time="100">WindowClose</animation> -->
+    <coordinates>
+        <system>1</system>
+        <left>0</left>
+        <top>-150</top>
+    </coordinates>
+    <controls>
+        <control type="group">
+                <control type="image">
+				 <left>0</left>
+				  <top>-1060</top>
+				  <width>1920</width>
+				  <height>1080</height>
+                <texture>black.jpeg</texture>
+            </control>
+				<control type="multiimage">
+				 <left>0</left>
+				  <top>-1060</top>
+				  <width>1920</width>
+				  <height>1080</height>
+					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+             	 <timeperimage>8000</timeperimage>
+				<randomize>true</randomize> 
+				 <fadetime>4000</fadetime>
+                  <imagepath background="true">walls</imagepath>
+
+            </control>
+
+              <control type="image">
+				 <left>0</left>
+				  <top>-1060</top>
+				  <width>1920</width>
+				  <height>1080</height>
+                <texture>mask_black20.png</texture>
+            </control>
+			
+            
+            <control type="fadelabel" id="401">
+							<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="300" tween="sine" easing="in" time="2300" />
+                        <effect type="slide" start="0" end="100" delay="500" tween="cubic" easing="out" time="1600" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="100" end="0" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
+                    </animation>
+                <description>Line 1 Label</description>
+                <left>-20</left>
+                <top>-40</top>
+                <width>680</width>
+                <height>18</height>
+                <font>Content-Label</font>
+                <textcolor>white</textcolor>
+                <align>left</align>
+                <aligny>center</aligny>
+                <scrollout>false</scrollout>
+                <pauseatend>2000</pauseatend>
+            </control>
+            <control type="fadelabel" id="402">
+							<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="700" tween="sine" easing="in" time="2300" />
+                        <effect type="slide" start="0" end="100" delay="900" tween="cubic" easing="out" time="1600" />
+                    </animation>
+									<animation type="WindowClose">
+                        <effect type="fade" start="100" end="0" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
+                    </animation>
+                <description>Line 2 Label</description>
+                <left>-20</left>
+                <top>-10</top>
+                <width>680</width>
+                <height>20</height>
+                <font>Charms-Date3</font>
+                <textcolor>white</textcolor>
+                <align>left</align>
+                <aligny>center</aligny>
+                <scrollout>false</scrollout>
+                <pauseatend>2000</pauseatend>
+            </control>
+			
+			<control type="image" id="400">
+                <description>avatar</description>
+                <left>5</left>
+                <top>-40</top>
+                <width>55</width>
+                <height>55</height>
+                <aspectratio>keep</aspectratio>
+                <texture>Chat_circular_outlined_interface_button_128 (1).png</texture>
+            </control>
+			
+			            <control type="image">
+                <description>avatar</description>
+                <left>1240</left>
+                <top>-20</top>
+                <width>25</width>
+                <height>25</height>
+                <aspectratio>keep</aspectratio>
+                <texture>Notifications_button_64.png</texture>
+            </control>
+        </control>
+    </controls>
+</window>
