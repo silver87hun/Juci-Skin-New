@@ -75,7 +75,7 @@
 		</control>
 		<control type="group">
 		<left>0</left>
-		<top>20</top>
+		<top>0</top>
 		            <control type="image">
                 <description>Busy animation</description>
                 <left>20</left>
