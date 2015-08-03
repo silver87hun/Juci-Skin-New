@@ -181,7 +181,7 @@
 	  
       <focusedlayout height="70" width="1000">
 	  
-  		  <!-- EZS - Texture: Focus menü kijelőlése -->
+  		  <!-- EZS - Texture: Focus menü kijelőlése HORZMENÜ -->
  		<control type="group">
 <!-- 		<control type="multiimage">
 			<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
@@ -197,7 +197,7 @@
             <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             </control> -->
-		<control type="image">
+		<!-- <control type="image">
 
           <left>40</left>
           <top>20</top>
@@ -205,16 +205,16 @@
           <height>40</height>
            <texture flipx="true">mask_white90.png</texture>
           <aspectratio>stretch</aspectratio>
-        </control>
+        </control> -->
 		</control>
         <control type="label">
 				<!-- EZS - Focus menüpont eltolása -->
-          <left>50</left>
+          <left>40</left>
           <top>21</top>
           <width>380</width>
           <height>40</height>
 		  		  <!-- EZS - Cirrus-betüméret -->
-          <font>Breadcrumb-SubFolder</font>
+          <font>Charms-Date-big</font>
           <textcolor>white</textcolor>
           <align>left</align>
           <aligny>center</aligny>

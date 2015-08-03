@@ -425,7 +425,7 @@
                     <top>21</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>Breadcrumb-SubFolder</font>
+                    <font>Charms-Date-big</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -438,7 +438,7 @@
                     <top>218</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>Breadcrumb-SubFolder</font>
+                    <font>Charms-Date-big</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
