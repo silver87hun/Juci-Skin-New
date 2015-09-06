@@ -3,8 +3,8 @@
   <defaultcontrol always="true">450</defaultcontrol>
   <coordinates>
     <system>1</system>
-    <left>0</left>
-    <top>400</top>
+    <left>300</left>
+    <top>180</top>
   </coordinates>
   <controls>
  		<!-- <control type="image">
@@ -16,7 +16,7 @@
 		   </control> -->
     <control type="group">
 	
- 					        <control type="image">
+ 					        <!-- <control type="image">
         <left>0</left>
         <top></top>
         <width>1920</width>
@@ -35,12 +35,11 @@
              	 <timeperimage>8000</timeperimage>
 				<randomize>true</randomize> 
 				 <fadetime>4000</fadetime>
-                  <imagepath background="true">walls</imagepath>
+                  <imagepath background="true">layer</imagepath>
                 <visible>!Skin.HasSetting(cleanHome) | !Skin.HasSetting(homeNoClock)</visible>
                 <visible>!Skin.HasSetting(originalcirrusclock)</visible>
-            </control> 
-	<animation effect="slide" start="0,400" end="0,0" tween="sine" time="600">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,400" tween="sine" time="600">WindowClose</animation>
+            </control>  -->
+
 <!-- - <control type="image">
         <left>350r</left>
         <top>-5</top>
@@ -70,28 +69,26 @@
             <height>1</height>
             <texture>mask_white90.png</texture>
           </control> -->
-		  <control type="image">
-		  		  	<animation effect="slide" start="0,400" end="0,0" tween="sine" time="600">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,400" tween="sine" time="600">WindowClose</animation>
-            <left>20</left>
-            <top>20</top>
-            <width>35</width>
-            <height>35</height>
+<!-- 		  <control type="image">
+            <left>250</left>
+            <top>-70</top>
+            <width>30</width>
+            <height>30</height>
             <texture>rate.png</texture>
-          </control>
+          </control> -->
 		  
-		  <control type="label">
-		  	<animation effect="slide" start="0,400" end="0,0" tween="sine" time="650">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,400" tween="sine" time="650">WindowClose</animation>
-            <left>70</left>
-            <top>20</top>
+ 		  <control type="label">
+            <left>-280</left>
+            <top>450</top>
             <label>1036</label>
-			<font>Content-Label</font>
+			<font>Charms-Date-big</font>
 			<textcolor>white</textcolor>
           </control>
       <control type="image">
-        <left>350</left>
-        <top>20</top>
+	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="750">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,800" tween="sine" time="750">WindowClose</animation>
+        <left>20</left>
+        <top>40</top>
         <width>180</width>
         <height>280</height>
         <aspectratio align="center">keep</aspectratio>
@@ -100,11 +97,21 @@
         <!-- <bordertexture border="10">mask_black20.png</bordertexture> -->
         <bordersize>8</bordersize>
       </control>
+
+<!-- 	                  <control type="image" id="11">
+                    <description>separator image</description>
+                    <left>-300</left>
+                    <top>20</top>
+                    <width>1280</width>
+                    <height>1</height>
+                    <colordiffuse>66FFFFFF</colordiffuse>
+                    <texture>separator2.png</texture>
+                </control> -->
       <control type="list" id="450">
-	  		  	<animation effect="slide" start="0,400" end="0,0" tween="sine" time="800">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,400" tween="sine" time="800">WindowClose</animation>
-        <left>600</left>
-        <top>20</top>
+	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,800" tween="sine" time="800">WindowClose</animation>
+        <left>300</left>
+        <top>40</top>
         <width>500</width>
         <height>360</height>
         <onup>450</onup>
@@ -122,12 +129,12 @@
             <texture border="5">menuitemNF.png</texture>
           </control> -->
           <control type="label">
-            <left>-25</left>
-            <top>0</top>
+            <left>25</left>
+            <top>5</top>
             <width>300</width>
             <height>40</height>
             <font>Keyboard-Label</font>
-			<textcolor>black</textcolor>
+			<textcolor>grey3</textcolor>
             <align>center</align>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
@@ -135,7 +142,7 @@
           </control>
         </itemlayout>
         <focusedlayout height="40">
-          		
+	
 
 <!-- 		  <control type="image">
             <left>0</left>
@@ -155,8 +162,8 @@
             <aspectratio>stretch</aspectratio>
           </control> -->
           <control type="label">
-            <left>-25</left>
-            <top>0</top>
+            <left>25</left>
+            <top>5</top>
             <width>300</width>
             <height>40</height>
             <font>Keyboard-Label</font>
@@ -168,7 +175,15 @@
           </control>
         </focusedlayout>
       </control>
-	  
+	            	  <control type="image">
+			  	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,800" tween="sine" time="800">WindowClose</animation>
+                        <left>280</left>
+                        <top>0</top>
+                        <height>400</height>
+                        <width>1</width>
+                        <texture>separator_vertical.png</texture>
+                </control>	
 <!-- 	  	           <control type="image">
             <left>930</left>
             <top>720</top>

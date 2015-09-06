@@ -2,24 +2,22 @@
 <window type="buttonMenu" id="111">
   <defaultcontrol always="true">13</defaultcontrol>
   
-  			<animation effect="slide" start="0,0" end="0,400" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,400" end="0,0" time="400" tween="quadratic" easing="out">WindowClose</animation>  
+
   
   <include>dialogeffect</include>
   <coordinates>
     <system>1</system>
     <left>0</left>
-    <top>-500</top>
+    <top>100</top>
   </coordinates>
   <controls>
-    <control type="image">
+<!--     <control type="image">
       <left>0</left>
       <top>0</top>
       <width>1280</width>
       <height>320</height>
-	  <!-- EZS- Blur hozzáadása -->
       <texture>halvany.png</texture>
-    </control>
+    </control> -->
 <!--     <control type="image">
       <left>0</left>
       <top>0</top>
@@ -33,25 +31,26 @@
       <top>300</top>
       <control type="label" id="3100">
         <description>Label control</description>
-        <left>5</left>
-        <top>-170</top>
-        <width>650</width>
+        <left>-280</left>
+        <top>250</top>
+        <width>1050</width>
         <height>35</height>
         <label>-</label>
-        <align>center</align>
+        <align>left</align>
         <aligny>center</aligny>
-        <font>cirrus_30</font>
+        <font>Charms-Date-big</font>
         <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
       </control>
       <control type="grouplist">
-        <left>15</left>
+        <left>-200</left>
         <top>-95</top>
-        <width>640</width>
+        <width>1040</width>
         <itemgap>20</itemgap>
         <align>center</align>
         <orientation>Horizontal</orientation>
         <control type="togglebutton" id="9">
+					  	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,800" tween="sine" time="800">WindowClose</animation>
           <description>Master mode button</description>
           <width>90</width>
           <height>90</height>
@@ -83,8 +82,8 @@
         </control>
         <control type="button" id="11">
           <description>Exit xbmc</description>
-          <width>80</width>
-          <height>80</height>
+          <width>120</width>
+          <height>120</height>
           <texturefocus>exitON.png</texturefocus>
           <texturenofocus>exitOFF.png</texturenofocus>
           <onclick>XBMC.Quit()</onclick>
@@ -93,14 +92,14 @@
           <label>$LOCALIZE[13012] XBMC</label>
         </control>
         <control type="group" id="13">
-          <width>90</width>
+          <width>120</width>
           <defaultcontrol always="true">15</defaultcontrol>
           <control type="button" id="17">
             <description>Cancel Shutdown Timer button</description>
             <left>0</left>
             <top>0</top>
-            <width>90</width>
-            <height>90</height>
+            <width>120</width>
+            <height>120</height>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
             <onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
@@ -117,8 +116,8 @@
             <description>Custom Shutdown Timer button</description>
             <left>0</left>
             <top>0</top>
-            <width>90</width>
-            <height>90</height>
+            <width>120</width>
+            <height>120</height>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
             <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
@@ -134,8 +133,8 @@
             <description>Shutdown button</description>
             <left>0</left>
             <top>0</top>
-            <width>80</width>
-            <height>80</height>
+            <width>120</width>
+            <height>120</height>
             <texturefocus>powerON.png</texturefocus>
             <texturenofocus>powerOFF.png</texturenofocus>
             <onclick>XBMC.Shutdown()</onclick>
@@ -151,16 +150,18 @@
             <description>Shutdown focus image</description>
             <left>0</left>
             <top>0</top>
-            <width>80</width>
-            <height>80</height>
+            <width>120</width>
+            <height>120</height>
             <texture>powerOFF.png</texture>
             <visible>Control.HasFocus(15) | Control.HasFocus(16) | Control.HasFocus(17)</visible>
           </control>
         </control>
         <control type="button" id="12">
           <description>Suspend xbmc</description>
-          <width>80</width>
-          <height>80</height>
+		    <left>0</left>
+            <top>0</top>
+          <width>120</width>
+          <height>120</height>
           <texturefocus>sleepON.png</texturefocus>
           <texturenofocus>sleepOFF.png</texturenofocus>
           <onclick>XBMC.Suspend()</onclick>
@@ -170,8 +171,8 @@
         </control>
         <control type="button" id="14">
           <description>Reboot button</description>
-          <width>80</width>
-          <height>80</height>
+          <width>120</width>
+          <height>120</height>
           <texturefocus>restartON.png</texturefocus>
           <texturenofocus>restartOFF.png</texturenofocus>
           <onclick>XBMC.Reset()</onclick>
@@ -181,8 +182,8 @@
         </control>
         <control type="button" id="19">
           <description>Settings button</description>
-          <width>80</width>
-          <height>80</height>
+          <width>120</width>
+          <height>120</height>
           <texturefocus>settingsON.png</texturefocus>
           <texturenofocus>settingsOFF.png</texturenofocus>
           <onclick>ActivateWindow(Settings)</onclick>
@@ -192,7 +193,7 @@
         </control>
       </control>
       <control type="group">
-        <left>275</left>
+        <left>225</left>
         <top>-107</top>
         <visible>ControlGroup(13).HasFocus</visible>
         <include>VisibleFadeEffect</include>
@@ -201,7 +202,7 @@
         <control type="image">
           <description>Shutdown Arrow Up image</description>
           <left>-55</left>
-          <top>-10</top>
+          <top>-20</top>
           <width>20</width>
           <height>20</height>
           <texture>arrowupON.png</texture>
@@ -209,7 +210,7 @@
         <control type="image">
           <description>Shutdown Arrow Down image</description>
           <left>-55</left>
-          <top>95</top>
+          <top>150</top>
           <width>20</width>
           <height>20</height>
           <texture>arrowdownON.png</texture>

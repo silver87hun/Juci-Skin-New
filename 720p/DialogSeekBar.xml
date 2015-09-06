@@ -2,52 +2,62 @@
 <window id="115">
   <defaultcontrol>1</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
-  <visible>Window.IsActive(fullscreenvideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
-<!--   <animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-  <animation effect="fade" start="100" end="0" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation> -->
+<!--     <visible>Window.IsActive(fullscreenvideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsVisible(142) + !Window.IsVisible(2901) + !Window.IsVisible(subtitlesearch) + !Skin.HasSetting(noinfopaused)</visible> -->
+<visible>Window.IsActive(fullscreenvideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
   <coordinates>
     <system>1</system>
     <left>-200</left>
-    <top>120</top>
+    <top>90</top>
   </coordinates>
   <controls>
 
     <control type="group">
-	                <control type="image">
+	 <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
+	 		            <control type="image">
+                <description>Busy animation</description>
+                <left>200</left>
+                <top>520</top>
+                    <width>34</width>
+                    <height>34</height>
+                    <texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/twirl.gif">$INFO[Skin.String(busyloader)]</texture>
+                    <aspectratio>keep</aspectratio>
+            </control>
+    <control type="group">	 
+	 <control type="image">
 							 	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="500">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="500">WindowClose</animation>
+
 		<left>200</left>
-        <top>450</top>
+        <top>550</top>
         <width>1920</width>
-        <height>150</height>
+        <height>1080</height>
                 <texture>black.jpeg</texture>
             </control>
 		 <control type="multiimage">
 		 	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="500">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="500">WindowClose</animation>
+
                 <!-- background -->
 		<left>200</left>
-        <top>450</top>
+        <top>550</top>
         <width>1920</width>
-        <height>150</height>
+        <height>1080</height>
                 <aspectratio>stretch</aspectratio>
-				<timeperimage>12000</timeperimage>
+				<timeperimage>16000</timeperimage>
 				<randomize>true</randomize>
-				<fadetime>2000</fadetime>
+				<fadetime>4000</fadetime>
 										<pauseatend>0</pauseatend>
 			<loop>true</loop>
-                <imagepath background="true">walls</imagepath>
+                <imagepath background="true">test</imagepath>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
               <!--   <texture flipy="true">OSDbackground.png</texture> -->
                 <!-- flip y when up the top -->
-            </control>
-								<control type="image">
+            </control></control>
+<!-- 								<control type="image">
 		<left>200</left>
         <top>-120</top>
         <width>1920</width>
         <height>40</height>
                 <texture>mask_black20.png</texture>	
-				</control>
+				</control> -->
 
 			
 	<!-- 			  <control type="image">
@@ -91,14 +101,12 @@
         <visible>!Skin .HasSetting(slimseek)</visible>
       </control>
       <control type="image">
-	  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-						</animation>
-						<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-						</animation>
+
+
+
+
+
+
         <left>228</left>
         <top>330</top>
         <width>824</width>
@@ -110,6 +118,7 @@
 
 	  <!-- Film poster -->
       <control type="image">
+	  
 <!-- 	  	  		 		<animation type="WindowOpen">
                         <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
                         <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
@@ -133,17 +142,11 @@
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
       <control type="image">
-					 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="1100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="100" end="260" delay="800" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="1100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="800" tween="cubic" easing="out" time="1300" />
-                    </animation>
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
         <!-- STARS-->
         <description>IMDB rating</description>
-        <left>180</left>
+        <left>60</left>
         <top>505</top>
         <width>90</width>
         <height>19</height>
@@ -152,21 +155,14 @@
         <visible>VideoPlayer.Content(Movies) + !Skin.HasSetting(slimseek)</visible>
       </control>
       <control type="image">
-	  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-					
+				<animation effect="slide" start="0,200" end="0,0" tween="sine" time="1000">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="1000">WindowClose</animation>	
 					
 
         <!-- STARS TV-->
         <description>IMDB rating</description>
-        <left>118</left>
-        <top>520</top>
+        <left>410</left>
+        <top>590</top>
         <width>90</width>
         <height>19</height>
         <texture>$INFO[Player.StarRating]</texture>
@@ -262,8 +258,8 @@
         <!-- Center labels -->
         <left>590</left>
         <top>0</top>
-        <align>center</align>
-        <control type="label">
+        <align>left</align>
+<!--         <control type="label">
 		<animation type="WindowOpen">
                         <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
                         <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
@@ -284,15 +280,15 @@
           <label>31043</label>
           <visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
           <visible>!VideoPlayer.Content(Files) + !Skin.HasSetting(slimseek)</visible>
-        </control>
+        </control> -->
 		
 		
 		        <control type="image">
           <description>Paused Label</description>
           <left>-380</left>
-          <top>-110</top>
-          <width>20</width>
-          <height>20</height>
+          <top>560</top>
+          <width>32</width>
+          <height>32</height>
           <align>center</align>
           <aligny>center</aligny>
           <texture>osd/miniplayer/pause_nf.png</texture>
@@ -306,7 +302,7 @@
         <control type="label">
           <description>Cache Label</description>
          <left>650</left>
-          <top>-120</top>
+          <top>120</top>
           <width>240</width>
           <height>35</height>
           <align>center</align>
@@ -320,9 +316,11 @@
       </control>
 	  
 	          <control type="label">
+			  	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
           <description>System Time</description>
-          <left>1330</left>
-          <top>-120</top>
+          <left>1350</left>
+          <top>550</top>
           <width>200</width>
           <height>35</height>
           <label>$INFO[System.Time]</label>
@@ -330,48 +328,35 @@
           <aligny>center</aligny>
           <font>Dialog-Detail</font>
           <textcolor>white</textcolor>
-          <shadowcolor>black</shadowcolor>
           <visible>!VideoPlayer.Content(Files)</visible>
           <visible>!Skin.HasSetting(slimseek)</visible>
         </control>
 	  
-    </control>
+
     <control type="group">
       <left>200</left>
-      <top>420</top>
+      <top>500</top>
      
       <control type="label">
-	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-        <left>-80</left>
-        <top>40</top>
-        <width>550</width>
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
+        <left>50</left>
+        <top>55</top>
+        <width>300</width>
         <height>30</height>
         <label>$INFO[VideoPlayer.TVShowTitle]</label>
         <align>left</align>
         <aligny>center</aligny>
         <scroll>true</scroll>
-        <font>Clock-Detail</font>
+        <font>Charms-Date4</font>
         <textcolor>white</textcolor>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
       <control type="label">
-	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-        <left>-50</left>
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
+        <left>50</left>
         <top>60</top>
         <width>300</width>
         <height>30</height>
@@ -385,17 +370,22 @@
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>Skin.HasSetting(slimseek)</visible>
       </control>
+	  
+	  	            	  <control type="image">
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="1200">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="1200">WindowClose</animation>
+                        <left>320</left>
+                        <top>55</top>
+                        <height>70</height>
+                        <width>1</width>
+                        <texture>separator_vertical.png</texture>
+                </control>	
+				
 	              <control type="label">
-				  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-                <left>-80</left>
-                <top>60</top>
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="1200">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="1200">WindowClose</animation>
+                <left>55</left>
+                <top>105</top>
                 <width>300</width>
                 <height>25</height>
                 <label>$INFO[VideoPlayer.Title]</label>
@@ -409,16 +399,10 @@
             </control>
 	  
       <control type="label">
-	  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-        <left>-80</left>
-        <top>75</top>
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="1000">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="1000">WindowClose</animation>
+        <left>55</left>
+        <top>85</top>
         <width>550</width>
         <height>30</height>
         <label>[COLOR=white]$LOCALIZE[20373][/COLOR] $INFO[VideoPlayer.Season]  [COLOR=white]$LOCALIZE[20359][/COLOR] $INFO[VideoPlayer.Episode]</label>
@@ -426,19 +410,13 @@
         <aligny>center</aligny>
         <scroll>true</scroll>
         <font>Clock-Detail</font>
-        <textcolor>grey</textcolor>
+        <textcolor>white</textcolor>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
       <control type="label">
-	  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
         <left>-80</left>
         <top>70</top>
         <width>300</width>
@@ -454,14 +432,8 @@
         <visible>Skin.HasSetting(slimseek)</visible>
       </control>
       <control type="label">
-	  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
         <left>0</left>
         <top>35</top>
         <width>680</width>
@@ -755,222 +727,10 @@
         <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
       </control>
      
-      <control type="group">
-
-        <!-- images for ff rew pause etc -->
-        <left>340</left>
-        <top>125</top>
-        <visible>!VideoPlayer.Content(Files)</visible>
-        <visible>!Skin.HasSetting(slimseek)</visible>
-        <control type="image">
-          <left>0</left>
-          <top>0</top>
-          <width>65</width>
-          <height>55</height>
-          <texture>OSDRewindNF.png</texture>
-          <visible>Player.Rewinding</visible>
-        </control>
-        <control type="image">
-          <left>0</left>
-          <top>0</top>
-          <width>65</width>
-          <height>55</height>
-          <texture>OSDForwardNF.png</texture>
-          <visible>Player.Forwarding</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD2x.png</texture>
-          <visible>Player.Rewinding2x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD4x.png</texture>
-          <visible>Player.Rewinding4x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD8x.png</texture>
-          <visible>Player.Rewinding8x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD16x.png</texture>
-          <visible>Player.Rewinding16x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD32x.png</texture>
-          <visible>Player.Rewinding32x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD2x.png</texture>
-          <visible>Player.Forwarding2x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD4x.png</texture>
-          <visible>Player.Forwarding4x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD8x.png</texture>
-          <visible>Player.Forwarding8x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD16x.png</texture>
-          <visible>Player.Forwarding16x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>97</width>
-          <height>55</height>
-          <texture>OSD32x.png</texture>
-          <visible>Player.Forwarding32x</visible>
-        </control>
-      </control>
-      <control type="group">
-	  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-        <!-- images for ff rew pause etc -->
-        <left>40</left>
-        <top>272</top>
-        <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
-        <control type="image">
-          <left>40</left>
-          <top>10</top>
-          <width>35</width>
-          <height>29</height>
-          <texture>OSDRewindNF.png</texture>
-          <visible>Player.Rewinding</visible>
-        </control>
-        <control type="image">
-          <left>40</left>
-          <top>10</top>
-          <width>35</width>
-          <height>29</height>
-          <texture>OSDForwardNF.png</texture>
-          <visible>Player.Forwarding</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD2x.png</texture>
-          <visible>Player.Rewinding2x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD4x.png</texture>
-          <visible>Player.Rewinding4x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD8x.png</texture>
-          <visible>Player.Rewinding8x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD16x.png</texture>
-          <visible>Player.Rewinding16x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD32x.png</texture>
-          <visible>Player.Rewinding32x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD2x.png</texture>
-          <visible>Player.Forwarding2x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD4x.png</texture>
-          <visible>Player.Forwarding4x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD8x.png</texture>
-          <visible>Player.Forwarding8x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD16x.png</texture>
-          <visible>Player.Forwarding16x</visible>
-        </control>
-        <control type="image">
-          <left>86</left>
-          <top>0</top>
-          <width>67</width>
-          <height>38</height>
-          <texture>OSD32x.png</texture>
-          <visible>Player.Forwarding32x</visible>
-        </control>
-      </control>
+ 
       
       <control type="group">
+	  	 <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
 	  	  		 		<animation type="WindowOpen">
                         <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
                         <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
@@ -985,7 +745,7 @@
           <visible>VideoPlayer.Content(Files)</visible>
           <description>Media Codec Flagging Images</description>
           <left>-150</left>
-          <top>150</top>
+          <top>200</top>
           <width min="100" max="550">auto</width>
           <align>center</align>
           <itemgap>0</itemgap>
@@ -1041,6 +801,7 @@
         </control>
       </control>
     </control>
+	    </control>
   </controls>
   
 	<!-- OSD menü kezdete -->
@@ -1055,253 +816,7 @@
             <control type="group" id="200">
                 <left>1000</left>
                 <top>500</top>
-                <control type="button" id="700">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>298</label>
-                    <font>-</font>
-                    <texturefocus>OSDBookMarksFO.png</texturefocus>
-                    <texturenofocus>OSDBookMarksNF.png</texturenofocus>
-                    <onleft>605</onleft>
-                    <onright>701</onright>
-                    <ondown>500</ondown>
-                    <onclick>ActivateWindow(125)</onclick>
-                </control>
-                <control type="button" id="701">
-                    <left>50</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>13396</label>
-                    <font>-</font>
-                    <texturefocus>OSDAudioFO.png</texturefocus>
-                    <texturenofocus>OSDAudioNF.png</texturenofocus>
-                    <onleft>700</onleft>
-                    <onright>702</onright>
-                    <ondown>500</ondown>
-                    <onclick>ActivateWindow(osdaudiosettings)</onclick>
-                </control>
-                <control type="button" id="702">
-                    <left>100</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>13395</label>
-                    <font>-</font>
-                    <texturefocus>OSDVideoFO.png</texturefocus>
-                    <texturenofocus>OSDVideoNF.png</texturenofocus>
-                    <onleft>701</onleft>
-                    <onright>703</onright>
-                    <ondown>500</ondown>
-                    <onclick>ActivateWindow(123)</onclick>
-                </control>
-                <control type="button" id="703">
-                    <left>150</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>31356</label>
-                    <font>-</font>
-                    <texturefocus>OSDSubtitlesFO.png</texturefocus>
-                    <texturenofocus>OSDSubtitlesNF.png</texturenofocus>
-                    <onleft>702</onleft>
-                    <onright>704</onright>
-                    <ondown>500</ondown>
-                    <onclick>Close</onclick>  
-                    <onclick>ActivateWindow(SubtitleSearch)</onclick>
-                </control>
-                <control type="button" id="704">
-                    <left>250</left>
-                    <top>-5</top>
-                    <width>40</width>
-                    <height>40</height>
-                    <label>264</label>
-                    <font>-</font>
-                    <texturefocus>OSDRecord2.png</texturefocus>
-                    <texturenofocus>OSDRecordNF2.png</texturenofocus>
-                    <onleft>703</onleft>
-                    <onright>705</onright>
-                    <ondown>500</ondown>
-                    <onclick>XBMC.PlayerControl(record)</onclick>
-                    <enable>Player.CanRecord</enable>
-                    <animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
-                    <visible>VideoPlayer.Content(LiveTV) + Player.CanRecord + !Player.Recording</visible>
-                </control>
-                <control type="button" id="704">
-                    <left>250</left>
-                    <top>-5</top>
-                    <width>40</width>
-                    <height>40</height>
-                    <label>19043</label>
-                    <font>-</font>
-                    <textcolor>accent</textcolor>
-                    <texturefocus>OSDRecord2.png</texturefocus>
-                    <texturenofocus>OSDRecordNF2.png</texturenofocus>
-                    <onleft>703</onleft>
-                    <onright>705</onright>
-                    <ondown>500</ondown>
-                    <onclick>XBMC.PlayerControl(record)</onclick>
-                    <enable>Player.CanRecord</enable>
-                    <animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
-                    <visible>VideoPlayer.Content(LiveTV) + Player.CanRecord + Player.Recording</visible>
-                </control>
-                <control type="button" id="705">
-                    <left>300</left>
-                    <top>-5</top>
-                    <width>40</width>
-                    <height>40</height>
-                    <label>41152</label>
-                    <font>-</font>
-                    <texturefocus>OSDChannelListFO.png</texturefocus>
-                    <texturenofocus>OSDChannelListNF.png</texturenofocus>
-                    <onleft>704</onleft>
-                    <onright>706</onright>
-                    <ondown>500</ondown>
-                    <onclick>ActivateWindow(PVROSDChannels)</onclick>
-                    <onclick>Dialog.Close(VideoOSD)</onclick>
-                    <visible>VideoPlayer.Content(LiveTV)</visible>
-                </control>
-                <control type="button" id="706">
-                    <left>350</left>
-                    <top>-5</top>
-                    <width>40</width>
-                    <height>40</height>
-                    <label>$LOCALIZE[19029]$INFO[VideoPlayer.ChannelName, - ]</label>
-                    <font>-</font>
-                    <texturefocus>OSDepgFO.png</texturefocus>
-                    <texturenofocus>OSDepgNF.png</texturenofocus>
-                    <onleft>705</onleft>
-                    <onright>707</onright>
-                    <ondown>500</ondown>
-                    <onclick>ActivateWindow(PVROSDGuide)</onclick>
-                    <visible>VideoPlayer.Content(LiveTV)</visible>
-                </control>
-                <control type="button" id="707">
-                    <left>400</left>
-                    <top>-5</top>
-                    <width>40</width>
-                    <height>40</height>
-                    <label>41153</label>
-                    <font>-</font>
-                    <texturefocus>OSDTeleTextFO.png</texturefocus>
-                    <texturenofocus>OSDTeleTextNF.png</texturenofocus>
-                    <onleft>706</onleft>
-                    <onright>600</onright>
-                    <ondown>500</ondown>
-                    <onclick>ActivateWindow(Teletext)</onclick>
-                    <visible>VideoPlayer.Content(LiveTV)</visible>
-                </control>
-            </control>
-            <!-- GROUP FOR PLAYER CONTROLS -->
-            <control type="group" id="100">
-                <left>650</left>
-                <top>500</top>
-                <control type="button" id="600">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>210</label>
-                    <font>-</font>
-                    <texturefocus>OSDPrevTrackFO.png</texturefocus>
-                    <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-                    <onleft>707</onleft>
-                    <onright>601</onright>
-                    <ondown>500</ondown>
-                    <onclick>PlayerControl(Previous)</onclick>
-                </control>
-                <control type="button" id="601">
-                    <left>50</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>31354</label>
-                    <font>-</font>
-                    <texturefocus>OSDRewindFO.png</texturefocus>
-                    <texturenofocus>OSDRewindNF.png</texturenofocus>
-                    <onleft>600</onleft>
-                    <onright>602</onright>
-                    <ondown>500</ondown>
-                    <onclick>PlayerControl(Rewind)</onclick>
-                </control>
-                <control type="togglebutton" id="602">
-                    <left>100</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>31351</label>
-                    <altlabel>208</altlabel>
-                    <font>-</font>
-                    <texturefocus>OSDPauseFO.png</texturefocus>
-                    <texturenofocus>OSDPauseNF.png</texturenofocus>
-                    <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                    <alttexturefocus>OSDPlayFO.png</alttexturefocus>
-                    <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-                    <onleft>601</onleft>
-                    <onright>603</onright>
-                    <ondown>500</ondown>
-                    <onclick>PlayerControl(Play)</onclick>
-                </control>
-                <control type="button" id="603">
-                    <left>150</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>31352</label>
-                    <font>-</font>
-                    <texturefocus>OSDStopFO.png</texturefocus>
-                    <texturenofocus>OSDStopNF.png</texturenofocus>
-                    <onleft>602</onleft>
-                    <onright>604</onright>
-                    <ondown>500</ondown>
-                    <onclick>PlayerControl(Stop)</onclick>
-                </control>
-                <control type="button" id="604">
-                    <left>200</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>31353</label>
-                    <font>-</font>
-                    <texturefocus>OSDForwardFO.png</texturefocus>
-                    <texturenofocus>OSDForwardNF.png</texturenofocus>
-                    <onleft>603</onleft>
-                    <onright>605</onright>
-                    <ondown>500</ondown>
-                    <onclick>PlayerControl(Forward)</onclick>
-                </control>
-                <control type="button" id="605">
-                    <left>250</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>209</label>
-                    <font>-</font>
-                    <texturefocus>OSDNextTrackFO.png</texturefocus>
-                    <texturenofocus>OSDNextTrackNF.png</texturenofocus>
-                    <onleft>604</onleft>
-                    <onright>606</onright>
-                    <ondown>500</ondown>
-                    <onclick>PlayerControl(Next)</onclick>
-                </control>
-                <control type="button" id="606">
-                    <left>300</left>
-                    <top>0</top>
-                    <width>40</width>
-                    <height>28</height>
-                    <label>31355</label>
-                    <font>-</font>
-                    <texturefocus>OSDDvdFO.png</texturefocus>
-                    <texturenofocus>OSDDvdNF.png</texturenofocus>
-                    <onleft>605</onleft>
-                    <onright>700</onright>
-                    <ondown>500</ondown>
-                    <onclick>PlayerControl(ShowVideoMenu)</onclick>
-                    <enable>VideoPlayer.HasMenu</enable>
-                    <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
-                </control>
+
 <!--                 <control type="image" id="11">
                     <description>separator image</description>
                     <left>-400</left>
@@ -1395,8 +910,9 @@
 		
 				<!-- FLAGS -->
 		    <control type="group">
-      <left>55</left>
-      <top>405</top>
+				 <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
+      <left>900</left>
+      <top>510</top>
 		 <control type="grouplist">
 <!-- 	  					 		<animation type="WindowOpen">
                         <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />

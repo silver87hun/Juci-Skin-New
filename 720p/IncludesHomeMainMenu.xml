@@ -11,7 +11,7 @@
 			<pauseatend>0</pauseatend>
 			<loop>true</loop>
 			<aspectratio background="true" aligny="top">stretch</aspectratio>
-			<imagepath background="true">walls</imagepath>
+			<imagepath background="true">layer</imagepath>
 			<include>Animation_CommonFade</include>
 			<visible>true</visible>
 			<colordiffuse>WallsDiffuse</colordiffuse>
@@ -495,7 +495,7 @@
 			<pauseatend>0</pauseatend>
 			<loop>true</loop>
 			<aspectratio background="true" aligny="top">stretch</aspectratio>
-			<imagepath background="true">walls</imagepath>
+			<imagepath background="true">layer</imagepath>
 			<include>Animation_CommonFade</include>
 			<visible>true</visible>
 			<colordiffuse>WallsDiffuse</colordiffuse>
