@@ -16,12 +16,25 @@
   <controls>
     <control type="group">
       <visible>Skin.HasSetting(EnableStartupAnimation)</visible>
+	  		<control type="group">
+		<left>0</left>
+		<top>0</top>
+		            <control type="image">
+                <description>Busy animation</description>
+                <left>20</left>
+                <top>20</top>
+                    <width>34</width>
+                    <height>34</height>
+                    <texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/startup.gif">$INFO[Skin.String(busyloader)]</texture>
+                    <aspectratio>keep</aspectratio>
+            </control>
+		</control>
       <control type="image">
         <left>0</left>
         <top>0</top>
         <width>1280</width>
         <height>720</height>
-        <texture>startup.jpg</texture>
+        <texture>startup.gif</texture>
       </control>
       <control type="image">
 	  <animation effect="slide" start="0,0" end="0,80" time="400" tween="quadratic" easing="out">WindowOpen</animation>

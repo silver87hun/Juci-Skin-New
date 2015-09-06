@@ -7,10 +7,10 @@
     <coordinates>
         <system>1</system>
         <left>0</left>
-        <top>-150</top>
+        <top>-130</top>
     </coordinates>
     <controls>
-        <control type="group">
+         <control type="group">
                 <control type="image">
 				 <left>0</left>
 				  <top>750</top>
@@ -22,15 +22,24 @@
 				 <left>0</left>
 				  <top>750</top>
 				  <width>1920</width>
-				  <height>500</height>
+				  <height>1080</height>
 					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
              	 <timeperimage>8000</timeperimage>
 				<randomize>true</randomize> 
 				 <fadetime>4000</fadetime>
-                  <imagepath background="true">walls</imagepath>
+                  <imagepath background="true">test</imagepath>
 
             </control>
 
+<!-- 			<control type="group">
+                <control type="image">
+				 <left>0</left>
+				  <top>750</top>
+				  <width>1920</width>
+				  <height>500</height>
+                <texture>mask_black90.png</texture>
+            </control> -->
+			
 			
             
             <control type="fadelabel" id="401">

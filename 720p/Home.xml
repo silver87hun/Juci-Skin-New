@@ -223,21 +223,17 @@
             <width>1280</width>
             <height>720</height>
             <aspectratio>stretch</aspectratio>
-            <texture>bg_vignette.png</texture>
+            <texture>mask_black50.png</texture>
             <!-- <visible>Skin.HasSetting(DimFanartonHome)</visible> -->
         </control>
 		<!-- EZS - JUCI LOGÓ -->
 
-		 				<control type="multiimage">
+		 				<control type="image">
 				 <left>100</left>
 				  <top>50</top>
-				  <width>90</width>
-				  <height>90</height>
-					<visible>!Skin.HasSetting(Menu_RandomCustom1)+ Skin.HasSetting(homepageRandomFanart)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>4000</fadetime>
-                  <imagepath background="true">juci</imagepath>
+				  <width>80</width>
+				  <height>80</height>
+			<texture>juci_white.png</texture>
             </control>
 			
         <control type="group">
