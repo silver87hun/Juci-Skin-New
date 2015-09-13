@@ -34,7 +34,7 @@
              	 <timeperimage>8000</timeperimage>
 				<randomize>true</randomize> 
 				 <fadetime>4000</fadetime>
-                  <imagepath background="true">layer</imagepath>
+                  <imagepath background="true">test</imagepath>
             </control>
 
 			<control type="label" id="1">

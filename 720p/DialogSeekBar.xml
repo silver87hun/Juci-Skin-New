@@ -801,7 +801,7 @@
  
       
       <control type="group">
-	  	 <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
+<!-- 	  	 <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
 	  	  		 		<animation type="WindowOpen">
                         <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
                         <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
@@ -809,7 +809,7 @@
 				<animation type="WindowClose">
                         <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
                         <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
+                    </animation> -->
         <left>0</left>
         <top>85</top>
         <control type="grouplist">
@@ -989,7 +989,7 @@
 				<!-- FLAGS -->
 		    <control type="group">
 				 <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
-      <left>900</left>
+      <left>100</left>
       <top>510</top>
 		 <control type="grouplist">
 <!-- 	  					 		<animation type="WindowOpen">
