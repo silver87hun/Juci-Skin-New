@@ -347,8 +347,10 @@
         <textoffsetx>10</textoffsetx>
         <textwidth>215</textwidth>
         <aligny>center</aligny>
-        <font>cirrus_18</font>
-        <texturefocus border="0" flipx="true">listwhitegradient.png</texturefocus>
+        <font>Clock-Detail</font>
+		        <textcolor>grey2</textcolor>
+		<!-- Kijelölés -->
+        <texturefocus border="0" flipx="true"></texturefocus>
         <texturenofocus>-</texturenofocus>
         <focusedcolor>white</focusedcolor>
         <pulseonselect>false</pulseonselect>
@@ -359,7 +361,7 @@
         <textoffsetx>10</textoffsetx>
         <textwidth>215</textwidth>
         <aligny>center</aligny>
-        <font>cirrus_20</font>
+        <font>Clock-Detail</font>
         <texturefocus border="0">button-backFO.png</texturefocus>
         <texturenofocus>-</texturenofocus>
         <focusedcolor>black</focusedcolor>
@@ -372,7 +374,7 @@
         <textoffsetx>20</textoffsetx>
         <textwidth>195</textwidth>
         <aligny>center</aligny>
-        <font>cirrus_18_Bold</font>
+        <font>Clock-Detail</font>
         <texturefocus border="0" flipx="true" aspectratio="stretch">rightwhitegradient.png</texturefocus>
         <texturenofocus border="2,2,2,2" flipx="true" diffuse="rowdiffuse.png">rowblank2.png</texturenofocus>
         <focusedcolor>white</focusedcolor>
@@ -383,7 +385,7 @@
         <textoffsetx>20</textoffsetx>
         <align>center</align>
         <aligny>center</aligny>
-        <font>cirrus_16</font>
+        <font>Clock-Detail</font>
         <texturefocus border="0" flipx="true">button-backFO.png</texturefocus>
         <texturenofocus border="0">button-backNF.png</texturenofocus>
         <pulseonselect>false</pulseonselect>
@@ -395,7 +397,7 @@
         <textoffsetx>20</textoffsetx>
         <align>center</align>
         <aligny>center</aligny>
-        <font>cirrus_16</font>
+        <font>Clock-Detail</font>
         <texturefocus border="0">button-focus.png</texturefocus>
         <texturenofocus border="0">button-nofocus.png</texturenofocus>
         <pulseonselect>false</pulseonselect>
@@ -442,7 +444,7 @@
             <top>0</top>
             <width>500</width>
             <height>50</height>
-            <font>cirrus_24</font>
+            <font>Clock-Detail</font>
             <textcolor>white</textcolor>
             <scroll>false</scroll>
             <align>right</align>
@@ -470,7 +472,7 @@
             <label>$INFO[MusicPlayer.Artist]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_16</font>
+            <font>Clock-Detail</font>
             <textcolor>accent</textcolor>
             <shadowcolor>black</shadowcolor>
         </control>
@@ -483,7 +485,7 @@
             <label>$INFO[MusicPlayer.Title]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_24</font>
+            <font>Clock-Detail</font>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
             <scrollout>false</scrollout>
@@ -524,7 +526,7 @@
             <label>[COLOR=accent]$LOCALIZE[209] :[/COLOR] $INFO[MusicPlayer.offset(1).Title]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_16</font>
+            <font>Clock-Detail</font>
             <textcolor>grey</textcolor>
             <shadowcolor>black</shadowcolor>
         </control>
@@ -562,7 +564,7 @@
             <label>$INFO[VideoPlayer.tvshowtitle]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_20</font>
+            <font>Clock-Detail</font>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
             <visible>videoplayer.content(episodes)</visible>
@@ -592,7 +594,7 @@
             <label>$INFO[VideoPlayer.Title]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_20</font>
+            <font>Clock-Detail</font>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
             <scrollout>false</scrollout>
@@ -607,7 +609,7 @@
             <label>$INFO[VideoPlayer.Genre]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_16</font>
+            <font>Clock-Detail</font>
             <textcolor>accent</textcolor>
             <shadowcolor>black</shadowcolor>
             <visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
@@ -620,7 +622,7 @@
             <label>$INFO[VideoPlayer.Album]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_16</font>
+            <font>Clock-Detail</font>
             <textcolor>accent</textcolor>
             <shadowcolor>black</shadowcolor>
             <visible>videoplayer.content(musicvideos)</visible>
@@ -634,7 +636,7 @@
             <label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_16</font>
+            <font>Clock-Detail</font>
             <textcolor>accent</textcolor>
             <shadowcolor>black</shadowcolor>
             <visible>videoplayer.content(episodes)</visible>
@@ -1000,7 +1002,7 @@
                 <height>28</height>
                 <align>left</align>
                 <aligny>center</aligny>
-                <font>cirrus_24</font>
+                <font>Clock-Detail</font>
                 <textcolor>white</textcolor>
                 <label>$INFO[System.Time]</label>
             </control>
@@ -1034,7 +1036,7 @@
     <include name="MenuItemSettings">
         <width>750</width>
         <height>34</height>
-        <font>cirrus_20</font>
+        <font>Clock-Detail</font>
         <textcolor>grey2</textcolor>
         <focusedcolor>white</focusedcolor>
         <texturefocus flipx="true">listwhitegradient.png</texturefocus>
@@ -1044,7 +1046,7 @@
     <include name="MenuTitleSettings">
         <width>750</width>
         <height>45</height>
-        <font>cirrus_20</font>
+        <font>Clock-Detail</font>
         <textcolor>accent</textcolor>
         <shadowcolor>black</shadowcolor>
         <align>left</align>
@@ -1054,7 +1056,7 @@
     <include name="MenuTitleSettingsHomebutton">
         <width>600</width>
         <height>40</height>
-        <font>cirrus_20</font>
+        <font>Clock-Detail</font>
         <align>left</align>
         <aligny>center</aligny>
     </include>

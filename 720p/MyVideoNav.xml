@@ -55,7 +55,7 @@
                 <top>0</top>
                 <width>1280</width>
                 <height>720</height>
-                <imagepath background="true" fallback="special://skin/backgrounds/videos.jpg">walls</imagepath>
+                <imagepath background="true" fallback="special://skin/backgrounds/videos.jpg">test</imagepath>
 				<randomize>true</randomize>
                 <timeperimage>8000</timeperimage>
                 <fadetime>FanartCrossfadeTime</fadetime>
@@ -339,47 +339,62 @@
                 <visible>true</visible>
             </control>
             <!-- Menu background panel -->
-            <control type="image">
+			            <control type="image">
                 <left>-820</left>
                 <top>0</top>
                 <width>820</width>
                 <height>720</height>
-                <texture border="5">dialogbackground.png</texture>
+                <texture>black.jpeg</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
-            <control type="image">
+            <control type="multiimage">
                 <left>-820</left>
                 <top>0</top>
                 <width>820</width>
                 <height>720</height>
-                <texture>grey2.png</texture>
-                <aspectratio>stretch</aspectratio>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+             	 <timeperimage>8000</timeperimage>
+				<randomize>true</randomize> 
+				 <fadetime>4000</fadetime>
+                  <imagepath background="true">test</imagepath>
             </control>
-            <control type="image">
+
+			<!-- JUCI LOGÓ -->
+<!--             <control type="image">
                 <left>-250</left>
                 <top>600</top>
-                <width>100</width>
-                <height>100</height>
-                <texture>JUCI_LOGO_3.png</texture>
-            </control>
+                <width>75</width>
+                <height>75</height>
+                <texture>juci_white.png</texture>
+            </control> -->
             <!-- eye image and view options label at top of menu -->
             <control type="group">   
                 <left>-240</left>
                 <top>20</top>
                 <control type="label">
                     <description>View options</description>
-                    <left>0</left>
+                    <left>-30</left>
                     <top>0</top>
                     <width>250</width>
                     <height>30</height>
-                    <font>cirrus_24</font>
-                    <textcolor>accent</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <font>Charms-Date4</font>
+                    <textcolor>white</textcolor>
                     <scroll>false</scroll>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>center</aligny>
                     <label>$LOCALIZE[14018]</label>
                 </control>
+				
+				<control type="image" id="11">
+                    <description>separator image</description>
+                    <left>-30</left>
+                    <top>40</top>
+                    <width>250</width>
+                    <height>1</height>
+                    <colordiffuse>66FFFFFF</colordiffuse>
+                    <texture>separator2.png</texture>
+                </control>
+				
             </control>
             <!-- MENU ITEMS BELOW -->
             <control type="group" id="9000">
