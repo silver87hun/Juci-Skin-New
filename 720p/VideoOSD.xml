@@ -1,46 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="2901">
     <defaultcontrol always="true">602</defaultcontrol>
+
     <controls>
         <control type="group">
 <!--             <animation effect="slide" start="0,-145" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
             <animation effect="slide" start="0,0" end="0,-145" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation> -->
-            <animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation>
-            <control type="image">
-                <!-- background -->
+            <animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation> 
+
+          <!--   <control type="image">
+
                 <left>0</left>
                 <top>426</top>
                 <width>1920</width>
                 <height>145</height>
                 <aspectratio>stretch</aspectratio>
                 <texture flipy="true">mask_white90.png</texture>
-                <!-- flip y when up the top -->
-            </control>
 
-						<control type="image">
-<!-- 	  	  		 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="100" tween="sine" easing="out" time="900" />
-                        <effect type="slide" start="200" end="260" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="100" tween="sine" easing="in" time="900" />
-                        <effect type="slide" start="260" end="220" delay="300" tween="cubic" easing="out" time="1300" />
-                    </animation> -->
-        <description>Movie cover image</description>
-        <left>10</left>
-        <top>420</top>
-        <width>160</width>
-        <height>240</height>
-        <fadetime>100</fadetime>
-        <animation effect="fade" time="900">VisibleChange</animation>
-        <texture background="true">$INFO[VideoPlayer.Cover]</texture>
-        <!-- <bordertexture border="6">ContentPanelvertical.png</bordertexture> -->
-        <bordersize>6</bordersize>
-        <aspectratio aligny="bottom">stretch</aspectratio>
-        <visible>VideoPlayer.Content(Movies)</visible>
-        <visible>!Skin.HasSetting(slimseek)</visible>
-      </control>
-		<control type="image">
+            </control> -->
+
+						
+<!-- 		<control type="image">
         <description>TV Show Poster cover image</description>
         <left>10</left>
         <top>420</top>
@@ -49,12 +29,12 @@
         <fadetime>200</fadetime>
         <animation effect="fade" time="900">VisibleChange</animation>
         <texture>$INFO[Player.Art(tvshow.poster)]</texture>
-<!--         <bordertexture border="6">ContentPanelvertical.png</bordertexture> -->
+
         <bordersize>6</bordersize>
         <aspectratio aligny="bottom">stretch</aspectratio>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
-      </control>	
+      </control>	 -->
             <!-- SETTINGS GROUP (Bookmarks audio video) -->
             <control type="group" id="200">
                 <left>800</left>
@@ -110,6 +90,7 @@
                     <font>-</font>
                     <texturefocus>OSDSubtitlesFO.png</texturefocus>
                     <texturenofocus>OSDSubtitlesNF.png</texturenofocus>
+					        <colordiffuse>black</colordiffuse>
                     <onleft>702</onleft>
                     <onright>704</onright>
                     <ondown>500</ondown>
@@ -369,91 +350,6 @@
 		
 
 		 <!-- Plot and other Stuff when Paused -->
-      <control type="group">
-	  					 		<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="300" delay="300" tween="sine" easing="out" time="400" />
-                        <effect type="slide" start="200" end="260" delay="500" tween="cubic" easing="out" time="900" />
-                    </animation>
-				<animation type="WindowClose">
-                        <effect type="fade" start="300" end="0" delay="300" tween="sine" easing="in" time="400" />
-                        <effect type="slide" start="260" end="220" delay="500" tween="cubic" easing="out" time="700" />
-                    </animation>
-        <left>0</left>
-        <top>0</top>
-        <control type="textbox">
-          <left>-80</left>
-          <top>440</top>
-          <width>1100</width>
-          <height>100</height>
-          <align>left</align>
-          <aligny>bottom</aligny>
-          <label>$INFO[VideoPlayer.Plot ]</label>
-          <autoscroll time="3000" delay="10000" repeat="5000" />
-          <font>Dialog-Detail</font>
-          <textcolor>black</textcolor>
-          <visible>!VideoPlayer.Content(Files)</visible>
-          <visible>!Skin.HasSetting(slimseek)</visible>
-          <visible>!Skin.HasSetting(noplotonpause)</visible>
-        </control>
-        <!-- el_Paraguayo Mod -->
-
-        <control type="label">
-          <description>System Time</description>
-          <left>0</left>
-          <top>165</top>
-          <width>510</width>
-          <height>20</height>
-          <label>$INFO[System.Time]</label>
-          <align>right</align>
-          <aligny>center</aligny>
-          <font>cirrus_18</font>
-          <textcolor>white</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <visible>Skin.HasSetting(slimseek) | VideoPlayer.Content(Files)</visible>
-        </control>
-<!-- 
-        <control type="label">
-          <description>Current Video End Time</description>
-          <left>0</left>
-          <top>285</top>
-          <width>510</width>
-          <height>20</height>
-          <label>[COLOR=accent]$LOCALIZE[31049][/COLOR] $INFO[Player.FinishTime]</label>
-          <align>right</align>
-          <aligny>center</aligny>
-          <font>cirrus_20</font>
-          <textcolor>grey2</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
-        </control>
-        <control type="label">
-          <description>Elapsed Time Label</description>
-          <left>-100</left>
-          <top>300</top>
-          <width>510</width>
-          <height>20</height>
-          <font>cirrus_20</font>
-          <textcolor>white</textcolor>
-          <align>left</align>
-          <aligny>center</aligny>
-          <label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
-          <visible>!VideoPlayer.Content(Files)</visible>
-          <visible>!Skin.HasSetting(slimseek)</visible>
-        </control> -->
-        <control type="label">
-          <description>Player Times</description>
-          <left>-262</left>
-          <top>285</top>
-          <width>500</width>
-          <height>20</height>
-          <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-          <align>left</align>
-          <aligny>center</aligny>
-          <font>cirrus_20</font>
-          <textcolor>white</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
-        </control>
-      </control>
+      
     </controls>
 </window>
