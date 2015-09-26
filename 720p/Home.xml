@@ -8,6 +8,7 @@
     <controls>
         <!-- Changes Begin Butchabay CEV2 2.05 -->
         <!-- NORMAL BACKDROPS -->
+		        
         <control type="multiimage">
             <visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
             <left>0</left>
@@ -215,6 +216,7 @@
             <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             <include>Animation_CommonFadeNoHide</include>
         </control>
+
 		<!-- EZS - HOME FANART kép előtti szinezés -->
         <control type="image">
             <!-- darken the background a bit -->
@@ -746,7 +748,7 @@
             <!-- MAIN MENUS -->
             <include condition="!Skin.HasSetting(horzHomeMenu)">HomeMainMenu</include>
             <include condition="Skin.HasSetting(horzHomeMenu)">HomeMainMenuHorz</include>
-					    <visible allowhiddenfocus="true">!Window.IsActive(1110) + !Window.IsActive(1113) + !Window.IsActive(1114) + !Window.IsActive(1115) + !Window.IsActive(selectdialog) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(Favourites) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(script-skinshortcuts.xml)</visible>
+					    <visible allowhiddenfocus="true">!Window.IsActive(1110) + !Window.IsActive(1113) + !Window.IsActive(1114) + !Window.IsActive(1115) + !Window.IsActive(selectdialog) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(Favourites) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(script-skinshortcuts.xml) + !Control.HasFocus(8000) + !Control.HasFocus(8001)</visible>
             <!-- Changes Begin Butchabay MOD 1.2.0 -->
   				 <!-- EZS - RSS httér -->
 	<!-- 			<control type="image">
@@ -1114,6 +1116,7 @@
         </control>
         <!-- RSS -->
         <control type="group">
+		<animation effect="slide" start="0" end="0,-50" time="500" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
             <left>140</left>
             <top>15</top>
 <!--             <control type="image">
@@ -1129,7 +1132,7 @@
             <control type="rss">
                 <description>RSS feed</description>
                 <left>1280r</left>
-                <top>20r</top>
+                <top>-30r</top>
                 <height>35</height>
                 <width>1280</width>
                 <font>Home-Tile-Header</font>

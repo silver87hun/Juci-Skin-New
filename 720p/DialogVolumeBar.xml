@@ -43,7 +43,7 @@
 				<control type="label">
 
 					<description>db Label</description>
-					<left>1000</left>
+					<left>-140</left>
 					<top>10</top>
 					<width>230</width>
 					<height>29</height>

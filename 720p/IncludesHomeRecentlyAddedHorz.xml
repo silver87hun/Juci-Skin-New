@@ -3,15 +3,15 @@
 
     <include name="HomeRecentlyAddedInfoHorz">
         <control type="group" id="8004">
-		
+
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowonhome)</visible>
             <visible>!Window.IsVisible(Favourites)</visible>
             <visible>!Window.IsVisible(114)</visible>
-
+			<visible allowhiddenfocus="true"></visible>
             <include>VisibleFadeEffect</include>
             <animation effect="fade" time="300" delay="1000">WindowOpen</animation>
             <animation effect="fade" time="200">WindowClose</animation>
-            <control type="image">
+<!--             <control type="multiimage">
                 <description>media info background image</description>
                 <left>0</left>
                 <top>400</top>
@@ -21,7 +21,39 @@
                 <visible>Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)</visible>
                 <animation effect="slide" time="0" tween="cubic" easing="inout" end="0,-150" condition="Skin.HasSetting(lowermainmenu) | Skin.HasSetting(Lockhomemenulow)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,-470" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(Lockhomemenulow) + !Skin.HasSetting(HomeMenuNoMoviesButton) + Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)">Conditional</animation>
-            </control>
+            </control> -->
+			<control type="group">	
+                <visible>Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)</visible>
+                <animation effect="slide" time="0" tween="cubic" easing="inout" end="0,0" condition="Skin.HasSetting(lowermainmenu) | Skin.HasSetting(Lockhomemenulow)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,0" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(Lockhomemenulow) + !Skin.HasSetting(HomeMenuNoMoviesButton) + Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)">Conditional</animation>			
+	 <control type="image">
+
+
+		<left>0</left>
+        <top>430</top>
+        <width>1920</width>
+        <height>1080</height>
+                <texture>black.jpeg</texture>
+            </control> 
+		 <control type="multiimage">
+
+
+                <!-- background -->
+		<left>0</left>
+        <top>430</top>
+        <width>1920</width>
+        <height>1080</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">test</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+              <!--   <texture flipy="true">OSDbackground.png</texture> -->
+                <!-- flip y when up the top -->
+            </control></control>
 		<!-- 	
 			 <control type="group">
 			                 <top>150</top>
@@ -62,18 +94,18 @@
 
             <!-- RECENTLY ADDED MOVIES -->
             <control type="group">
-			
+		<animation effect="slide" start="0" end="855,-50" time="600" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
  		    <control type="image">
             <left>-800</left>
-            <top>100</top>
+            <top>0</top>
             <height>25</height>
             <width>25</width>
             <texture>OSD\Play_arrow_24.png</texture>
 			 <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
             </control>
 			
-                <left>855</left>
-				<top>380</top>	
+                <left>-100</left>
+				<top>480</top>	
                 <visible>Library.HasContent(Movies)</visible>
                 <visible>Container(9000).Hasfocus(1)</visible>
                 <visible>Skin.HasSetting(latestmovies) | Skin.HasSetting(moviesinprogress)</visible>
@@ -82,7 +114,7 @@
                     <left>35</left>
                     <top>10</top>
                     <height>20</height>
-                    <width>450</width>
+                    <width>850</width>
                     <label>31323</label>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -105,21 +137,24 @@
             </control> 
         <control type="label">
             <description>Title label</description>
-            <left>-800</left>
-            <top>170</top>
+            <left>350</left>
+            <top>-20</top>
             <height>20</height>
             <width>800</width>
             <label>$INFO[Container(8000).ListItem.Label]</label>
-            <align>right</align>
+            <align>center</align>
             <aligny>center</aligny>
-            <font>Charms-Date-big</font>
+            <font>Charms-Date</font>
             <textcolor>white</textcolor>
             <visible>Control.HasFocus(8000)</visible>
 				</control>
-				        <control type="label">
+				
+
+	  
+<!-- 				        <control type="label">
             <description>Title label Year</description>
-            <left>-800</left>
-            <top>120</top>
+            <left>350</left>
+            <top>20</top>
             <height>20</height>
             <width>800</width>
             <label>[COLOR=white]$INFO[Container(8000).ListItem.Property(Year)][/COLOR]</label>
@@ -128,19 +163,19 @@
             <font>Clock-Detail</font>
             <textcolor>white</textcolor>
             <visible>Control.HasFocus(8000)</visible>
-				</control>
-		    <control type="image">
-            <left>-800</left>
-            <top>100</top>
+				</control> -->
+<!-- 		    <control type="image">
+            <left>250</left>
+            <top>-20</top>
             <height>25</height>
             <width>25</width>
-            <texture>OSD\Play_arrow_24.png</texture>
-			 <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
-            </control>
+            <texture>osd/play.png</texture>
+			 <visible>Control.HasFocus(8000) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
+            </control> -->
         <control type="list" id="8000">
-            <left>30</left>
+            <left>160</left>
             <top>55</top>
-            <width>340</width>
+            <width>1280</width>
             <height>400</height>
             <onleft>8000</onleft>
             <onright>8000</onright>
@@ -1022,10 +1057,9 @@
             </content>
         </control>
     </control>
-
     <!-- RECENTLY ADDED TV SHOWS -->
     <control type="group">
-						
+			<animation effect="slide" start="0" end="400,-100" time="500" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>		
         <left>515</left>
         <top>450</top>
         <visible>Library.HasContent(TVShows)</visible>
