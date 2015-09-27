@@ -37,23 +37,88 @@
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>	 -->
             <!-- SETTINGS GROUP (Bookmarks audio video) -->
+<<<<<<< HEAD
+            <control type="group">
+						<control type="image">
+						<description>button</description>
+						<left>970</left>
+						<top>480</top>
+						<width>24</width>
+						<height>24</height>
+						<texture></texture>
+						</control>
+												<control type="image">
+						<description>button</description>
+						<left>800</left>
+						<top>450</top>
+						<width>80</width>
+						<height>45</height>
+						<texture></texture>
+						</control>
+												<control type="image">
+						<description>button</description>
+						<left>800</left>
+						<top>450</top>
+						<width>80</width>
+						<height>45</height>
+						<texture></texture>
+						</control>
+												<control type="image">
+						<description>button</description>
+						<left>800</left>
+						<top>450</top>
+						<width>80</width>
+						<height>45</height>
+						<texture></texture>
+						</control>
+			</control>
+            <control type="group" id="200">
+						
+                <left>800</left>
+                <top>620</top>
+                <control type="button" id="700">
+
+                    <left>0</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>40</height>
+                    <label>298</label>
+                    <font>-</font>
+                    <texturefocus>osd/bookmark5fo.png</texturefocus>
+                    <texturenofocus>osd/bookmark5no.png</texturenofocus>
+                    <onleft>605</onleft>
+                    <onright>701</onright>
+                    <ondown>500</ondown>
+                    <onclick>ActivateWindow(125)</onclick>
+                </control>
+=======
            
             <control type="group" id="200">
 									 	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="700">WindowOpen</animation>		
                 <left>30</left>
                 <top>675</top>
 
+>>>>>>> po
                 <control type="button" id="701">
                     <left>-20</left>
                     <top>0</top>
                     <width>150</width>
                     <height>30</height>
+<<<<<<< HEAD
+                    <label>13396</label>
+                    <font>Context-List-Small</font>
+					<textcolor>black</textcolor>
+					<align>center</align>
+                    <texturefocus>osd/osdwide40.png</texturefocus>
+                    <texturenofocus>osd/osdwide20.png</texturenofocus>
+=======
                    <label>13396</label> 
                     <font>Context-List-Small</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
                     <texturefocus>osd/osdwide60.png</texturefocus>
                     <texturenofocus>osd/osdwide40.png</texturenofocus>
+>>>>>>> po
                     <onleft>700</onleft>
                     <onright>702</onright>
                     <ondown>500</ondown>
@@ -68,8 +133,13 @@
                     <font>Context-List-Small</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
+<<<<<<< HEAD
+                    <texturefocus>osd/osdwide40.png</texturefocus>
+                    <texturenofocus>osd/osdwide20.png</texturenofocus>
+=======
                     <texturefocus>osd/osdwide60.png</texturefocus>
                     <texturenofocus>osd/osdwide40.png</texturenofocus>
+>>>>>>> po
                     <onleft>701</onleft>
                     <onright>703</onright>
                     <ondown>500</ondown>
@@ -84,8 +154,13 @@
                     <font>Context-List-Small</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
+<<<<<<< HEAD
+                    <texturefocus>osd/osdwide40.png</texturefocus>
+                    <texturenofocus>osd/osdwide20.png</texturenofocus>>
+=======
                     <texturefocus>osd/osdwide60.png</texturefocus>
                     <texturenofocus>osd/osdwide40.png</texturenofocus>
+>>>>>>> po
                     <onleft>702</onleft>
                     <onright>704</onright>
                     <ondown>500</ondown>
