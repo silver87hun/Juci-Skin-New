@@ -372,9 +372,9 @@
         <!-- HORIZONTAL MAIN MENU -->
         <control type="wraplist" id="9000">
             <left>0</left>
-            <top>420</top>
+            <top>320</top>
             <width>1280</width>
-            <height>300</height>
+            <height>500</height>
             <onleft>9000</onleft>
             <onright>9000</onright>
             <viewtype>list</viewtype>
@@ -387,7 +387,7 @@
             <onup condition="Container(9000).Hasfocus(11)">8011</onup>
             <ondown>10</ondown>
             <pagecontrol>-</pagecontrol>
-            <scrolltime tween="quadratic" easing="out">300</scrolltime>
+            <scrolltime tween="quadratic" easing="out">500</scrolltime>
             <focusposition>1</focusposition>
             <orientation>horizontal</orientation>
             <animation effect="fade" start="0" end="100" time="200">Visible</animation>
@@ -396,7 +396,7 @@
             <itemlayout condition="!Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>21</top>
+                    <top>50</top>
                     <width>430</width>
                     <height>40</height>
                     <font>Breadcrumb-SubFolder</font>
@@ -409,7 +409,7 @@
             <itemlayout condition="Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>218</top>
+                    <top>320</top>
                     <width>430</width>
                     <height>40</height>
                     <font>Breadcrumb-SubFolder</font>
@@ -422,7 +422,7 @@
             <focusedlayout condition="!Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>21</top>
+                    <top>50</top>
                     <width>430</width>
                     <height>40</height>
                     <font>Charms-Date-big</font>
@@ -435,7 +435,7 @@
             <focusedlayout condition="Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>218</top>
+                    <top>320</top>
                     <width>430</width>
                     <height>40</height>
                     <font>Charms-Date-big</font>
