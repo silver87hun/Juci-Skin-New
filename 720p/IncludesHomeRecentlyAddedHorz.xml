@@ -3,7 +3,7 @@
 
     <include name="HomeRecentlyAddedInfoHorz">
         <control type="group" id="8004">
-
+		<animation effect="slide" start="0" end="0,-100" time="600" condition="Window.IsVisible(DialogProgress.xml)">Conditional</animation>
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowonhome)</visible>
             <visible>!Window.IsVisible(Favourites)</visible>
             <visible>!Window.IsVisible(114)</visible>
@@ -94,7 +94,7 @@
 
             <!-- RECENTLY ADDED MOVIES -->
             <control type="group">
-		<animation effect="slide" start="0" end="855,-50" time="600" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
+		<animation effect="slide" start="0" end="855,-70" time="600" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
  		    <control type="image">
             <left>-800</left>
             <top>0</top>
@@ -105,14 +105,14 @@
             </control>
 			
                 <left>-100</left>
-				<top>480</top>	
+				<top>460</top>	
                 <visible>Library.HasContent(Movies)</visible>
                 <visible>Container(9000).Hasfocus(1)</visible>
                 <visible>Skin.HasSetting(latestmovies) | Skin.HasSetting(moviesinprogress)</visible>
                 <control type="label">
                     <description>Latest Movies</description>
-                    <left>35</left>
-                    <top>10</top>
+                    <left>165</left>
+                    <top>20</top>
                     <height>20</height>
                     <width>850</width>
                     <label>31323</label>
@@ -138,7 +138,7 @@
         <control type="label">
             <description>Title label</description>
             <left>350</left>
-            <top>-20</top>
+            <top>-10</top>
             <height>20</height>
             <width>800</width>
             <label>$INFO[Container(8000).ListItem.Label]</label>
@@ -1059,9 +1059,9 @@
     </control>
     <!-- RECENTLY ADDED TV SHOWS -->
     <control type="group">
-			<animation effect="slide" start="0" end="400,-100" time="500" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>		
-        <left>515</left>
-        <top>450</top>
+			<animation effect="slide" start="0" end="610,-100" time="500" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>		
+        <left>-80</left>
+        <top>560</top>
         <visible>Library.HasContent(TVShows)</visible>
         <visible>Container(9000).Hasfocus(7)</visible>
         <visible>Skin.HasSetting(latestepisodes) | Skin.HasSetting(watchlisttvhorizontal)</visible>
@@ -1086,7 +1086,7 @@
         <control type="wraplist" id="8001">
             <left>225</left>
             <top>-20</top>
-            <width>500</width>
+            <width>1280</width>
             <height>400</height>
             <onleft>8001</onleft>
             <onright>8001</onright>
@@ -1097,17 +1097,17 @@
             <orientation>horizontal</orientation>
             <focusposition>0</focusposition>
             <pagecontrol>-</pagecontrol>
-            <scrolltime>200</scrolltime>
+            <scrolltime>300</scrolltime>
             <preloaditems>3</preloaditems>
             <itemlayout width="260" height="160">
                 <control type="image">
                     <left>0</left>
                     <top>2</top>
-                    <width>250</width>
-                    <height>154</height>
+                    <width>260</width>
+                    <height>160</height>
                     <texture background="true">$INFO[ListItem.ActualIcon]</texture>
 <!--                     <bordertexture border="6">ContentPanelvertical.png</bordertexture> -->
-                    <bordersize>3</bordersize>
+                    <bordersize>5</bordersize>
                     <aspectratio>stretch</aspectratio>
                 </control>
 								 
@@ -1122,16 +1122,18 @@
 					</control> -->
                 <control type="image">
                     <left>0</left>
-                    <top>5</top>
-                    <width>250</width>
-                    <height>154</height>
+                    <top>0</top>
+                    <width>260</width>
+                    <height>160</height>
                     <fadetime>IconCrossfadeTime</fadetime>
                     <aspectratio>stretch</aspectratio>
                     <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-<!--                     <bordertexture width="3">mask_black70.png</bordertexture>
-                    <bordersize>6</bordersize> -->
-<!--                     <animation reversible="false" effect="zoom" start="20,15,240,134" end="12,6,260,156" time="200">focus</animation>
-                    <animation reversible="false" effect="zoom" end="20,15,240,134" start="12,6,260,156" time="200">unfocus</animation> -->
+<!--                      <bordertexture width="3">mask_black70.png</bordertexture> -->
+                    <bordersize>5</bordersize>
+                      <animation reversible="false" effect="zoom" start="20,15,260,160" end="-115,-70,410,260" time="200">focus</animation>
+                    <animation reversible="false" effect="zoom" end="20,15,260,160" start="12,6,260,160" time="200">unfocus</animation> 
+<!-- 					<animation reversible="false" effect="zoom" start="2,16,110,160" end="-12,-8,138,200" time="200">focus</animation>
+                    <animation reversible="false" effect="zoom" end="2,16,110,160" start="-12,-8,138,200" time="200">unfocus</animation> -->
                 </control>
 
             </focusedlayout>
@@ -1436,47 +1438,47 @@
         </control> 
         <control type="label">
             <description>Title label</description>
-            <right>200</right>
-            <top>100</top>
+            <left>500</left>
+            <top>-105</top>
             <height>20</height>
             <width>800</width>
             <label>$INFO[Container(8001).ListItem.Label2] </label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>Charms-Date-big</font>
+            <font>Charms-Date</font>
             <textcolor>white</textcolor>
             <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
         </control>
 		        <control type="label">
             <description>Title label</description>
-            <right>540</right>
-            <top>40</top>
+            <left>500</left>
+            <top>-75</top>
             <height>20</height>
             <width>300</width>
-            <label>ep:[COLOR=white] $INFO[Container(8001).ListItem.Property(EpisodeSeason)]$INFO[Container(8001).ListItem.Property(EpisodeNumber)][/COLOR]  </label>
-            <align>right</align>
+            <label>ep:[COLOR=white] $INFO[Container(8001).ListItem.Property(EpisodeNumber)][/COLOR] $INFO[Container(8001).ListItem.Property(EpisodeSeason)] </label>
+            <align>left</align>
             <aligny>center</aligny>
             <font>Clock-Detail</font>
             <textcolor>white</textcolor>
             <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
         </control>
 		
-		    <control type="image">
+<!-- 		    <control type="image">
             <left>190</left>
             <top>10</top>
             <height>25</height>
             <width>25</width>
             <texture>OSD\Play_arrow_24.png</texture>
 			 <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
-            </control>
+            </control> -->
 		<control type="label">
             <description>Title label</description>
-            <right>550</right>
-            <top>60</top>
+            <left>500</left>
+            <top>-50</top>
             <height>20</height>
             <width>300</width>
             <label>[COLOR=white]$INFO[Container(8001).ListItem.Label][/COLOR]</label>
-            <align>right</align>
+            <align>left</align>
             <aligny>center</aligny>
             <font>Clock-Detail</font>
             <textcolor>white</textcolor>
