@@ -32,28 +32,50 @@
       <left>0</left>
       <top>0</top>
       <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
         <effect type="fade" start="0" end="100" time="300" />
       </animation>
       <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
         <effect type="fade" start="100" end="0" time="300" />
       </animation>
-      <control type="image">
-        <left>-90</left>
+
+	  	 <control type="image">
+
+
+		<left>0</left>
         <top>0</top>
         <width>1920</width>
         <height>1080</height>
-        <texture border="20">startup.jpg</texture>
-      </control>
-      <control type="image">
+                <texture>black.jpeg</texture>
+            </control> 
+		 <control type="multiimage">
+
+
+                <!-- background -->
+		<left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+              <!--   <texture flipy="true">OSDbackground.png</texture> -->
+                <!-- flip y when up the top -->
+            </control>
+<!--       <control type="image">
         <description>LOGO</description>
         <left>100</left>
         <top>30</top>
         <width>160</width>
         <height>160</height>
         <texture>JUCI_LOGO_1.png</texture>
-      </control>
+      </control> -->
       <control type="grouplist" id="3">
         <description>button area</description>
         <left>10</left>
@@ -75,16 +97,16 @@
       </control> -->
       <control type="label">
         <description>header label</description>
-        <left>300</left>
-        <top>20</top>
+        <left>250</left>
+        <top>50</top>
         <width>740</width>
         <height>30</height>
-        <font>cirrus_35</font>
+        <font>Charms-Date-Big2</font>
         <label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
+        <textcolor>black</textcolor>
+
       </control>
       <control type="grouplist" id="5">
         <description>control area</description>
@@ -101,13 +123,13 @@
       </control>
       <control type="textbox" id="6">
         <description>description area</description>
-        <left>290</left>
+        <left>250</left>
         <top>100</top>
         <width>750</width>
         <height>85</height>
-        <font>Cirrus_24</font>
-        <align>justify</align>
-        <textcolor>white</textcolor>
+        <font>Charms-Date</font>
+        <align>center</align>
+        <textcolor>black</textcolor>
         <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
       </control>
       <control type="scrollbar" id="60">
@@ -128,16 +150,17 @@
     </control>
     <include>BehindDialogFadeOut</include>
     <control type="button" id="10">
+            <!-- <animation effect="zoom" start="100" end="120" center="auto" time="100" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
       <description>Default Category Button</description>
       <height>60</height>
       <width>260</width>
       <textoffsetx>20</textoffsetx>
-      <align>center</align>
+      <align>right</align>
       <aligny>center</aligny>
-      <font>cirrus_24</font>
-      <textcolor>grey2</textcolor>
+      <font>Charms-Date4</font>
+      <textcolor>black</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturefocus border="5">Notification3.png</texturefocus>
+      <texturefocus border="5">-</texturefocus>
       <texturenofocus border="5"><!-- <!-- menuitemNF.png --> --></texturenofocus>
       <pulseonselect>false</pulseonselect>
     </control>
@@ -147,7 +170,7 @@
       <top>0</top>
       <height>40</height>
       <font>cirrus_20</font>
-      <textcolor>grey2</textcolor>
+      <textcolor>black</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2" flipx="true">progressblack.png</texturefocus>
       <texturenofocus border="0,2,0,2"><!-- menuitemNF.png --></texturenofocus>

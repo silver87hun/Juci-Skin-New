@@ -13,9 +13,18 @@
   <onload condition="System.HasAddon(script.randomandlastitems) + [Skin.HasSetting(notvwidgetplaylisttv3) | Skin.HasSetting(latestepisodesplaylist3)] + Skin.HasSetting(Menu_Custom11) + !IsEmpty(Skin.String(Menu_Custom11_Path))">XBMC.RunScript(script.randomandlastitems,type=Episode,unwatched=True,limit=10,method=Last,playlist=$INFO[Skin.String(Menu_Custom11_Path)],menu=Menu6)</onload>
   <animation effect="fade" start="50" end="100" time="500" reversible="true" condition="Skin.HasSetting(EnableStartupAnimation)">WindowOpen</animation>
   <animation effect="fade" start="100" end="0" time="500" reversible="true" condition="Skin.HasSetting(EnableStartupAnimation)">WindowClose</animation>
+  	        <animation type="WindowOpen" reversible="false">
+        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
+        <effect type="fade" start="0" end="100" time="300" />
+      </animation>
+      <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
+        <effect type="fade" start="100" end="0" time="300" />
+      </animation>
   <controls>
     <control type="group">
       <visible>Skin.HasSetting(EnableStartupAnimation)</visible>
+	  
  <control type="multiimage">
 
                 <!-- background -->
@@ -29,7 +38,7 @@
 				<fadetime>1000</fadetime>
 										<pauseatend>0</pauseatend>
 			<loop>true</loop>
-                <imagepath background="true">test</imagepath>
+                <imagepath background="true">test_dark</imagepath>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
               <!--   <texture flipy="true">OSDbackground.png</texture> -->
                 <!-- flip y when up the top -->

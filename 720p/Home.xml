@@ -27,6 +27,8 @@
             <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
         </control>
 
+
+		
         <!-- RANDOM FANART BACKDROPS -->
         <include>BackgroundFadeLabels</include>
         <control type="multiimage">
@@ -42,6 +44,26 @@
             <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
         </control>
+		
+	
+<!-- 		        <control type="multiimage">
+            <left>0</left>
+            <top>0</top>
+            <width>400</width>
+            <height>200</height>
+            <imagepath background="true">$INFO[Container(8001).ListItem.Property(Fanart)]</imagepath>
+            <timeperimage>100</timeperimage>
+            <randomize>true</randomize>
+            <fadetime>500</fadetime>
+>
+            <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+
+            <visible>Skin.HasSetting(homepageRandomFanart)</visible>
+        </control> -->
+		
+		
         <control type="multiimage">
             <visible>Skin.HasSetting(Menu_RandomCustom1)</visible>
             <left>0</left>
@@ -96,6 +118,7 @@
             <include>Animation_CommonFadeNoHide</include>
             <visible>Control.HasFocus(8001)</visible>
         </control>
+		
         <control type="image">
             <left>0</left>
             <top>0</top>
@@ -217,8 +240,20 @@
             <include>Animation_CommonFadeNoHide</include>
         </control>
 
+
 		<!-- EZS - HOME FANART kép előtti szinezés -->
         <control type="image">
+            <!-- darken the background a bit -->
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>720</height>
+            <aspectratio>stretch</aspectratio>
+            <texture>mask_black50.png</texture>
+            <!-- <visible>Skin.HasSetting(DimFanartonHome)</visible> -->
+        </control>
+		        <control type="image">
+							<visible>System.IdleTime(10)</visible>
             <!-- darken the background a bit -->
             <left>0</left>
             <top>0</top>
@@ -231,12 +266,154 @@
 		<!-- EZS - JUCI LOGÓ -->
 
 		 				<control type="image">
+				<animation effect="zoom" start="100" end="150" center="100,50" time="800" condition="System.IdleTime(10)">conditional</animation>
+  				<animation effect="slide" start="0" end="320,10" time="800" condition="System.IdleTime(10)">conditional</animation>
 				 <left>100</left>
 				  <top>50</top>
 				  <width>80</width>
 				  <height>80</height>
 			<texture>juci_white.png</texture>
             </control>
+			
+			
+			
+			
+			<!-- Recently on screensaver -->
+			<control type="group">
+			<left>40</left>
+			  <control type="multiimage">
+<!-- 				  				<animation effect="slide" start="0" end="0,-350" time="800" condition="System.IdleTime(12)">conditional</animation> -->
+  				<animation effect="slide" start="0" end="0,100" time="1500" condition="System.IdleTime(15)">conditional</animation>
+							  <animation effect="fade" start="0" end="500" time="600" condition="System.IdleTime(15)">conditional</animation>
+            <left>250</left>
+            <top>520</top>
+            <width>300</width>
+            <height>50</height>
+ <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">layer</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+            <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <include>Animation_CommonFadeNoHide</include>
+							<visible>System.IdleTime(15)</visible>
+        </control>
+		        <control type="image">
+<!-- 				  				<animation effect="slide" start="0" end="0,-350" time="800" condition="System.IdleTime(12)">conditional</animation> -->
+				<animation effect="zoom" start="90" end="100" center="200,450" time="500" condition="System.IdleTime(14)">conditional</animation>
+  				<animation effect="slide" start="0" end="50,0" time="500" condition="System.IdleTime(14)">conditional</animation>
+							  <animation effect="fade" start="0" end="500" time="600" condition="System.IdleTime(14)">conditional</animation>
+            <left>200</left>
+            <top>450</top>
+            <width>300</width>
+            <height>170</height>
+            <texture background="true">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
+            <fadetime>600</fadetime>
+            <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <include>Animation_CommonFadeNoHide</include>
+							<visible>System.IdleTime(14)</visible>
+        </control>
+		
+		
+		        <control type="label">
+				<animation effect="zoom" start="80" end="100" center="250,660" time="500" condition="System.IdleTime(16)">conditional</animation>
+				<!-- <animation effect="slide" start="0" end="50,0" time="2000" condition="System.IdleTime(15)">conditional</animation> -->
+            <description>Title label</description>
+            <left>260</left>
+            <top>640</top>
+            <height>20</height>
+            <width>260</width>
+            <label>$INFO[Container(8000).ListItem.Label]</label>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>Context-List2-dash</font>
+            <textcolor>white</textcolor>
+			<visible>System.IdleTime(16)</visible>
+				</control>
+		
+		
+		
+		
+					  <control type="multiimage">
+<!-- 				  				<animation effect="slide" start="0" end="0,-350" time="800" condition="System.IdleTime(12)">conditional</animation> -->
+  				<animation effect="slide" start="0" end="0,100" time="1500" condition="System.IdleTime(16)">conditional</animation>
+							  <animation effect="fade" start="0" end="500" time="600" condition="System.IdleTime(16)">conditional</animation>
+            <left>650</left>
+            <top>520</top>
+            <width>300</width>
+            <height>50</height>
+ <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">layer</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+            <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <include>Animation_CommonFadeNoHide</include>
+							<visible>System.IdleTime(16)</visible>
+        </control>
+		
+		
+        <control type="image">
+						<animation effect="zoom" start="90" end="100" center="200,450" time="500" condition="System.IdleTime(14)">conditional</animation>
+  				<animation effect="slide" start="0" end="50,0" time="500" condition="System.IdleTime(14)">conditional</animation>
+							  <animation effect="fade" start="0" end="500" time="600" condition="System.IdleTime(14)">conditional</animation>
+            <left>600</left>
+            <top>450</top>
+            <width>300</width>
+            <height>170</height>
+            <texture background="true">$INFO[Container(8001).ListItem.Property(Fanart)]</texture>
+
+            <fadetime>600</fadetime>
+            <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <include>Animation_CommonFadeNoHide</include>
+							<visible>System.IdleTime(14)</visible>
+        </control>
+        <control type="label">
+		<animation effect="zoom" start="80" end="100" center="670,620" time="500" condition="System.IdleTime(17)">conditional</animation>
+            <description>Title label</description>
+            <left>660</left>
+            <top>640</top>
+            <height>20</height>
+            <width>260</width>
+            <label>$INFO[Container(8001).ListItem.Label2]</label>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>Context-List2-dash</font>
+            <textcolor>white</textcolor>
+			<visible>System.IdleTime(17)</visible>
+				</control>
+				        <control type="label">
+		<animation effect="zoom" start="80" end="100" center="670,620" time="500" condition="System.IdleTime(17)">conditional</animation>
+            <description>Title label</description>
+            <left>660</left>
+            <top>620</top>
+            <height>20</height>
+            <width>260</width>
+            <label>ep:[COLOR=white] $INFO[Container(8001).ListItem.Property(EpisodeNumber)][/COLOR] $INFO[Container(8001).ListItem.Property(EpisodeSeason)]</label>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>Context-List-Small</font>
+            <textcolor>white</textcolor>
+			<visible>System.IdleTime(17)</visible>
+				</control>
+		</control>	
+			
+			
+			
 			
         <control type="group">
             <!-- Now playing - Low Horizontal Menu el_Paraguayo -->
@@ -252,6 +429,8 @@
             <include>ExtendedNowPlaying</include>
             <visible>Skin.HasSetting(horzHomeMenu) + !Skin.HasSetting(horzLowHomeMenu)  + Skin.HasSetting(ExtendedNowPlaying) + !Skin.HasSetting(homepageNowplayingInfo)</visible>
         </control>
+		
+		
         <!--el_Paraguayo mod - end -->
         <!-- Changes Ending Butchabay MOD 1.2.0 -->
         <!-- Changes Malexx MOD 1.2.0 -->
@@ -270,8 +449,9 @@
             <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)">HomeHorzLowSubmenu</include>
            <!-- Weather Plus Widget Beginning -->
             <control type="group">
-                <left>-70</left>
-                <top>160</top>
+					<animation effect="slide" start="0" end="0,600" time="200" condition="System.IdleTime(10)">conditional</animation>
+                <left>140</left>
+                <top>400</top>
                 <animation type="Conditional" condition="Container(9000).HasFocus(25)" reversible="false">
                     <effect type="fade" start="0" end="100" time="250" />
                 </animation>
@@ -333,14 +513,14 @@
                     <height>190</height>
                     <texture>mask_black50.png</texture>
                 </control> </control> -->
-				             <control type="image">
+<!-- 				             <control type="image">
                             <left>0</left>
                             <top>-160</top>
                             <width>1920</width>
                             <height>1080</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>mask_black70.png</texture>
-                        </control>
+                        </control> -->
 				
                 <visible>Container(9000).HasFocus(24) + Weather.IsFetched + !Skin.HasSetting(NoBackgroundWeatherWidget)</visible>
                 <control type="label">
@@ -397,7 +577,7 @@
                     <label>[COLOR=grey]$LOCALIZE[401]: [/COLOR]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Context-List2</font>
+                    <font>Context-List2-dash</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -417,7 +597,7 @@
                     <label>[COLOR=grey]$LOCALIZE[33020]: [/COLOR]$INFO[Window(Weather).Property(Current.Condition)]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Context-List2</font>
+                    <font>Context-List2-dash</font>
                     <textcolor>white</textcolor>
                    <!--  <shadowcolor>black</shadowcolor> -->
                 </control>
@@ -448,7 +628,7 @@
                             <top>20</top>
                             <width>150</width>
                             <height>20</height>
-                            <font>Dialog-Detail</font>
+                            <font>Context-List2-dash</font>
                             <textcolor>white</textcolor>
                             <label>$VAR[WeatherShortDay1]</label>
                             <align>center</align>
@@ -521,7 +701,7 @@
                             <top>20</top>
                             <width>150</width>
                             <height>20</height>
-                            <font>Dialog-Detail</font>
+                            <font>Context-List2-dash</font>
                             <textcolor>white</textcolor>
                             <label>$VAR[WeatherShortDay2]</label>
                             <align>center</align>
@@ -600,7 +780,7 @@
                             <top>20</top>
                             <width>150</width>
                             <height>20</height>
-                            <font>Dialog-Detail</font>
+                            <font>Context-List2-dash</font>
                             <textcolor>white</textcolor>
                             <label>$VAR[WeatherShortDay3]</label>
                             <align>center</align>
@@ -679,7 +859,7 @@
                             <top>20</top>
                             <width>150</width>
                             <height>20</height>
-                            <font>Dialog-Detail</font>
+                            <font>Context-List2-dash</font>
                             <textcolor>white</textcolor>
                             <label>$VAR[WeatherShortDay4]</label>
                             <align>center</align>
@@ -784,6 +964,9 @@
                 <visible>!Skin.HasSetting(themelighthorz)</visible>
                 <visible>!Skin.HasSetting(originalcirrusclock)</visible>
             </control> 
+			
+			 <animation effect="slide" start="0" end="0,250" time="500" condition="Window.IsVisible(HomeRecentlyAddedInfoHorz.xml)">Conditional</animation>
+			
 			<!-- EZS - DOWNHOME Háttér -->
 
 <!--              <control type="image">
@@ -974,16 +1157,17 @@
 			
 			<!--EZS TOPHOME menü -->
             <control type="group" id="10">
+					<animation effect="slide" start="0" end="0,-300" time="200" condition="System.IdleTime(10)">conditional</animation>
 <!-- 				<animation effect="slide" start="0,0" end="100,100" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 				<animation effect="slide" start="100,100" end="0,0" time="400" tween="quadratic" easing="out">WindowClose</animation> -->
 
                 <visible>!Skin.HasSetting(originalcirrusclock)</visible>
                 <visible>!Skin.HasSetting(topbuttons)</visible>
                 <left>900</left>
-                <top>60</top>
+                <top>30</top>
 				<control type="button" id="20">
                     <description>Power push button</description>
-                    <left>-700</left>
+                    <left>-670</left>
                     <top>50</top>
                     <width>20</width>
                     <height>20</height>
@@ -1001,7 +1185,7 @@
                 </control>
                 <control type="button" id="21">
                     <description>Favourites push button</description>
-                    <left>-670</left>
+                    <left>-700</left>
                     <top>50</top>
                     <width>20</width>
                     <height>20</height>
@@ -1143,70 +1327,102 @@
                 <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
             </control>
         </control>
-	
+		 
         <!--CIRRUS Weather, time etc  -->
 		     <control type="group">
+			             <left>215</left>
+            <top>15</top>
+            <width>900</width>
 	  	  			<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="150" delay="200" tween="sine" easing="in" time="1000" />
-                        <effect type="slide" start="0" end="150" delay="400" tween="cubic" easing="out" time="1300" />
+                        <effect type="fade" start="0" end="150"  tween="sine" easing="in" time="1000" />
+                        <effect type="slide" start="0,-300" end="0"  tween="cubic" easing="out" time="1300" />
                     </animation>
-									<animation type="WindowClose">
+<!-- 									<animation type="WindowClose">
                         <effect type="fade" start="150" end="0" delay="50" tween="sine" easing="in" time="100" />
                         <effect type="slide" start="150" end="0" delay="200" tween="cubic" easing="out" time="300" />
-                    </animation>
+                    </animation> -->
             <visible>!Skin.HasSetting(homeNoClock)</visible>
             <visible>!Skin.HasSetting(originalcirrusclock)</visible>
-            <left>65</left>
+            <left>215</left>
             <top>15</top>
             <width>900</width>
             <align>left</align>
-
 			  <control type="label">
-                <description>time label</description>
-                <left>345</left>
-                <top>80</top>
+			  <animation effect="slide" start="0,-20" end="0,0" time="800" condition="System.IdleTime(11)">conditional</animation>
+			  <animation effect="fade" start="0" end="100" time="800" condition="System.IdleTime(11)">conditional</animation>
+			  <visible>System.IdleTime(11)</visible>
+                <description>date label</description>
+                <left>115</left>
+                <top>280</top>
                 <width>600</width>
                 <height>28</height>
-                <align>right</align>
+                <align>center</align>
                 <aligny>top</aligny>
-                <font>Clock-Detail</font>
+                <font>Settings-Menu-Header2</font>
                 <textcolor>white</textcolor>
                 <label> $INFO[System.Date(DDD)],  $INFO[System.Date(YYYY MMM DD)]</label> 
             </control>
 			     <control type="label">
+				<animation effect="zoom" start="30" end="36" center="950,20" time="1">WindowOpen</animation>
+				<animation effect="zoom" start="100" end="200" center="950,20" time="800" condition="System.IdleTime(10)">conditional</animation>
+ 				<animation effect="slide" start="0" end="-580,150" time="800" condition="System.IdleTime(10)">conditional</animation>
+								<animation effect="zoom" start="36" end="36" center="950,20" time="1">WindowClose</animation>
                 <description>time label</description>
-                <left>5</left>
-                <top>20</top>
+                <left>325</left>
+                <top>70</top>
                 <width>950</width>
                 <height>28</height>
-                <align>right</align>
+                <align>center</align>
                 <aligny>top</aligny>
-                <font>Charms-Date-big</font>
+                <font>Screensaver-Time</font>
                 <textcolor>white</textcolor>
                 <label> $INFO[System.Time] </label>
             </control>
-			<control type="label">
-                <description>time label</description>
-                <right>-50</right>
-                <top>105</top>
-                <width>760</width>
-                <height>28</height>
-                <align>right</align>
-                <aligny>top</aligny>
-                <font>Clock-Detail</font>
-                <textcolor>white</textcolor>
-                <label>$INFO[Weather.Temperature] </label>
-            </control>
+
             <control type="image">
+				<animation effect="slide" start="0,-40" end="0,0" time="1000" delay="800" condition="System.IdleTime(11)">conditional</animation>
+			  <animation effect="fade" start="0" end="200" time="1200" delay="800" condition="System.IdleTime(11)">conditional</animation>
+			<visible>System.IdleTime(11)</visible>
                 <description>Weather image</description>
-                <left>430</left>
-                <top>100</top>
+                <left>-70</left>
+                <top>320</top>
                 <width>900</width>
-                <height>45</height>
+                <height>85</height>
                 <aspectratio>keep</aspectratio>
                 <texture>$INFO[Weather.Conditions]</texture>
             </control>
+							<control type="label">
+				<animation effect="slide" start="-30,0" end="0,0" time="600" delay="1200" condition="System.IdleTime(11)">conditional</animation>
+			  <animation effect="fade" start="0" end="500" time="600" delay="1200" condition="System.IdleTime(11)">conditional</animation>
+			<visible>System.IdleTime(11)</visible>
+                <description>weather label</description>
+                <left>440</left>
+                <top>340</top>
+                <width>760</width>
+                <height>28</height>
+                <align>left</align>
+                <aligny>top</aligny>
+                <font>Settings-Menu-Header2</font>
+                <textcolor>white</textcolor>
+                <label>$INFO[Weather.Temperature] </label>
+            </control>
         </control>
+
+			
+						
+				<control type="image">
+				<visible>System.IdleTime(11)</visible>
+				<animation effect="slide" start="-200,0" end="0,0" time="800" delay="1600" condition="System.IdleTime(11)">conditional</animation>
+			  <animation effect="fade" start="0" end="500" time="800" delay="1600" condition="System.IdleTime(11)">conditional</animation>
+  
+				<animation effect="zoom" start="100" end="6000,0" center="340,421" time="800" condition="System.IdleTime(13)">conditional</animation>
+			  <left>340</left>
+                <top>421</top>
+				  <width>10</width>
+				  <height>1</height>
+			<texture>mask_white90.png</texture>
+            </control>
+		
         <control type="group">
             <visible>Skin.HasSetting(originalcirrusclock)</visible>
             <left>20</left>
@@ -1234,6 +1450,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture>$INFO[Weather.Conditions]</texture>
             </control>
+		
         </control>
     </controls>
 </window>
