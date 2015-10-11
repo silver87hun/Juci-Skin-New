@@ -50,7 +50,7 @@
 				<fadetime>1000</fadetime>
 										<pauseatend>0</pauseatend>
 			<loop>true</loop>
-                <imagepath background="true">test</imagepath>
+                <imagepath background="true">test_light</imagepath>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
               <!--   <texture flipy="true">OSDbackground.png</texture> -->
                 <!-- flip y when up the top -->

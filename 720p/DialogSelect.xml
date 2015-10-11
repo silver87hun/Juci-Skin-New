@@ -2,6 +2,14 @@
 <window type="dialog" id="2000">
 <!--       <animation effect="slide" start="600,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
       <animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out">WindowClose</animation> -->
+	        <animation type="WindowOpen" reversible="false">
+        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
+        <effect type="fade" start="0" end="100" time="300" />
+      </animation>
+      <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
+        <effect type="fade" start="100" end="0" time="300" />
+      </animation>
   <defaultcontrol always="true">3</defaultcontrol>
   <coordinates>
     <system>1</system>
@@ -29,7 +37,7 @@
              	 <timeperimage>8000</timeperimage>
 				<randomize>true</randomize> 
 				 <fadetime>4000</fadetime>
-                  <imagepath background="true">test</imagepath>
+                  <imagepath background="true">test_light</imagepath>
             </control> 
 
  			    <control type="image">
@@ -42,7 +50,7 @@
     </control> 
 	<control type="group">
 	      <left>-420</left>
-	     <control type="label">
+	     <!-- <control type="label">
                 <description>time label</description>
                 <left>700</left>
                 <top>35</top>
@@ -51,13 +59,13 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>Breadcrumb-SubFolder</font>
-                <textcolor>white</textcolor>
+                <textcolor>black</textcolor>
                 <label> $INFO[System.Time] </label>
-            </control>
-    <control type="button">
+            </control> -->
+    <!-- <control type="button">
       <description>Close Window button</description>
-      <left>20</left>
-      <top>9</top>
+      <left>420</left>
+      <top>90</top>
       <width>64</width>
       <height>32</height>
       <label>-</label>
@@ -70,7 +78,7 @@
       <onup>10</onup>
       <ondown>10</ondown>
       <visible>system.getbool(input.enablemouse)</visible>
-    </control>
+    </control> -->
     <control type="label" id="1">
 <!-- 				<animation type="WindowOpen">
                         <effect type="fade" start="0" end="100" delay="300" tween="sine" easing="in" time="2300" />
@@ -81,25 +89,18 @@
                         <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
                     </animation> -->
       <description>header label</description>
-      <left>-280</left>
+      <left>200</left>
             <top>50</top>
             <width>0</width>
             <height>0</height>
-            <font>Breadcrumb-SubFolder</font>
+            <font>Charms-Date-Big2</font>
       <label>$LOCALIZE[13406]</label>
       <align>center</align>
       <aligny>center</aligny>
-      <textcolor>white</textcolor>
+      <textcolor>black</textcolor>
     </control>
     <control type="list" id="3">
-				<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="100" delay="300" tween="sine" easing="in" time="2300" />
-                        <effect type="slide" start="0" end="100" delay="500" tween="cubic" easing="out" time="1600" />
-                    </animation>
-									<animation type="WindowClose">
-                        <effect type="fade" start="100" end="0" delay="100" tween="sine" easing="in" time="500" />
-                        <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
-                    </animation>
+				
       <left>-100</left>
       <top>100</top>
       <width>1050</width>
@@ -121,20 +122,13 @@
           <aspectratio>stretch</aspectratio>
         </control>
         <control type="label">
-					<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="100" delay="300" tween="sine" easing="in" time="2300" />
-                        <effect type="slide" start="0" end="100" delay="500" tween="cubic" easing="out" time="1600" />
-                    </animation>
-									<animation type="WindowClose">
-                        <effect type="fade" start="100" end="0" delay="100" tween="sine" easing="in" time="500" />
-                        <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
-                    </animation>
+
           <left>20</left>
           <top>0</top>
           <width>1050</width>
           <height>50</height>
           <font>Charms-Date</font>
-          <textcolor>grey2</textcolor>
+          <textcolor>black</textcolor>
           <selectedcolor>selected</selectedcolor>
           <align>left</align>
           <aligny>center</aligny>
@@ -163,14 +157,7 @@
           <aspectratio>stretch</aspectratio>
         </control> -->
         <control type="label">
-					<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="100" delay="300" tween="sine" easing="in" time="2300" />
-                        <effect type="slide" start="0" end="100" delay="500" tween="cubic" easing="out" time="1600" />
-                    </animation>
-									<animation type="WindowClose">
-                        <effect type="fade" start="100" end="0" delay="100" tween="sine" easing="in" time="500" />
-                        <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
-                    </animation>
+
           <left>20</left>
           <top>0</top>
           <width>1050</width>
@@ -196,32 +183,36 @@
       <pagecontrol>61</pagecontrol>
       <scrolltime>200</scrolltime>
       <animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
+
       <itemlayout height="80" width="550">
+	  
         <control type="image">
           <left>0</left>
           <top>0</top>
           <width>1050</width>
           <height>81</height>
-          <texture border="0,2,0,2" flipx="true">menuitemNF.png</texture>
+          <texture border="0,2,0,2" flipx="true">-</texture>
           <aspectratio>stretch</aspectratio>
         </control>
         <control type="image">
+<!-- 		<animation effect="zoom" start="100" end="120" center="auto" time="100" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
           <left>0</left>
           <top>2</top>
           <width>120</width>
           <height>76</height>
           <texture>$INFO[Listitem.Icon]</texture>
-          <bordertexture border="3">black-back2.png</bordertexture>
+          <bordertexture border="6">-</bordertexture>
           <bordersize>2</bordersize>
           <aspectratio>keep</aspectratio>
         </control>
         <control type="label">
+		
           <left>130</left>
           <top>0</top>
           <width>410</width>
           <height>30</height>
           <font>Charms-Date</font>
-          <textcolor>grey</textcolor>
+          <textcolor>black</textcolor>
           <selectedcolor>selected</selectedcolor>
           <align>left</align>
           <aligny>center</aligny>
@@ -233,7 +224,7 @@
           <width>410</width>
           <height>50</height>
           <font>Charms-Date</font>
-          <textcolor>grey</textcolor>
+          <textcolor>black</textcolor>
           <selectedcolor>selected</selectedcolor>
           <align>left</align>
           <label>$INFO[ListItem.Label2]</label>
@@ -266,7 +257,7 @@
           <width>120</width>
           <height>76</height>
           <texture>$INFO[Listitem.Icon]</texture>
-          <bordertexture border="3">black-back2.png</bordertexture>
+          <bordertexture border="3">-</bordertexture>
           <bordersize>2</bordersize>
           <aspectratio>keep</aspectratio>
         </control>
@@ -304,7 +295,7 @@
                         <effect type="fade" start="100" end="0" delay="100" tween="sine" easing="in" time="500" />
                         <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
                     </animation>
-      <left>680</left>
+      <left>450</left>
       <top>100</top>
       <width>5</width>
       <height>550</height>
@@ -331,7 +322,7 @@
       <aligny>center</aligny>
       <scroll>true</scroll>
       <textcolor>grey</textcolor>
-      <label>([COLOR=accent]$INFO[Container(3).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=accent]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR])</label>
+      <label>([COLOR=grey]$INFO[Container(3).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=grey]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR])</label>
       <visible>Control.IsVisible(3)</visible>
     </control>
     <control type="label">

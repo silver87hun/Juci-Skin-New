@@ -4,16 +4,12 @@
 
         <!-- Background for horizontal menu -->
 
-        <control type="multiimage">
+        <control type="image">
             <left>0</left>
-            <top>423</top>
+            <top>313</top>
             <width>1280</width>
             <height>80</height>
-					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>4000</fadetime>
-                  <imagepath background="true">layer</imagepath>
+				<texture flipy="true">mask_black20.png</texture>	
                 <visible>!Skin.HasSetting(cleanHome) | !Skin.HasSetting(homeNoClock)</visible>
                 <visible>!Skin.HasSetting(themelighthorz)</visible>
                 <visible>!Skin.HasSetting(originalcirrusclock)</visible>
@@ -183,16 +179,13 @@
         </control>
         <!-- Background for low horizontal menu -->
 
-        <control type="multiimage">
+        <control type="image">
             <left>0</left>
             <top>100r</top>
             <width>1280</width>
             <height>105</height>
- 			 <visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>4000</fadetime>
-                  <imagepath background="true">layer</imagepath>			
+
+				<texture flipy="true">mask_black20.png</texture>				
             <visible>Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)</visible>
             <visible>!Skin.HasSetting(themelighthorz)</visible>
         </control>
@@ -371,8 +364,9 @@
 
         <!-- HORIZONTAL MAIN MENU -->
         <control type="wraplist" id="9000">
+		<animation effect="slide" start="0" end="0,500" time="200" condition="System.IdleTime(10)">conditional</animation>
             <left>0</left>
-            <top>320</top>
+            <top>280</top>
             <width>1280</width>
             <height>500</height>
             <onleft>9000</onleft>
@@ -409,7 +403,7 @@
             <itemlayout condition="Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>320</top>
+                    <top>370</top>
                     <width>430</width>
                     <height>40</height>
                     <font>Breadcrumb-SubFolder</font>
@@ -435,7 +429,7 @@
             <focusedlayout condition="Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>320</top>
+                    <top>370</top>
                     <width>430</width>
                     <height>40</height>
                     <font>Charms-Date-big</font>

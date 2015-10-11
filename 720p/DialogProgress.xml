@@ -34,7 +34,7 @@
              	 <timeperimage>8000</timeperimage>
 				<randomize>true</randomize> 
 				 <fadetime>4000</fadetime>
-                  <imagepath background="true">test</imagepath>
+                  <imagepath background="true">test_dark</imagepath>
             </control>
 
 			<control type="label" id="1">
@@ -79,10 +79,10 @@
 		            <control type="image">
                 <description>Busy animation</description>
                 <left>20</left>
-                <top>20</top>
+                <top>40</top>
                     <width>34</width>
                     <height>34</height>
-                    <texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/appearingsquares.gif">$INFO[Skin.String(busyloader)]</texture>
+                    <texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/fillingcircles.gif">$INFO[Skin.String(busyloader)]</texture>
                     <aspectratio>keep</aspectratio>
             </control>
 		</control>

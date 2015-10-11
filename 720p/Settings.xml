@@ -9,21 +9,51 @@
       <left>0</left>
       <top>0</top>
       <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
         <effect type="fade" start="0" end="100" time="300" />
       </animation>
       <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
         <effect type="fade" start="100" end="0" time="300" />
       </animation>
-      <control type="image">
+<!--       <control type="image">
         <left>-90</left>
         <top>0</top>
         <width>1920</width>
         <height>1080</height>
          <texture border="20">startup.jpg</texture>
-      </control>
-      <control type="image">
+      </control> -->
+	  
+	  	 <control type="image">
+
+
+		<left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+                <texture>black.jpeg</texture>
+            </control> 
+		 <control type="multiimage">
+
+
+                <!-- background -->
+		<left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+              <!--   <texture flipy="true">OSDbackground.png</texture> -->
+                <!-- flip y when up the top -->
+            </control>
+	  
+      <!-- <control type="image">
         <description>LOGO</description>
         <left>100</left>
         <top>30</top>
@@ -31,10 +61,10 @@
         <width>160</width>
         <height>160</height>
          <texture>JUCI_LOGO_1.png</texture>    
-		</control>
+		</control> -->
       <control type="list" id="9000">
-        <left>50</left>
-        <top>200</top>
+        <left>100</left>
+        <top>150</top>
         <width>260</width>
         <height>581</height>
         <onleft>9000</onleft>
@@ -57,30 +87,32 @@
             <top>0</top>
             <width>260</width>
             <height>56</height>
-            <font>cirrus_24</font>
-            <textcolor>grey2</textcolor>
-            <align>center</align>
+            <font>Charms-Date4</font>
+            <textcolor>black</textcolor>
+            <align>right</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
         <focusedlayout height="55" width="260">
-          <control type="image">
+<!--           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>260</width>
             <height>56</height>
             <texture border="5">Notification3.png</texture>
             <aspectratio>stretch</aspectratio>
-          </control>
+          </control> -->
           <control type="label">
+		  		  	<animation effect="zoom" start="100" end="110" center="-60,-80" time="300">WindowOpen</animation>
+<!-- 					            <animation effect="zoom" start="100" end="120" center="auto" time="100" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
             <left>0</left>
             <top>0</top>
             <width>260</width>
             <height>56</height>
-            <font>cirrus_24</font>
+            <font>Charms-Date4</font>
             <textcolor>white</textcolor>
-            <align>center</align>
+            <align>right</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
@@ -154,15 +186,15 @@
       <control type="label">
         <description>header label</description>
         <left>270</left>
-        <top>20</top>
+        <top>50</top>
         <width>735</width>
         <height>30</height>
-        <font>cirrus_30</font>
+        <font>Charms-Date-Big2</font>
         <label>$LOCALIZE[31000] $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
+        <textcolor>black</textcolor>
+
       </control>
       <control type="image">
         <left>270</left>
@@ -172,12 +204,13 @@
         <texture border="5">button-nofocus.png</texture>
       </control>
       <control type="image">
-        <left>270</left>
-        <top>62</top>
-        <width>799</width>
-        <height>446</height>
+        <left>600</left>
+        <top>300</top>
+        <width>550</width>
+        <height>246</height>
         <aspectratio>stretch</aspectratio>
-        <fadetime>600</fadetime>
+        <fadetime>10</fadetime>
+		<colordiffuse>black</colordiffuse>
         <texture background="true">$INFO[Container(9000).ListItem.Icon]</texture>
       </control>
       <control type="image">
@@ -191,18 +224,18 @@
       </control>
       <control type="textbox">
         <description>Appearance Description</description>
-        <left>290</left>
-        <top>80</top>
-        <width>700</width>
+        <left>690</left>
+        <top>180</top>
+        <width>500</width>
         <height>700</height>
-        <font>cirrus_20</font>
+        <font>Charms-Date</font>
         <label>$INFO[Container(9000).ListItem.Label2]</label>
-        <align>center</align>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
+        <align>left</align>
+        <textcolor>black</textcolor>
+
       </control>
     </control>
     <include>BehindDialogFadeOut</include>
-    <include>Clock</include>
+<!--     <include>Clock</include> -->
   </controls>
 </window>
