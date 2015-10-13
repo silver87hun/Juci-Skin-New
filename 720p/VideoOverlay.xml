@@ -2,5 +2,15 @@
 <window id="2904">
     <defaultcontrol>-</defaultcontrol>
     <controls>
+	        <control type="image">
+            <!-- darken the background a bit -->
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>720</height>
+            <aspectratio>stretch</aspectratio>
+            <texture>mask_black20.png</texture>
+            <!-- <visible>Skin.HasSetting(DimFanartonHome)</visible> -->
+        </control>
     </controls>
 </window>
