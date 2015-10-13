@@ -1166,17 +1166,18 @@
                 <left>900</left>
                 <top>30</top>
 				<control type="button" id="20">
+				<animation effect="zoom" start="100" end="140" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation>
                     <description>Power push button</description>
-                    <left>-670</left>
+                    <left>-700</left>
                     <top>50</top>
-                    <width>20</width>
-                    <height>20</height>
+                    <width>34</width>
+                    <height>34</height>
                     <label>-</label>
                     <font>-</font>
                     <aligny>-</aligny>
                     <onclick>ActivateWindow(ShutdownMenu)</onclick>
-                    <texturefocus>tophome\power_fo.png</texturefocus>
-                    <texturenofocus>tophome\power_no.png</texturenofocus>
+                    <texturefocus>power5.png</texturefocus>
+                    <texturenofocus>power51.png</texturenofocus>
                     <onleft>21</onleft>
                     <onright>25</onright>
                     <onup>9000</onup>
@@ -1184,24 +1185,25 @@
                     <visible>!Skin.HasSetting(cleanHome)</visible>
                 </control>
                 <control type="button" id="21">
+				<animation effect="zoom" start="100" end="140" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation>
                     <description>Favourites push button</description>
-                    <left>-700</left>
+                    <left>-650</left>
                     <top>50</top>
-                    <width>20</width>
-                    <height>20</height>
+                    <width>34</width>
+                    <height>34</height>
                     <label>-</label>
                     <font>-</font>
                     <aligny>-</aligny>
                     <onclick>ActivateWindow(Favourites)</onclick>
-                    <texturefocus>tophome\fav_w.png</texturefocus>
-                    <texturenofocus>tophome\fav_sz.png</texturenofocus>
+                     <texturefocus>favorite21.png</texturefocus>
+                    <texturenofocus>favorite211.png</texturenofocus>
                     <onleft>22</onleft>
                     <onright>20</onright>
                     <onup>9000</onup>
                     <ondown>9000</ondown>
                     <visible>!Skin.HasSetting(cleanHome)</visible>
                 </control>
-                  <control type="button" id="23">
+<!--                   <control type="button" id="23">
                     <description>Global Search</description>
                     <left>-640</left>
                     <top>50</top>
@@ -1219,7 +1221,7 @@
                     <ondown>9000</ondown>
                     <visible>System.HasAddon(script.globalsearch)</visible>
                     <visible>!Skin.HasSetting(cleanHome)</visible>
-                </control>
+                </control> -->
                 <control type="button" id="24">
                     <description>Player Controls</description>
                     <left>-800</left>
@@ -1321,8 +1323,8 @@
                 <width>1280</width>
                 <font>Home-Tile-Header</font>
                 <urlset>1</urlset>
-                <textcolor>accent</textcolor>
-                <titlecolor>accent</titlecolor>
+                <textcolor>grey</textcolor>
+                <titlecolor>grey2</titlecolor>
                 <headlinecolor>grey3</headlinecolor>
                 <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
             </control>

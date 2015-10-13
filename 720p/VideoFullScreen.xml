@@ -2,6 +2,10 @@
 <window id="2005">
     <defaultcontrol>-</defaultcontrol>
     <controls>
+
+
+
+	
         <!-- codec infos -->
         <control type="image">
             <description>media info background image</description>
@@ -38,5 +42,29 @@
             <font>font12</font>
             <include>VisibleFadeEffect</include>
         </control>
+
     </controls>
-</window>
+
+				<control type="image">
+			<animation effect="slide" start="0" end="0,-250" time="500" condition="Window.IsVisible(DialogSeekbar.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,-250" time="500" condition="Window.IsVisible(VidaoOSD.xml)">Conditional</animation>
+				 <left>0</left>
+				  <top>0</top>
+				  <width>1920</width>
+				  <height>500</height>
+                <texture>black.jpeg</texture>
+            </control>
+				<control type="multiimage">
+			<animation effect="slide" start="0" end="0,-250" time="500" condition="Window.IsVisible(DialogSeekbar.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,-250" time="500" condition="Window.IsVisible(VidaoOSD.xml)">Conditional</animation>
+				 <left>0</left>
+				  <top>0</top>
+				  <width>1920</width>
+				  <height>1080</height>
+					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+             	 <timeperimage>8000</timeperimage>
+				<randomize>true</randomize> 
+				 <fadetime>1000</fadetime>
+                  <imagepath background="true">test_light</imagepath>
+            </control>
+	</window>

@@ -8,9 +8,17 @@
     </coordinates>
     <controls>
         <control type="group">
+		 <animation type="WindowOpen" reversible="false">
+        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
+        <effect type="fade" start="0" end="100" time="300" />
+      </animation>
+      <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
+        <effect type="fade" start="100" end="0" time="300" />
+      </animation>
  <control type="group">	 
 	 <control type="image">
-							 	<animation effect="slide" start="0,-1000" end="0,0" tween="sine" time="1000">WindowOpen</animation>
+
 
 		<left>0</left>
         <top>0</top>
@@ -19,7 +27,7 @@
                 <texture>black.jpeg</texture>
             </control> 
 		 <control type="multiimage">
-		 	<animation effect="slide" start="0,-1000" end="0,0" tween="sine" time="1000">WindowOpen</animation>
+
 
                 <!-- background -->
 		<left>0</left>
@@ -32,7 +40,7 @@
 				<fadetime>1000</fadetime>
 										<pauseatend>0</pauseatend>
 			<loop>true</loop>
-                <imagepath background="true">test</imagepath>
+                <imagepath background="true">test_light</imagepath>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
               <!--   <texture flipy="true">OSDbackground.png</texture> -->
                 <!-- flip y when up the top -->
