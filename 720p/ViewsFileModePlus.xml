@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="CommonRootView">
+    <!-- BACKGROUND PANEL FOR LIST VIEW (not sure why this is here, but it works) -->
+    <control type="group">
+      <animation type="WindowOpen" reversible="false">
+        <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+        <effect type="fade" start="0" end="100" time="300" />
+      </animation>
+      <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+        <effect type="fade" start="100" end="0" time="300" />
+      </animation>
+      <include>Window_OpenClose_Animation</include>
+      <control type="group">
+        <include>VisibleFadeEffect</include>
+        <visible>Control.IsVisible(55)</visible>
+        <control type="image">
+          <left>0</left>
+          <top>120</top>
+          <width>1280</width>
+          <height>480</height>
+          <texture>-</texture>
+        </control>
+        <control type="image">
+          <left>0</left>
+          <top>120</top>
+          <width>1280</width>
+          <height>480</height>
+          <texture>-</texture>
+        </control>
+			  	 <control type="image">
+
+
+		<left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+                <texture>black.jpeg</texture>
+            </control> 
+		 <control type="multiimage">
+
+
+                <!-- background -->
+		<left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+              <!--   <texture flipy="true">OSDbackground.png</texture> -->
+                <!-- flip y when up the top -->
+            </control>
+		
+      </control>
+    </control>
+    <control type="group">
+      <animation type="WindowOpen" reversible="false">
+        <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+        <effect type="fade" start="0" end="100" time="300" />
+      </animation>
+      <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+        <effect type="fade" start="100" end="0" time="300" />
+      </animation>
+	   <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="150,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-150,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+      <visible>Control.IsVisible(55)</visible>
+      <include>VisibleFadeEffect</include>
+      <control type="list" id="55">
+        <left>60</left>
+        <top>100</top>
+        <width>700</width>
+        <height>550</height>
+        <onleft>2</onleft>
+        <onright>60</onright>
+        <onup>55</onup>
+        <ondown>55</ondown>
+        <viewtype label="535">list</viewtype>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="40">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>700</width>
+            <height>40</height>
+            <aligny>bottom</aligny>
+            <texture border="2,2,2,2" diffuse="rowdiffuse.png">-</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="label">
+            <left>0</left>
+            <top>0</top>
+            <width>500</width>
+            <height>40</height>
+            <font>FontSize_20</font>
+            <textcolor>black</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>480</left>
+            <top>0</top>
+            <width>190</width>
+            <height>40</height>
+            <font>FontSize_20</font>
+            <textcolor>black</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="[Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+          </control>
+          <control type="image">
+            <left>650</left>
+            <top>14</top>
+            <width>20</width>
+            <height>16</height>
+            <texture>$VAR[overlayIcon]</texture>
+					<colordiffuse>black</colordiffuse>
+            <aspectratio>keep</aspectratio>
+          </control>
+        </itemlayout>
+        <focusedlayout height="40">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>700</width>
+            <height>40</height>
+            <aligny>bottom</aligny>
+            <texture border="2,2,2,2" diffuse="rowdiffuse.png">-</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>700</width>
+            <height>40</height>
+            <aligny>bottom</aligny>
+            <texture>-</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="label">
+            <left>0</left>
+            <top>0</top>
+            <width>500</width>
+            <height>40</height>
+            <font>FontSize_20b</font>
+            <textcolor>black</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>480</left>
+            <top>0</top>
+            <width>190</width>
+            <height>40</height>
+            <font>FontSize_20</font>
+            <textcolor>black</textcolor>
+			<!-- <shadowcolor>black</shadowcolor> -->
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="[Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+          </control>
+          <control type="image">
+            <left>650</left>
+            <top>14</top>
+            <width>20</width>
+            <height>16</height>
+            <texture>$VAR[overlayIcon]</texture>
+					<colordiffuse>black</colordiffuse>
+            <aspectratio>keep</aspectratio>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="scrollbar" id="60">
+        <left>770</left>
+        <top>105</top>
+        <width>5</width>
+        <height>550</height>
+        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+        <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+        <textureslidernib>ScrollBarNib.png</textureslidernib>
+        <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+		<colordiffuse>black</colordiffuse>
+        <onleft>55</onleft>
+        <onright>ActivateWindow(1121)</onright>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <visible>Control.IsVisible(55)</visible>
+      </control>
+      <control type="group">
+        <left>850</left>
+        <top>100</top>
+        <visible>Control.IsVisible(55)</visible>
+        <control type="image">
+          <left>0</left>
+          <top>40</top>
+          <width>360</width>
+          <height>440</height>
+          <aspectratio aligny="center">keep</aspectratio>
+          <fadetime>IconCrossfadeTime</fadetime>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+          <bordertexture border="8">-</bordertexture>
+          <bordersize>8</bordersize>
+          <visible>!Container.Content(Genres)</visible>
+        </control>
+        <!-- GenreFanart Mod -->
+        <control type="image">
+          <left>0</left>
+          <top>40</top>
+          <width>360</width>
+          <height>440</height>
+          <aspectratio aligny="center">keep</aspectratio>
+          <fadetime>IconCrossfadeTime</fadetime>
+          <texture background="true" fallback="special://skin/extras/moviegenres/Unknown.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].png</texture>
+          <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+        </control>
+        <control type="image">
+          <left>0</left>
+          <top>40</top>
+          <width>360</width>
+          <height>440</height>
+          <aspectratio aligny="center">keep</aspectratio>
+          <fadetime>IconCrossfadeTime</fadetime>
+          <texture background="true" fallback="special://skin/media/musicgenres/default.png">special://skin/extras/musicgenres/$INFO[ListItem.Label].png</texture>
+          <visible>Container.Content(Genres) + Window.IsVisible(MusicLibrary)</visible>
+        </control>
+      </control>
+    </control>
+  </include>
+</includes>

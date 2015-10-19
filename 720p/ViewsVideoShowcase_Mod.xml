@@ -4,7 +4,14 @@
     <!-- ================================= Showcase VIEW ID 721 ================================ -->
     <!-- ====================== Movies, TV Shows, Seasons only ===================== -->
     <include name="ShowcaseMod">
-
+      <animation type="WindowOpen" reversible="false">
+        <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+        <effect type="fade" start="0" end="100" time="300" />
+      </animation>
+      <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+        <effect type="fade" start="100" end="0" time="300" />
+      </animation>
 
         <control type="group">
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
@@ -26,6 +33,9 @@
                 <texture>$INFO[ListItem.Art(discart)]</texture>
                 <visible>Skin.HasSetting(showmoviedvd)</visible>
             </control>
+			
+			
+			
         </control>
 
         <!-- Showcase Movie Bilder Mod Anfang -->
@@ -452,6 +462,7 @@
             <left>0</left>
             <top>100</top>
             <visible>Control.IsVisible(721) + !Window.IsVisible(VideoFiles) + Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
+			
             <control type="group">
                 <left>80</left>
                 <top>20</top>
@@ -466,6 +477,7 @@
                     <visible>Control.IsVisible(721)</visible>
 
                 </control>
+				
                 <!-- ende -->
                 <control type="fadelabel">
                     <left>230</left>

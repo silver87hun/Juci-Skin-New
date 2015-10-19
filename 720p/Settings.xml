@@ -9,13 +9,13 @@
       <left>0</left>
       <top>0</top>
       <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
+        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="400" />
         <effect type="fade" start="0" end="100" time="300" />
       </animation>
-      <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
+<!--       <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="400" />
         <effect type="fade" start="100" end="0" time="300" />
-      </animation>
+      </animation> -->
 <!--       <control type="image">
         <left>-90</left>
         <top>0</top>
@@ -89,7 +89,7 @@
             <height>56</height>
             <font>Charms-Date4</font>
             <textcolor>black</textcolor>
-            <align>right</align>
+            <align>left</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
@@ -112,7 +112,7 @@
             <height>56</height>
             <font>Charms-Date4</font>
             <textcolor>white</textcolor>
-            <align>right</align>
+            <align>left</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
@@ -204,12 +204,12 @@
         <texture border="5">button-nofocus.png</texture>
       </control>
       <control type="image">
-        <left>600</left>
-        <top>300</top>
-        <width>550</width>
-        <height>246</height>
+        <left>310</left>
+        <top>50</top>
+        <width>650</width>
+        <height>346</height>
         <aspectratio>stretch</aspectratio>
-        <fadetime>10</fadetime>
+        <fadetime>2</fadetime>
 		<colordiffuse>black</colordiffuse>
         <texture background="true">$INFO[Container(9000).ListItem.Icon]</texture>
       </control>
@@ -224,13 +224,13 @@
       </control>
       <control type="textbox">
         <description>Appearance Description</description>
-        <left>690</left>
-        <top>180</top>
+        <left>390</left>
+        <top>400</top>
         <width>500</width>
         <height>700</height>
         <font>Charms-Date</font>
         <label>$INFO[Container(9000).ListItem.Label2]</label>
-        <align>left</align>
+        <align>center</align>
         <textcolor>black</textcolor>
 
       </control>

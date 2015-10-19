@@ -55,8 +55,7 @@
                 <top>0</top>
                 <width>1280</width>
                 <height>720</height>
-                <imagepath background="true" fallback="special://skin/backgrounds/videos.jpg">test</imagepath>
-				<randomize>true</randomize>
+                <imagepath background="true" fallback="special://skin/backgrounds/videos.jpg">$VAR[FanartBackgrounds]</imagepath>
                 <timeperimage>8000</timeperimage>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <include>global_kenburns_fanart</include>
@@ -202,6 +201,7 @@
         <include>MusicWallView</include>
         <!-- view id = 525-->
         <include>CommonPageCount</include>
+
         <!-- ==================== VIEW OPTIONS FLYOUT MENU ========================== -->
         <!-- LABELS FOR MUSIC VIDEO BREADCRUMB TRAIL -->
         <control type="group">
@@ -213,7 +213,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[20389][/B]   $INFO[ListItem.label][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20389][/B]   $INFO[ListItem.label][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -227,7 +227,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[20343][/B]  $INFO[ListItem.TVShowTitle][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20343][/B]  $INFO[ListItem.TVShowTitle][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -240,7 +240,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[20342][/B][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20342][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -253,7 +253,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[135][/B][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[135][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -266,7 +266,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[652][/B][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[652][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -279,7 +279,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[344][/B][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[344][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -292,7 +292,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[20348][/B][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20348][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -305,7 +305,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   $LOCALIZE[31007][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   $LOCALIZE[31007][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -318,7 +318,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=white]$INFO[System.Time]   $LOCALIZE[31021][/COLOR]</label>
+                <label>[COLOR=black]$INFO[System.Time]   $LOCALIZE[31021][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -339,67 +339,52 @@
                 <visible>true</visible>
             </control>
             <!-- Menu background panel -->
-			            <control type="image">
+<!--             <control type="image">
                 <left>-820</left>
                 <top>0</top>
                 <width>820</width>
                 <height>720</height>
-                <texture>black.jpeg</texture>
+                <texture>progresswhite.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control> -->
+            <control type="image">
+                <left>-820</left>
+                <top>0</top>
+                <width>820</width>
+                <height>720</height>
+                <texture>mask_black20.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
-            <control type="multiimage">
-                <left>-820</left>
-                <top>0</top>
-                <width>820</width>
-                <height>720</height>
-				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>4000</fadetime>
-                  <imagepath background="true">test</imagepath>
-            </control>
-
-			<!-- JUCI LOGÓ -->
 <!--             <control type="image">
                 <left>-250</left>
-                <top>600</top>
-                <width>75</width>
-                <height>75</height>
-                <texture>juci_white.png</texture>
+                <top>650</top>
+                <width>160</width>
+                <height>40</height>
+                <texture>xbmc_logo_white.png</texture>
             </control> -->
             <!-- eye image and view options label at top of menu -->
             <control type="group">   
-                <left>-240</left>
-                <top>20</top>
+                <left>-260</left>
+                <top>50</top>
                 <control type="label">
                     <description>View options</description>
-                    <left>-30</left>
+                    <left>0</left>
                     <top>0</top>
                     <width>250</width>
                     <height>30</height>
-                    <font>Charms-Date4</font>
-                    <textcolor>white</textcolor>
-                    <scroll>false</scroll>
-                    <align>center</align>
+                    <font>FontSize_24</font>
+                    <textcolor>black</textcolor>
+<!--                     <shadowcolor>black</shadowcolor> -->
+                    <scroll>true</scroll>
+                    <align>left</align>
                     <aligny>center</aligny>
                     <label>$LOCALIZE[14018]</label>
                 </control>
-				
-				<control type="image" id="11">
-                    <description>separator image</description>
-                    <left>-30</left>
-                    <top>40</top>
-                    <width>250</width>
-                    <height>1</height>
-                    <colordiffuse>66FFFFFF</colordiffuse>
-                    <texture>separator2.png</texture>
-                </control>
-				
             </control>
             <!-- MENU ITEMS BELOW -->
             <control type="group" id="9000">
                 <left>-260</left>
-                <top>70</top>
+                <top>100</top>
                 <!-- <include>CommonNowPlaying</include> --> <!-- GET RID OF FROM INCLUDES? -->
                 <control type="button" id="2">
                     <description>View As button</description>
@@ -453,7 +438,7 @@
                         <include>ButtonCommonValues</include>
                         <label>653</label>
                         <altlabel>13353</altlabel>
-                       <alttexturefocus border="0" flipx="true">listwhitegradient.png</alttexturefocus>
+                        <alttexturefocus border="0" flipx="true">listwhitegradient.png</alttexturefocus>
                         <alttexturenofocus>-</alttexturenofocus>
                         <usealttexture>Library.IsScanningVideo</usealttexture>
                     </control>
