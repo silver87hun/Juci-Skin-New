@@ -346,13 +346,14 @@
         <width>250</width>
         <textoffsetx>10</textoffsetx>
         <textwidth>215</textwidth>
+        <aligny>left</aligny>
         <aligny>center</aligny>
-        <font>Clock-Detail</font>
-		        <textcolor>grey2</textcolor>
+        <font>FontSize_20</font>
+		<textcolor>black</textcolor>
 		<!-- Kijelölés -->
         <texturefocus border="0" flipx="true"></texturefocus>
-        <texturenofocus>-</texturenofocus>
-        <focusedcolor>white</focusedcolor>
+        <texturenofocus>black</texturenofocus>
+        <focusedcolor>grey2</focusedcolor>
         <pulseonselect>false</pulseonselect>
     </include>
     <include name="ButtonMediaSubCommonValues">
@@ -361,7 +362,7 @@
         <textoffsetx>10</textoffsetx>
         <textwidth>215</textwidth>
         <aligny>center</aligny>
-        <font>Clock-Detail</font>
+        <font>FontSize_18</font>
         <texturefocus border="0">button-backFO.png</texturefocus>
         <texturenofocus>-</texturenofocus>
         <focusedcolor>black</focusedcolor>

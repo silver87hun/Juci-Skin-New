@@ -3,11 +3,11 @@
 <!--       <animation effect="slide" start="600,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
       <animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out">WindowClose</animation> -->
 	        <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
+        <effect type="zoom" start="40" end="100" center="auto" easing="out" tween="back" time="300" />
         <effect type="fade" start="0" end="100" time="300" />
       </animation>
       <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
+        <effect type="zoom" start="100" end="40" center="auto" easing="in" tween="back" time="300" />
         <effect type="fade" start="100" end="0" time="300" />
       </animation>
   <defaultcontrol always="true">3</defaultcontrol>
@@ -36,7 +36,7 @@
 					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
              	 <timeperimage>8000</timeperimage>
 				<randomize>true</randomize> 
-				 <fadetime>4000</fadetime>
+				 <fadetime>1000</fadetime>
                   <imagepath background="true">test_light</imagepath>
             </control> 
 
@@ -49,7 +49,7 @@
       <texture border="10">mask_black50.png</texture>
     </control> 
 	<control type="group">
-	      <left>-420</left>
+	      <left>-300</left>
 	     <!-- <control type="label">
                 <description>time label</description>
                 <left>700</left>
@@ -89,11 +89,11 @@
                         <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
                     </animation> -->
       <description>header label</description>
-      <left>200</left>
+      <left>100</left>
             <top>50</top>
             <width>0</width>
             <height>0</height>
-            <font>Charms-Date-Big2</font>
+            <font>font30</font>
       <label>$LOCALIZE[13406]</label>
       <align>center</align>
       <aligny>center</aligny>
@@ -127,7 +127,7 @@
           <top>0</top>
           <width>1050</width>
           <height>50</height>
-          <font>Charms-Date</font>
+          <font>FontSize_20</font>
           <textcolor>black</textcolor>
           <selectedcolor>selected</selectedcolor>
           <align>left</align>
@@ -162,8 +162,8 @@
           <top>0</top>
           <width>1050</width>
           <height>50</height>
-          <font>Charms-Date</font>
-          <textcolor>white</textcolor>
+          <font>FontSize_28</font>
+          <textcolor>black</textcolor>
           <selectedcolor>selected</selectedcolor>
           <align>left</align>
           <aligny>center</aligny>
@@ -287,23 +287,16 @@
       </focusedlayout>
     </control>
     <control type="scrollbar" id="61">
-						<animation type="WindowOpen">
-                        <effect type="fade" start="0" end="100" delay="700" tween="sine" easing="in" time="2300" />
-                        <effect type="slide" start="0" end="100" delay="900" tween="cubic" easing="out" time="1600" />
-                    </animation>
-									<animation type="WindowClose">
-                        <effect type="fade" start="100" end="0" delay="100" tween="sine" easing="in" time="500" />
-                        <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
-                    </animation>
-      <left>450</left>
+      <left>500</left>
       <top>100</top>
-      <width>5</width>
+      <width>10</width>
       <height>550</height>
       <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
       <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
       <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
       <textureslidernib>ScrollBarNib.png</textureslidernib>
       <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+	  <colordiffuse>black</colordiffuse>
       <onleft>3</onleft>
       <onright>3</onright>
       <ondown>61</ondown>

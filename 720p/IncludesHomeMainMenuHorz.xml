@@ -393,20 +393,27 @@
                     <top>50</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>Breadcrumb-SubFolder</font>
+                    <font>FontSize_48</font>
                     <textcolor>grey3</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
-            </itemlayout>
+			<control type="image">
+                <left>60</left>
+                <top>360</top>
+                <width>50</width>
+                <height>50</height>
+                <texture></texture>
+            </control>
+            </itemlayout>			
             <itemlayout condition="Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
                     <top>370</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>Breadcrumb-SubFolder</font>
+                    <font>FontSize_48</font>
                     <textcolor>grey3</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -419,7 +426,7 @@
                     <top>50</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>Charms-Date-big</font>
+                    <font>FontSize_48</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -432,7 +439,7 @@
                     <top>370</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>Charms-Date-big</font>
+                    <font>FontSize_48</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
