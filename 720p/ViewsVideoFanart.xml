@@ -4,6 +4,11 @@
     <!-- ================================= FANART VIEW ID 508 ================================ -->
     <!-- ====================== Movies, TV Shows, Seasons, Episodes only ===================== -->
     <include name="Fanart">
+	
+	
+	
+	
+	
         <control type="image">
             <!-- darken the background a bit -->
             <left>0</left>
@@ -24,6 +29,11 @@
             <texture>rightlistbackground.png</texture>
             <visible>Control.IsVisible(508)</visible>
         </control>
+		
+		
+		
+		
+		
         <control type="group">
             <visible>Control.IsVisible(508)</visible>
             <animation type="WindowOpen" reversible="false">
@@ -211,7 +221,7 @@
                 <top>-10</top>
                 <width>1480</width>
                 <height>400</height>
-                <texture>videoinfoback.png</texture>
+                <texture>-</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="group">

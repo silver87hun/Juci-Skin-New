@@ -96,7 +96,7 @@
         <top>50</top>
         <width>740</width>
         <height>30</height>
-        <font>Charms-Date-Big2</font>
+        <font>FontSize_28</font>
         <label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
@@ -122,7 +122,7 @@
         <top>100</top>
         <width>750</width>
         <height>85</height>
-        <font>Charms-Date</font>
+        <font>FontSize_24</font>
         <align>center</align>
         <textcolor>black</textcolor>
         <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
@@ -147,12 +147,12 @@
     <control type="button" id="10">
              <!-- <animation effect="zoom" start="100" end="110" center="auto" time="100" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
       <description>Default Category Button</description>
-      <height>60</height>
-      <width>260</width>
+	  <height>60</height>
+      <width>280</width>
       <textoffsetx>20</textoffsetx>
-      <align>right</align>
+      <align>left</align>
       <aligny>center</aligny>
-      <font>Charms-Date4</font>
+      <font>FontSize_20</font>
       <textcolor>black</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="5">-</texturefocus>
@@ -164,7 +164,7 @@
       <left>0</left>
       <top>0</top>
       <height>40</height>
-      <font>Charms-Date</font>
+      <font>FontSize_20</font>
       <textcolor>black</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2" flipx="true">progressblack.png</texturefocus>
@@ -176,7 +176,7 @@
       <left>0</left>
       <top>0</top>
       <height>40</height>
-      <font>Charms-Date</font>
+      <font>FontSize_20</font>
       <textcolor>black</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2" flipx="true">-</texturefocus>
@@ -187,7 +187,7 @@
       <left>0</left>
       <top>0</top>
       <height>40</height>
-      <font>Charms-Date</font>
+      <font>FontSize_20</font>
       <textcolor>black</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2" flipx="true">-</texturefocus>
@@ -201,7 +201,7 @@
       <left>0</left>
       <top>0</top>
       <height>40</height>
-      <font>Charms-Date</font>
+      <font>FontSize_20</font>
       <textcolor>black</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -238,6 +238,10 @@
         <texturefocus>-</texturefocus>
         <visible>true</visible>
       </control>
+	  
+	  <focusedlayout height="40">
+	  
+	  </focusedlayout>
       <!-- Menu background panel -->
 <!--       <control type="image">
         <left>-820</left>

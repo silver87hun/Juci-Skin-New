@@ -87,7 +87,7 @@
             <top>0</top>
             <width>260</width>
             <height>56</height>
-            <font>Charms-Date4</font>
+            <font>FontSize_20</font>
             <textcolor>black</textcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -110,8 +110,8 @@
             <top>0</top>
             <width>260</width>
             <height>56</height>
-            <font>Charms-Date4</font>
-            <textcolor>white</textcolor>
+            <font>FontSize_20b</font>
+            <textcolor>black</textcolor>
             <align>left</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
@@ -189,7 +189,7 @@
         <top>50</top>
         <width>735</width>
         <height>30</height>
-        <font>Charms-Date-Big2</font>
+        <font>FontSize_28</font>
         <label>$LOCALIZE[31000] $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
@@ -228,7 +228,7 @@
         <top>400</top>
         <width>500</width>
         <height>700</height>
-        <font>Charms-Date</font>
+        <font>FontSize_22</font>
         <label>$INFO[Container(9000).ListItem.Label2]</label>
         <align>center</align>
         <textcolor>black</textcolor>

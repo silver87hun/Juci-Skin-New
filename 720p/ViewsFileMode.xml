@@ -29,35 +29,7 @@
           <height>480</height>
           <texture>-</texture>
         </control>
-			  	 <control type="image">
-
-
-		<left>0</left>
-        <top>0</top>
-        <width>1920</width>
-        <height>1080</height>
-                <texture>black.jpeg</texture>
-            </control> 
-		 <control type="multiimage">
-
-
-                <!-- background -->
-		<left>0</left>
-        <top>0</top>
-        <width>1920</width>
-        <height>1080</height>
-                <aspectratio>stretch</aspectratio>
-				<timeperimage>16000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
-										<pauseatend>0</pauseatend>
-			<loop>true</loop>
-                <imagepath background="true">test_light</imagepath>
-				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-              <!--   <texture flipy="true">OSDbackground.png</texture> -->
-                <!-- flip y when up the top -->
-            </control>
-		
+			  	 
       </control>
     </control>
     <control type="group">

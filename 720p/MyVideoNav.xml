@@ -11,6 +11,30 @@
         <include>CommonVideoBackground</include>
         <!-- FANART IMAGES Mod  -->
         <control type="group">
+		
+		
+		
+		 <control type="multiimage">
+
+
+                <!-- background -->
+		<left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+              <!--   <texture flipy="true">OSDbackground.png</texture> -->
+                <!-- flip y when up the top -->
+            </control>
+		
+		
             <control type="image">
                 <left>0</left>
                 <top>0</top>
@@ -50,6 +74,9 @@
                 <visible>Container.Content(Movies)</visible>
                 <visible>Skin.HasSetting(VideoLibraryBlackFanart)</visible>
             </control>
+			
+			
+			
             <control type="multiimage">
                 <left>0</left>
                 <top>0</top>
@@ -74,7 +101,7 @@
             </control>
             <!-- ExtraFanart Mod -->
             <include condition="System.HasAddon(script.toolbox)">NodeFadeLabels</include>
-            <control type="multiimage">
+<!--             <control type="multiimage">
                 <left>0</left>
                 <top>0</top>
                 <width>1280</width>
@@ -85,7 +112,12 @@
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <include>global_kenburns_fanart</include>
                 <visible>!Stringcompare(ListItem.Label,..) + [Skin.HasSetting(ExtraFanMovies) + Container.Content(Movies)] | [Skin.HasSetting(ExtraFanTV) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]]</visible>
-            </control>
+            </control> -->
+			
+			
+			
+			
+			
             <control type="multiimage">
                 <left>0</left>
                 <top>0</top>

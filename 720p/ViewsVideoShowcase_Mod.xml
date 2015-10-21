@@ -4,6 +4,7 @@
     <!-- ================================= Showcase VIEW ID 721 ================================ -->
     <!-- ====================== Movies, TV Shows, Seasons only ===================== -->
     <include name="ShowcaseMod">
+	
       <animation type="WindowOpen" reversible="false">
         <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
         <effect type="fade" start="0" end="100" time="300" />
@@ -14,6 +15,7 @@
       </animation>
 
         <control type="group">
+		
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
             <animation effect="slide" start="0,0" end="0,-100" time="500" delay="2000" reversible="false">Visible</animation>
             <animation effect="slide" time="300" tween="circle" easing="out" start="0,0" end="0,0">WindowOpen</animation>
@@ -39,7 +41,12 @@
         </control>
 
         <!-- Showcase Movie Bilder Mod Anfang -->
-
+  <control type="group">
+  			   <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="150,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-150,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+ 
         <control type="image">
             <!-- Movies und Sets Plot Back -->
             <left>295</left>
@@ -47,7 +54,7 @@
             <width>490</width>
             <height>320</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_einer_plot.png</texture>
+            <texture>-</texture>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(Movies)</visible>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
@@ -63,7 +70,7 @@
             <width>400</width>
             <height>260</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_einer_plot.png</texture>
+            <texture>-</texture>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(TVShows)</visible>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
@@ -79,7 +86,7 @@
             <width>400</width>
             <height>260</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_einer_plot.png</texture>
+            <texture>-</texture>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(Seasons)</visible>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
@@ -95,7 +102,7 @@
             <width>200</width>
             <height>360</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_zweier.png</texture>
+            <texture>-</texture>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious</visible>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="900" delay="900" reversible="false">Visible</animation>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="900" delay="900" reversible="false">WindowOpen</animation>
@@ -110,7 +117,7 @@
             <width>211</width>
             <height>383</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_zweier_links.png</texture>
+            <texture>-</texture>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(Movies)</visible>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">Visible</animation>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">WindowOpen</animation>
@@ -120,12 +127,13 @@
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
         </control>
 
-        <control type="image">
-            <!-- Fenster rechts oben -->
-            <left>1060</left>
+	    <!-- Fanart -->
+        <!-- <control type="image">
+
+            <left>160</left>
             <top>75</top>
-            <width>190</width>
-            <height>108</height>
+            <width>390</width>
+            <height>238</height>
             <aspectratio>stretch</aspectratio>
             <fadetime>FanartCrossfadeTime</fadetime>
             <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
@@ -135,51 +143,50 @@
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="900" delay="900" reversible="false">WindowOpen</animation>
             <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
             <visible>Control.IsVisible(721)</visible>
-        </control>
+        </control> -->
         <control type="image"> 
             <left>880</left>
             <top>-10</top>
             <width>200</width>
             <height>260</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_einer.png</texture>
+            <texture>-</texture>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(Movies)</visible>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">Visible</animation>
             <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">WindowOpen</animation>
             <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
             <visible>Control.IsVisible(721)</visible>
         </control>
-        <!-- Extrathumbs für Movies -->
+        <!-- 2 alsó fanart movie -->
         <control type="multiimage">
-            <left>75</left>
-            <top>90</top>
+<!-- 			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation> -->
+			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
+
+            <left>300</left>
+            <top>350</top>
             <width>185</width>
             <height>95</height>
             <aspectratio>stretch</aspectratio>
             <fadetime>FanartCrossfadeTime</fadetime>
             <imagepath background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</imagepath>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious</visible>
-            <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">Visible</animation>
-            <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-            <visible>Control.IsVisible(721)</visible>
+             <visible>Control.IsVisible(721)</visible>
             <visible>!Skin.HasSetting(VideoLibraryMovieExtrathumbs)</visible>
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
         </control>
         <control type="multiimage">
-            <left>43</left>
-            <top>270</top>
+<!-- 			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation> -->
+			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
+
+            <left>80</left>
+            <top>350</top>
             <width>185</width>
             <height>93</height>
             <aspectratio>stretch</aspectratio>
             <fadetime>FanartCrossfadeTime</fadetime>
             <imagepath background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</imagepath>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious</visible>
-            <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">Visible</animation>
-            <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-            <animation effect="rotate" time="0" delay="0" start="0" end="7" condition="true">Conditional</animation>
-            <visible>Control.IsVisible(721)</visible>
+             <visible>Control.IsVisible(721)</visible>
             <visible>!Skin.HasSetting(VideoLibraryMovieExtrathumbs)</visible>
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
         </control> 
@@ -193,7 +200,7 @@
             <width>360</width>
             <height>360</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_trailer.png</texture>
+            <texture>-</texture>
             <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
             <visible>Control.IsVisible(721)</visible>
             <visible>Player.HasVideo + Skin.HasSetting(videowindowglobal)</visible>
@@ -204,7 +211,7 @@
             <width>150</width>
             <height>150</height>
             <aspectratio>stretch</aspectratio>
-            <texture>Showcase_logo.png</texture>
+            <texture>-</texture>
             <visible>!Container(721).OnNext + !Container(721).OnPrevious + !Container.Content(Movies)</visible>
             <animation effect="fade" start="0" end="100" easing="out" time="1200" delay="1100" reversible="false">Visible</animation>
             <animation effect="fade" start="0" end="100" easing="out" time="1200" delay="1100" reversible="false">WindowOpen</animation>
@@ -212,9 +219,32 @@
             <visible>Control.IsVisible(721)</visible>
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
         </control>
+</control>
+	                <control type="image">
+		  <animation effect="zoom" start="100" end="0" time="400" center="auto" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  
+ 
+                    <description>Movie Logo Mirror</description>
+<!-- 					<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation> -->
+					<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
+                    <left>730</left>
+                    <top>290</top>
+                    <width>550</width>
+                    <height>420</height>
+					<colordiffuse>5FFFFFFF</colordiffuse>
+                    <texture flipy="true">$INFO[ListItem.Art(clearart)]</texture>
 
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <visible>Container.Content(Movies)</visible>
+                    <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
+                    <visible>Control.IsVisible(721)</visible>
+                </control>
         <!-- Showcase Movie Bilder Mod Ende -->
         <control type="group">
+			   <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="215,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-150,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
             <visible>Control.IsVisible(721)</visible>
             <animation type="WindowOpen" reversible="false">
                 <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
@@ -226,11 +256,12 @@
             </animation> 
             <left>0</left>
             <top>510</top>
+			
             <control type="fixedlist" id="721">
                 <visible>Container.Content(Movies) | Window.IsVisible(VideoFiles) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
-                <left>-20</left>
-                <top>-250</top>
-                <width>1600</width>
+                <left>0</left>
+                <top>-180</top>
+                <width>1300</width>
                 <height>400</height>
                 <onleft>721</onleft>
                 <onright>721</onright>
@@ -251,20 +282,21 @@
                         <height>175</height>
                         <aspectratio>stretch</aspectratio>
                         <texture background="true">$INFO[ListItem.Icon]</texture>
-                        <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+                        <bordertexture border="6">-</bordertexture>
                         <bordersize>6</bordersize>
                     </control>
-                    <control type="image">
+					<!-- Cover tükrkép -->
+<!--                     <control type="image">
                         <left>-26</left>
                         <top>332</top>
                         <width>120</width>
                         <height>175</height>
                         <aspectratio>stretch</aspectratio>
                         <texture background="true" flipy="true">$INFO[ListItem.Icon]</texture>
-                        <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+                        <bordertexture border="6">-</bordertexture>
                         <bordersize>6</bordersize>
                         <colordiffuse>ff444444</colordiffuse>
-                    </control>
+                    </control> -->
                 </itemlayout>
                 <focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows)" height="310" width="120">
                     <control type="group">
@@ -279,24 +311,23 @@
                             <width>145</width>
                             <height>200</height>
                             <aspectratio>stretch</aspectratio>
-                            <texture>black-back.png</texture>
-                            <bordertexture>ContentPanelvertical.png</bordertexture>
+                            <texture>-</texture>
+                            <bordertexture>-</bordertexture>
                             <bordersize>6</bordersize>
                         </control>
 
-                        <control type="image">
-                            <!-- großes Cover Spiegel -->
+<!--                         <control type="image">
                             <left>-35</left>
-                            <top>310</top>
+                            <top>300</top>
                             <width>145</width>
                             <height>200</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>black-back.png</texture>
                             <texture background="true" flipy="true">$INFO[ListItem.Icon]</texture>
-                            <bordertexture>ContentPanelvertical.png</bordertexture>
+                            <bordertexture>-</bordertexture>
                             <bordersize>6</bordersize>
                             <colordiffuse>ff444444</colordiffuse>
-                        </control>
+                        </control> -->
                         <control type="image">
                             <left>-35</left>
                             <top>110</top>
@@ -307,8 +338,8 @@
                             <bordersize>6</bordersize>
                         </control>
 
-                        <control type="image">
-                            <!-- großes Cover Spiegel -->
+						<!-- Kijelőlt tükörképe -->
+                       <!--  <control type="image">
                             <left>-35</left>
                             <top>310</top>
                             <width>145</width>
@@ -317,10 +348,9 @@
                             <texture background="true" flipy="true">$INFO[ListItem.Icon]</texture>
                             <bordersize>6</bordersize>
                             <colordiffuse>ff444444</colordiffuse>
-                        </control>
+                        </control> -->
 
                         <control type="image">
-                            <!-- Gesehen großes Cover -->
                             <left>85</left>
                             <top>285</top>
                             <width>35</width>
@@ -369,6 +399,7 @@
                         <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$VAR[overlayIcon]</texture>
+						
                         <visible>Skin.HasSetting(originalwatched)</visible>
                     </control>
                 </itemlayout>
@@ -427,6 +458,7 @@
                             <height>20</height>
                             <aspectratio>keep</aspectratio>
                             <texture>$VAR[overlayIcon]</texture>
+							
                             <visible>Skin.HasSetting(originalwatched)</visible>
                         </control>
                     </control>
@@ -434,13 +466,14 @@
             </control>
 
             <control type="scrollbar" id="60">
-                <left>-10</left>
-                <top>110</top>
-                <width>1300</width>
-                <height>35</height>
+                <left>100</left>
+                <top>150</top>
+                <width>1100</width>
+                <height>5</height>
                 <texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
                 <textureslidernib>ScrollBarV.png</textureslidernib>
                 <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
+				<colordiffuse>black</colordiffuse>
                 <onup>2</onup>
                 <ondown>508</ondown>
                 <showonepage>false</showonepage>
@@ -450,15 +483,7 @@
         </control>
 
         <!-- WHEN INFO IS NOT HIDDEN MOVIES -->
-        <control type="group">
-            <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
-                <effect type="fade" start="0" end="100" time="300"/>
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
-                <effect type="fade" start="100" end="0" time="300"/>
-            </animation> 
+        <control type="group"> 
             <left>0</left>
             <top>100</top>
             <visible>Control.IsVisible(721) + !Window.IsVisible(VideoFiles) + Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
@@ -473,24 +498,49 @@
                     <width>1280</width>
                     <height>720</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture>slide_schatten.png</texture>
+                    <texture>-</texture>
                     <visible>Control.IsVisible(721)</visible>
 
                 </control>
 				
-                <!-- ende -->
+                <!-- Film title cím -->
                 <control type="fadelabel">
-                    <left>230</left>
-                    <top>-37</top>
-                    <width>455</width>
+				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+<!-- 				<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation>
+			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation> -->
+                    <left>0</left>
+                    <top>-67</top>
+                    <width>550</width>
                     <height>30</height>
-                    <font>cirrus_26</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <font>FontSize_28b</font>
+                    <textcolor>black</textcolor>
                     <scroll>true</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Title]</label>
+                    <scrollout>false</scrollout>
+                    <pauseatend>2000</pauseatend>
+                    <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
+                    <visible>Control.IsVisible(721)</visible>
+                    <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
+                </control>
+				
+				                <control type="fadelabel">
+				<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation>
+			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
+                    <left>0</left>
+                    <top>-27</top>
+                    <width>550</width>
+                    <height>30</height>
+                    <font>FontSize_28b</font>
+                    <textcolor>black</textcolor>
+                    <scroll>true</scroll>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[Container(8000).ListItem.Title2]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                     <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
@@ -500,17 +550,22 @@
                     <visible>Control.IsVisible(721)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                 </control>
+				<!-- film idő -->
                 <control type="fadelabel">
-                    <left>465</left>
-                    <top>548</top>
+				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+                    <left>0</left>
+                    <top>-20</top>
                     <width>170</width>
                     <height>30</height>
-                    <font>cirrus_24</font>
-                    <textcolor>white</textcolor>
+                    <font>font13</font>
+                    <textcolor>black</textcolor>
                     <scroll>true</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+                    <label>[COLOR=black]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                     <visible>!ListItem.IsFolder</visible>
@@ -529,7 +584,7 @@
                     <colordiffuse>accent</colordiffuse>
                 </control>
 
-                <control type="label">
+				<control type="label">
                     <!-- Top250IMDB Mod 1.2 -->
                     <description>top250</description>
                     <left>348</left>
@@ -544,36 +599,41 @@
                 </control>
 
                 <control type="textbox">
+				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
                     <!-- Plotoutline Mod -->
                     <description>Movie Plot</description>
-                    <left>230</left>
-                    <top>-2</top>
-                    <width>459</width>
-                    <height>160</height>
-                    <font>cirrus_16</font>
+                    <left>0</left>
+                    <top>80</top>
+                    <width>600</width>
+                    <height>120</height>
+                    <font>font12</font>
                     <align>justify</align>
-                    <textcolor>white</textcolor>
+                    <textcolor>black</textcolor>
                     <label>$INFO[ListItem.Plot]</label>
                     <align>justify</align>
+					 <autoscroll time="3000" delay="1000" repeat="5000">true</autoscroll>
                     <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-                    <visible>!Container(721).OnNext + !Container(721).OnPrevious</visible>
-                    <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-                    <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+<!--                     <visible>!Container(721).OnNext + !Container(721).OnPrevious</visible>
+			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation> -->
+			<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
                     <visible>Control.IsVisible(721)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                 </control>
-                <control type="textbox">
+<!--                 <control type="textbox">
                     <description>Movie PlotOutline</description>
-                    <left>230</left>
-                    <top>-2</top>
-                    <width>459</width>
-                    <height>160</height>
-                    <font>cirrus_16</font>
+                    <left>0</left>
+                    <top>130</top>
+                    <width>490</width>
+                    <height>110</height>
+                    <font>FontSize_20</font>
                     <align>justify</align>
-                    <textcolor>white</textcolor>
+                    <textcolor>black</textcolor>
                     <label>$INFO[ListItem.Plot]</label>
                     <align>justify</align>
+					<autoscroll time="3000" delay="1000" repeat="5000">true</autoscroll>
                     <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
                     <visible>!Container(721).OnNext + !Container(721).OnPrevious</visible>
                     <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
@@ -581,9 +641,13 @@
                     <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
                     <visible>Control.IsVisible(721)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
-                </control>
+                </control> -->
             </control>		
             <control type="group">
+			  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="150,-75" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-150,75" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
                 <left>-60</left>
 
                 <control type="videowindow" id="8">
@@ -615,25 +679,26 @@
                     <visible>Control.IsVisible(721)</visible>
                     <visible>!Skin.HasSetting(videonotitle)</visible>
                 </control>
+				<!-- Film studio -->
                 <control type="image">
+				
                     <width>150</width>
-                    <height>75</height>
-                    <left>967</left>
-                    <top>50</top>
+                    <height>60</height>
+                    <left>300</left>
+                    <top>-10</top>
                     <aspectratio align="center">keep</aspectratio>
-                    <texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+                    <texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
                     <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
-                    <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="900" delay="900" reversible="false">Visible</animation>
-                    <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="900" delay="900" reversible="false">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<colordiffuse>black</colordiffuse>
                     <visible>Control.IsVisible(721)</visible>
                 </control>
-
-                <control type="image">
-                    <!-- Movie Logo -->
+				
+				    <!--  <control type="image">
+					<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation>
+					<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
                     <description>Movie Logo</description>
-                    <left>1135</left>
-                    <top>-50</top>
+                    <left>135</left>
+                    <top>-80</top>
                     <width>180</width>
                     <height>120</height>
 
@@ -641,12 +706,48 @@
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <visible>Container.Content(Movies)</visible>
                     <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
-                    <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="900" delay="900" reversible="false">Visible</animation>
-                    <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="900" delay="900" reversible="false">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-                    <animation effect="rotate" time="0" delay="0" start="0" end="-8" condition="true">Conditional</animation>
+
+                    <visible>Control.IsVisible(721)</visible>
+                </control> -->
+
+                <control type="image">
+				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="50,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-50,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+                    <!-- Movie Logo -->
+                    <description>Movie Logo</description>
+                    <left>790</left>
+                    <top>-120</top>
+                    <width>550</width>
+                    <height>420</height>
+					<!-- <animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation> -->
+					<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
+                    <texture>$INFO[ListItem.Art(clearart)]</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <visible>Container.Content(Movies)</visible>
+                    <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
+
                     <visible>Control.IsVisible(721)</visible>
                 </control>
+
+	<!-- 			
+				                <control type="image">
+                    <description>Movie Logo</description>
+                    <left>635</left>
+                    <top>50</top>
+                    <width>450</width>
+                    <height>300</height>
+
+                    <texture>$INFO[ListItem.Art(characterart)]</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <visible>Container.Content(Movies)</visible>
+                    <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
+					<visible>Skin.HasSetting(EnableFileSysArt) | !IsEmpty(ListItem.Art(clearart)) | !IsEmpty(ListItem.Art(characterart)) | !IsEmpty(ListItem.Art(tvshow.clearart)) | !IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+                    <visible>Control.IsVisible(721)</visible>
+                </control> -->
+				
+				
                 <control type="label">
                     <description>Movie Set Genre</description>
                     <left>1145</left>
@@ -681,9 +782,13 @@
                 </control>
             </control>
             <control type="grouplist">
+			  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="200,-70" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-200,70" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
                 <description>MPAA Rating Flagging Images</description>
-                <left>920</left>
-                <top>567</top>
+                <left>250</left>
+                <top>50</top>
                 <width>145</width>
                 <align>left</align>
                 <itemgap>0</itemgap>
@@ -691,41 +796,53 @@
                 <include>NewVideoMPAAFlaggingConditions</include>
                 <visible>!ListItem.IsFolder</visible>
             </control>
-            <control type="image">
+<!--             <control type="image">
                 <description>Rating value</description>
-                <left>1085</left>
-                <top>566</top>
+                <left>80</left>
+                <top>110</top>
                 <align>left</align>
                 <width>180</width>
                 <height>35</height>
+				<colordiffuse>black</colordiffuse>
                 <texture>$INFO[Listitem.StarRating]</texture>
                 <visible>!ListItem.IsFolder</visible>
-            </control>
+            </control> 
+			
+			<!-- Film IMDB -->
             <control type="label">
+			  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="230,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-230,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
                 <description>Rating value</description>
-                <left>860</left>
-                <top>568</top>
+                <left>155</left>
+                <top>50</top>
                 <width>183</width>
                 <height>25</height>
-                <textcolor>white</textcolor>
-                <font>cirrus_30_Bold</font>
+                <textcolor>black</textcolor>
+                <font>font13</font>
                 <align>left</align>
                 <label>$INFO[Listitem.Rating]</label>
                 <colordiffuse>black</colordiffuse>
                 <visible>!IsEmpty(ListItem.Thumb)</visible> 
             </control>
             <control type="image">
-                <width>84</width>
+			  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+		  <animation effect="slide" start="0,0" end="260,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+		  <animation effect="slide" start="0,0" end="-260,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
+                <width>460</width>
                 <height>31</height>
-                <left>770</left>
-                <top>568</top>
+                <left>-115</left>
+                <top>50</top>
                 <aspectratio align="center">keep</aspectratio>
                 <texture>imdb-logo.png</texture>
                 <visible>!ListItem.IsFolder + !IsEmpty(Listitem.Rating)</visible>
             </control>
-            <control type="image">
+			
+			<!-- Film Trailer kép -->
+<!--             <control type="image">
                 <left>525</left>
-
                 <top>270</top>
                 <width>91</width>
                 <height>91</height>
@@ -740,7 +857,7 @@
                 <visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                 <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                 <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
-            </control>
+            </control> -->
         </control>
 
         <!-- Movie Sets Mod Anfang -->

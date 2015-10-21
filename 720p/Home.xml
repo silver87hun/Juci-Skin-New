@@ -306,7 +306,7 @@
             <top>450</top>
             <width>300</width>
             <height>170</height>
-            <texture background="true">$INFO[Container(8000).ListItem.Art(clearlogo)]</texture>
+            <texture background="true">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
             <fadetime>600</fadetime>
             <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
