@@ -64,8 +64,8 @@
         <value condition="Skin.HasSetting(homepageRandomFanart)">$INFO[Control.GetLabel(4324)]</value>
     </variable>
     <variable name="NextAired">
-        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))+!IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=accent]$LOCALIZE[31062] [/COLOR][COLOR=white]$INFO[Window(Home).Property(NextAired.NextDate)][/COLOR]</value>
-        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))+IsEmpty(Window(Home).Property(NextAired.NextDate))+!IsEmpty(Window(Home).Property(NextAired.Status))">[COLOR=accent]$LOCALIZE[31009] [/COLOR][COLOR=white]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</value>
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))+!IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=black]$LOCALIZE[31062] [/COLOR][COLOR=black]$INFO[Window(Home).Property(NextAired.NextDate)][/COLOR]</value>
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))+IsEmpty(Window(Home).Property(NextAired.NextDate))+!IsEmpty(Window(Home).Property(NextAired.Status))">[COLOR=black]$LOCALIZE[31009] [/COLOR][COLOR=black]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</value>
     </variable>
     <variable name="FlagColor">
         <value condition="Skin.HasSetting(newFlags)">FFb88a00</value>
