@@ -71,6 +71,55 @@
         <visible>VideoPlayer.Content(Movies)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
+	  
+	        <control type="image">
+        <description>Movie cover image</description>
+        <left>244</left>
+        <top>260</top>
+        <width>160</width>
+        <height>240</height>
+        <fadetime>200</fadetime>
+        <animation effect="fade" time="900">VisibleChange</animation>
+        <texture background="true">$INFO[VideoPlayer.Cover]</texture>
+        <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+        <bordersize>6</bordersize>
+        <aspectratio aligny="bottom">stretch</aspectratio>
+		        <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+        <visible>!VideoPlayer.Content(episodes)</visible>
+      </control>
+	  
+	        <control type="image">
+        <description>Movie cover image</description>
+        <left>244</left>
+        <top>260</top>
+        <width>160</width>
+        <height>240</height>
+        <fadetime>200</fadetime>
+        <animation effect="fade" time="900">VisibleChange</animation>
+        <texture background="true">$INFO[Player.Art(thumb)]</texture>
+        <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+        <bordersize>6</bordersize>
+        <aspectratio aligny="bottom">stretch</aspectratio>
+		        <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+        <visible>!VideoPlayer.Content(episodes)</visible>
+      </control>
+	  
+	  	        <control type="image">
+        <description>Movie cover image</description>
+        <left>244</left>
+        <top>260</top>
+        <width>160</width>
+        <height>240</height>
+        <fadetime>200</fadetime>
+        <animation effect="fade" time="900">VisibleChange</animation>
+        <texture background="true">ListItem.Art(poster)</texture>
+        <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+        <bordersize>6</bordersize>
+        <aspectratio aligny="bottom">stretch</aspectratio>
+        <visible>VideoPlayer.Content(Movies)</visible>
+        <visible>!Skin.HasSetting(slimseek)</visible>
+      </control>
+	  
       <control type="image">
         <!-- STARS-->
         <description>IMDB rating</description>
@@ -340,7 +389,6 @@
         <aligny>center</aligny>
         <font>cirrus_24_Bold</font>
         <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
         <visible>VideoPlayer.Content(Movies)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
@@ -424,8 +472,7 @@
         <align>center</align>
         <aligny>center</aligny>
         <font>cirrus_24</font>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
+        <textcolor>black</textcolor>
         <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
         <visible>!VideoPlayer.Content(episodes)</visible>
       </control>
