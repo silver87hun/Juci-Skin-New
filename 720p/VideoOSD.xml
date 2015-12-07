@@ -40,15 +40,17 @@
                 <top>10</top>
 				 <!-- <animation effect="zoom" start="70" end="80" center="auto" time="500" tween="cubic" easing="inout" pulse="true"condition="Window.IsVisible(100)">Conditional</animation> -->
                  <control type="button" id="700">
+				 				<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
                     <left>-650</left>
                     <top>0</top>
                     <width>150</width>
                     <height>30</height>
                     <label>298</label>
-                    <font>DialogInfo-Label-Small</font>
+                    <font>FontSize_16b</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-                    <texturefocus>osd/osdwide40.png</texturefocus>
+                    <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <onleft>706</onleft>
                     <onright>701</onright>
@@ -56,16 +58,18 @@
                     <onclick>ActivateWindow(125)</onclick>
                 </control>
                 <control type="button" id="701">
+								<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
 				<!-- <animation effect="zoom" start="100" end="105" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
                     <left>-490</left>
                     <top>0</top>
-                    <width>200</width>
+                    <width>250</width>
                     <height>30</height>
                     <label>13396</label>
-                    <font>DialogInfo-Label-Small</font>
+                    <font>FontSize_16b</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-                    <texturefocus>osd/osdwide40.png</texturefocus>
+                    <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <onleft>700</onleft>
                     <onright>600</onright>
@@ -73,16 +77,17 @@
                     <onclick>ActivateWindow(osdaudiosettings)</onclick>
                 </control>
                 <control type="button" id="702">
-				<!-- <animation effect="zoom" start="100" end="105" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
+				<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
                     <left>130</left>
                     <top>0</top>
                     <width>150</width>
                     <height>30</height>
                     <label>13395</label>
-                    <font>DialogInfo-Label-Small</font>
+                    <font>FontSize_16b</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-                    <texturefocus>osd/osdwide40.png</texturefocus>
+                    <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <onleft>605</onleft>
                     <onright>703</onright>
@@ -90,21 +95,22 @@
                     <onclick>ActivateWindow(123)</onclick>
                 </control>
                 <control type="button" id="703">
-				<!-- <animation effect="zoom" start="100" end="105" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
+				<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
                     <left>310</left>
                     <top>0</top>
                     <width>130</width>
                     <height>30</height>
                     <label>31356</label>
-                    <font>DialogInfo-Label-Small</font>
+                    <font>FontSize_16b</font>
 					<textcolor>black</textcolor>
 					<align>center</align>
-                    <texturefocus>osd/osdwide40.png</texturefocus>
+                    <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <onleft>702</onleft>
                     <onright>700</onright>
                     <ondown>500</ondown>
-                    <onclick>Close</onclick>
+                    <!-- <onclick>Close</onclick> -->
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
                 <control type="button" id="704">
@@ -194,11 +200,11 @@
                 <left>590</left>
                 <top>20</top>
                 <control type="button" id="600">
-				<animation effect="zoom" start="100" end="120" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				<animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
                     <left>-110</left>
                     <top>-6</top>
-                    <width>29</width>
-                    <height>29</height>
+                    <width>25</width>
+                    <height>25</height>
                    <!--  <label>210</label> -->
                     <font>-</font>
 					<texturefocus>osd/osd/fast20.png</texturefocus>
@@ -209,11 +215,11 @@
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="601">
-				<animation effect="zoom" start="100" end="120" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				<animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
                     <left>-50</left>
                     <top>-5</top>
-                    <width>26</width>
-                    <height>26</height>
+                    <width>22</width>
+                    <height>22</height>
                     <!-- <label>31354</label> -->
                     <font>-</font>
 					<texturefocus>osd/osd/forw.png</texturefocus>
@@ -226,11 +232,11 @@
                     <onclick>PlayerControl(Rewind)</onclick>
                 </control>
                 <control type="togglebutton" id="602">
-				 <animation effect="zoom" start="100" end="120" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
                     <left>10</left>
                     <top>-4</top>
-                    <width>23</width>
-                    <height>23</height>
+                    <width>20</width>
+                    <height>20</height>
                     <!-- <label>31351</label>
                     <altlabel>208</altlabel> -->
                     <font>-</font>
@@ -245,11 +251,11 @@
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
                 <control type="button" id="603">
-					 <animation effect="zoom" start="100" end="120" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation> 
+					 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation> 
                     <left>70</left>
                     <top>-3</top>
-                    <width>23</width>
-                    <height>23</height>
+                    <width>19</width>
+                    <height>19</height>
                     <!-- <label>31352</label> -->
                     <font>-</font>
                     <texturefocus>osd/osd/stop4.png</texturefocus>
@@ -260,11 +266,11 @@
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="604">
-				 <animation effect="zoom" start="100" end="120" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
                     <left>130</left>
                     <top>-5</top>
-                    <width>26</width>
-                    <height>26</height>
+                    <width>22</width>
+                    <height>22</height>
                     <!-- <label>31353</label> -->
                     <font>-</font>
 					<texturefocus>osd/osd/forw1.png</texturefocus>
@@ -275,11 +281,11 @@
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="605">
-				 <animation effect="zoom" start="100" end="120" center="auto" time="300" tween="cubic" easing="inout" pulse="true">Focus</animation>
+				 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
                     <left>190</left>
                     <top>-6</top>
-                    <width>29</width>
-                    <height>29</height>
+                    <width>25</width>
+                    <height>25</height>
                     <!-- <label>209</label> -->
                     <font>-</font>
                     <texturefocus>osd/osd/fast19.png</texturefocus>

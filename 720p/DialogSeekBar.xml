@@ -190,7 +190,7 @@
           <height>30</height>
           <aspectratio>keep</aspectratio>
           <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.VideoResolution,special://skin/extras/flagging/video/,.png]</texture>
-		  
+		  <colordiffuse>black</colordiffuse>
         </control>
         <control type="image">
           <description>Common Codec Image</description>
@@ -198,7 +198,7 @@
           <height>30</height>
           <aspectratio>keep</aspectratio>
           <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.VideoCodec,special://skin/extras/flagging/video/,.png]</texture>
-		  
+		  <colordiffuse>black</colordiffuse>
           <!-- Don't show if its one of the 500 divx codecs -->
           <visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
         </control>
@@ -208,7 +208,7 @@
           <height>30</height>
           <aspectratio>keep</aspectratio>
           <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/video/divx.png</texture>
-		  
+		  <colordiffuse>black</colordiffuse>
           <visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
         </control>
         <control type="image">
@@ -217,6 +217,7 @@
           <height>30</height>
           <aspectratio>keep</aspectratio>
           <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/audio/dolbydigital.png</texture>
+		  <colordiffuse>black</colordiffuse>
           <visible>[substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
         </control>
         <control type="image">
@@ -225,7 +226,7 @@
           <height>30</height>
           <aspectratio>keep</aspectratio>
           <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.AudioCodec,special://skin/extras/flagging/audio/,.png]</texture>
-		  
+		  <colordiffuse>black</colordiffuse>
           <!-- Don't show if I want the Dolby Digital Logo -->
           <visible>![substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
         </control>
@@ -235,7 +236,7 @@
           <height>30</height>
           <aspectratio>keep</aspectratio>
           <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
-		  
+		  <colordiffuse>black</colordiffuse>
         </control>
       </control>
       <control type="label">
@@ -252,6 +253,7 @@
         <textcolor>black</textcolor>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
+		
       </control>
       <control type="label">
 	   <animation effect="zoom" start="60" end="100" center="auto" time="400" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
@@ -840,6 +842,7 @@
           <description>Media Codec Flagging Images</description>
           <left>-150</left>
           <top>150</top>
+		  <colordiffuse>black</colordiffuse>
           <width min="100" max="550">auto</width>
           <align>center</align>
           <itemgap>0</itemgap>
@@ -850,6 +853,7 @@
             <height>30</height>
             <aspectratio>keep</aspectratio>
             <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.VideoResolution,special://skin/extras/flagging/video/,.png]</texture>
+			<colordiffuse>black</colordiffuse>
           </control>
           <control type="image">
             <description>Common Codec Image</description>
@@ -857,6 +861,7 @@
             <height>30</height>
             <aspectratio>keep</aspectratio>
             <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.VideoCodec,special://skin/extras/flagging/video/,.png]</texture>
+			<colordiffuse>black</colordiffuse>
             <!-- Don't show if its one of the 500 divx codecs -->
             <visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
           </control>
@@ -866,6 +871,7 @@
             <height>30</height>
             <aspectratio>keep</aspectratio>
             <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/video/divx.png</texture>
+			<colordiffuse>black</colordiffuse>
             <visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
           </control>
           <control type="image">
@@ -874,6 +880,7 @@
             <height>30</height>
             <aspectratio>keep</aspectratio>
             <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/audio/dolbydigital.png</texture>
+			<colordiffuse>black</colordiffuse>
             <visible>[substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
           </control>
           <control type="image">
@@ -882,6 +889,7 @@
             <height>30</height>
             <aspectratio>keep</aspectratio>
             <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.AudioCodec,special://skin/extras/flagging/audio/,.png]</texture>
+			<colordiffuse>black</colordiffuse>
             <!-- Don't show if I want the Dolby Digital Logo -->
             <visible>![substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
           </control>
@@ -891,6 +899,7 @@
             <height>30</height>
             <aspectratio>keep</aspectratio>
             <texture diffuse="maskflags.png" colordiffuse="$VAR[FlagColor]">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
+			<colordiffuse>black</colordiffuse>
           </control>
         </control>
       </control>
