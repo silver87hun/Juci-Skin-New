@@ -8,38 +8,17 @@
   <coordinates>
     <system>1</system>
     <left>0</left>
-    <top>100</top>
+    <top>-500</top>
   </coordinates>
   <controls>
-      <control type="group">
-	   		<control type="image">
-			  <animation effect="slide" start="0" end="0,1000" time="10" condition="System.IdleTime(10)">conditional</animation>
-        <left>-300</left>
-        <top>-300</top>
-        <width>1920</width>
-        <height>1080</height>
-        <texture>mask_black50.png</texture>
-		   </control>
-	  <animation effect="slide" start="0" end="0,600" time="200" condition="System.IdleTime(10)">conditional</animation>
-    			<animation effect="slide" start="0,400" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-     <control type="image">
+    <control type="image">
       <left>0</left>
-      <top>260</top>
-        <width>1920</width>
-        <height>400</height>
-        <texture>black.jpeg</texture>
+      <top>500</top>
+      <width>1920</width>
+      <height>1080</height>
+	  <!-- EZS- Blur hozzáadása -->
+      <texture>mask_black50.png</texture>
     </control>
-	     <control type="multiimage">
-      <left>0</left>
-      <top>260</top>
-        <width>1920</width>
-        <height>400</height>
-<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>4000</fadetime>
-                  <imagepath background="true">test_dark</imagepath>
-    </control>      </control>   
 <!--     <control type="image">
       <left>0</left>
       <top>0</top>
@@ -49,37 +28,31 @@
       <aspectratio>stretch</aspectratio>
     </control> -->
     <control type="group">
-		  <animation effect="slide" start="0" end="0,800" time="200" condition="System.IdleTime(10)">conditional</animation>
+	  			<animation effect="slide" start="0,0" end="0,600" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,600" end="0,0" time="400" tween="quadratic" easing="out">WindowClose</animation>  
       <left>305</left>
       <top>300</top>
       <control type="label" id="3100">
-	  		  	<animation effect="zoom" start="60" end="100" center="-70,-300" time="300">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
-					  	<animation effect="zoom" start="100" end="0" center="-70,-305" time="300">WindowClose</animation>
         <description>Label control</description>
         <left>-110</left>
-        <top>-330</top>
-        <width>1050</width>
+        <top>-325</top>
+        <width>650</width>
         <height>35</height>
         <label>-</label>
         <align>left</align>
         <aligny>center</aligny>
-        <font>Charms-Date-Big2</font>
+        <font>FontSize_38</font>
         <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
       </control>
       <control type="grouplist">
-	  	  		  	<animation effect="zoom" start="80" end="100" center="-100,300" time="600">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
-	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="750">WindowOpen</animation>
-        <left>-200</left>
-        <top>80</top>
-        <width>1040</width>
+        <left>15</left>
+        <top>-95</top>
+        <width>640</width>
         <itemgap>20</itemgap>
         <align>center</align>
         <orientation>Horizontal</orientation>
         <control type="togglebutton" id="9">
-					  	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="800">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,800" tween="sine" time="800">WindowClose</animation>
           <description>Master mode button</description>
           <width>90</width>
           <height>90</height>
@@ -96,7 +69,6 @@
           <visible>System.HasLocks</visible>
         </control>
         <control type="button" id="10">
-		
           <description>LogOff Profile</description>
           <width>90</width>
           <height>90</height>
@@ -112,8 +84,8 @@
         </control>
         <control type="button" id="11">
           <description>Exit xbmc</description>
-          <width>120</width>
-          <height>120</height>
+          <width>80</width>
+          <height>80</height>
           <texturefocus>exitON.png</texturefocus>
           <texturenofocus>exitOFF.png</texturenofocus>
           <onclick>XBMC.Quit()</onclick>
@@ -122,14 +94,14 @@
           <label>$LOCALIZE[13012] XBMC</label>
         </control>
         <control type="group" id="13">
-          <width>120</width>
+          <width>90</width>
           <defaultcontrol always="true">15</defaultcontrol>
           <control type="button" id="17">
             <description>Cancel Shutdown Timer button</description>
             <left>0</left>
             <top>0</top>
-            <width>120</width>
-            <height>120</height>
+            <width>90</width>
+            <height>90</height>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
             <onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
@@ -146,8 +118,8 @@
             <description>Custom Shutdown Timer button</description>
             <left>0</left>
             <top>0</top>
-            <width>120</width>
-            <height>120</height>
+            <width>90</width>
+            <height>90</height>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
             <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
@@ -163,8 +135,8 @@
             <description>Shutdown button</description>
             <left>0</left>
             <top>0</top>
-            <width>120</width>
-            <height>120</height>
+            <width>80</width>
+            <height>80</height>
             <texturefocus>powerON.png</texturefocus>
             <texturenofocus>powerOFF.png</texturenofocus>
             <onclick>XBMC.Shutdown()</onclick>
@@ -180,18 +152,16 @@
             <description>Shutdown focus image</description>
             <left>0</left>
             <top>0</top>
-            <width>120</width>
-            <height>120</height>
+            <width>80</width>
+            <height>80</height>
             <texture>powerOFF.png</texture>
             <visible>Control.HasFocus(15) | Control.HasFocus(16) | Control.HasFocus(17)</visible>
           </control>
         </control>
         <control type="button" id="12">
           <description>Suspend xbmc</description>
-		    <left>0</left>
-            <top>0</top>
-          <width>120</width>
-          <height>120</height>
+          <width>80</width>
+          <height>80</height>
           <texturefocus>sleepON.png</texturefocus>
           <texturenofocus>sleepOFF.png</texturenofocus>
           <onclick>XBMC.Suspend()</onclick>
@@ -201,8 +171,8 @@
         </control>
         <control type="button" id="14">
           <description>Reboot button</description>
-          <width>120</width>
-          <height>120</height>
+          <width>80</width>
+          <height>80</height>
           <texturefocus>restartON.png</texturefocus>
           <texturenofocus>restartOFF.png</texturenofocus>
           <onclick>XBMC.Reset()</onclick>
@@ -212,8 +182,8 @@
         </control>
         <control type="button" id="19">
           <description>Settings button</description>
-          <width>120</width>
-          <height>120</height>
+          <width>80</width>
+          <height>80</height>
           <texturefocus>settingsON.png</texturefocus>
           <texturenofocus>settingsOFF.png</texturenofocus>
           <onclick>ActivateWindow(Settings)</onclick>
@@ -223,11 +193,8 @@
         </control>
       </control>
       <control type="group">
-	  	  		  	<animation effect="zoom" start="80" end="100" center="-100,200" time="600">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
-	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="750">WindowOpen</animation>
-        <left>225</left>
-        <top>70</top>
+        <left>275</left>
+        <top>-107</top>
         <visible>ControlGroup(13).HasFocus</visible>
         <include>VisibleFadeEffect</include>
         <animation effect="slide" start="0,0" end="55,0" time="0" condition="System.HasLocks">Conditional</animation>
@@ -235,7 +202,7 @@
         <control type="image">
           <description>Shutdown Arrow Up image</description>
           <left>-55</left>
-          <top>-20</top>
+          <top>-10</top>
           <width>20</width>
           <height>20</height>
           <texture>arrowupON.png</texture>
@@ -243,7 +210,7 @@
         <control type="image">
           <description>Shutdown Arrow Down image</description>
           <left>-55</left>
-          <top>150</top>
+          <top>95</top>
           <width>20</width>
           <height>20</height>
           <texture>arrowdownON.png</texture>

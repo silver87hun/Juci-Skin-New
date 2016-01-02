@@ -9,18 +9,33 @@
   </coordinates>
   <controls>
     <control type="group">
-      <left>580</left>
+      <left>0</left>
       <animation effect="slide" start="700,0" end="0,0" time="400" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
       <animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
       <animation effect="slide" start="0,0" end="700,0" time="400" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
       <animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
-      <control type="image">
+
+	  
+	  <control type="multiimage">
+				 <left>0</left>
+				  <top>0</top>
+				  <width>1920</width>
+				  <height>1080</height>
+					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+             	 <timeperimage>48000</timeperimage>
+				<randomize>true</randomize> 
+				 <fadetime>100</fadetime>
+                  <imagepath background="true">test_light</imagepath>
+            </control>
+	  
+	         <control type="image">
         <left>0</left>
         <top>0</top>
-        <width>1100</width>
-        <height>720</height>
-        <texture border="15,0,0,0">homesubbackground.png</texture>
+        <width>1920</width>
+        <height>1080</height>
+        <texture border="15,0,0,0">mask_black50.png</texture>
       </control>
+	  
       <control type="group">
         <animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
         <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -30,29 +45,29 @@
           <top>40</top>
           <width>630</width>
           <height>30</height>
-          <font>cirrus_30</font>
+          <font>FontSize_38</font>
           <label>1023</label>
           <align>left</align>
           <aligny>center</aligny>
           <textcolor>white</textcolor>
-          <shadowcolor>black</shadowcolor>
+          <!-- <shadowcolor>black</shadowcolor> -->
         </control>
         <control type="label" id="412">
           <description>Path label</description>
           <left>35</left>
           <top>80</top>
-          <width>630</width>
+          <width>1100</width>
           <height>30</height>
-          <font>cirrus_24</font>
+          <font>FontSize_22</font>
           <haspath>true</haspath>
           <align>left</align>
           <aligny>center</aligny>
-          <textcolor>accent</textcolor>
-          <shadowcolor>black</shadowcolor>
+          <textcolor>grey</textcolor>
+          <!-- <shadowcolor>black</shadowcolor> -->
         </control>
         <control type="grouplist" id="9000">
-          <left>20</left>
-          <top>460</top>
+          <left>980</left>
+          <top>250</top>
           <width>200</width>
           <height>225</height>
           <itemgap>5</itemgap>
@@ -94,7 +109,7 @@
             <label>749</label>
           </control>
         </control>
-        <control type="image">
+<!--         <control type="image">
           <left>245</left>
           <top>460</top>
           <width>420</width>
@@ -116,12 +131,12 @@
           <height>227</height>
           <aspectratio>stretch</aspectratio>
           <texture background="true">border-browserpanel.png</texture>
-        </control>
+        </control> -->
         <control type="panel" id="450">
           <left>20</left>
           <top>120</top>
-          <width>640</width>
-          <height>321</height>
+          <width>1040</width>
+          <height>520</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>450</onup>
@@ -134,7 +149,7 @@
               <top>0</top>
               <width>640</width>
               <height>41</height>
-              <texture border="5">menuitemNF.png</texture>
+              <texture border="5"></texture>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
@@ -148,12 +163,13 @@
             <control type="label">
               <left>55</left>
               <top>0</top>
-              <width>580</width>
+              <width>1080</width>
               <height>40</height>
-              <font>font13</font>
+              <font>FontSize_18</font>
               <align>left</align>
               <aligny>center</aligny>
-              <selectedcolor>green</selectedcolor>
+			  <textcolor>grey2</textcolor>
+              <selectedcolor>grey2</selectedcolor>
               <info>ListItem.Label</info>
             </control>
           </itemlayout>
@@ -164,7 +180,7 @@
               <width>640</width>
               <height>41</height>
               <visible>!Control.HasFocus(450)</visible>
-              <texture border="5">menuitemNF.png</texture>
+              <texture border="5"></texture>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
@@ -173,7 +189,7 @@
               <width>640</width>
               <height>41</height>
               <visible>Control.HasFocus(450)</visible>
-              <texture border="5" flipx="true">listfilemanagerFO.png</texture>
+              <texture border="5" flipx="true"></texture>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
@@ -187,12 +203,12 @@
             <control type="label">
               <left>55</left>
               <top>0</top>
-              <width>580</width>
+              <width>1080</width>
               <height>40</height>
-              <font>font13</font>
+              <font>FontSize_18</font>
               <align>left</align>
               <aligny>center</aligny>
-              <selectedcolor>green</selectedcolor>
+              <selectedcolor>white</selectedcolor>
               <info>ListItem.Label</info>
             </control>
           </focusedlayout>
@@ -201,7 +217,7 @@
           <left>20</left>
           <top>120</top>
           <width>640</width>
-          <height>321</height>
+          <height>520</height>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>451</onup>
@@ -214,7 +230,7 @@
               <top>0</top>
               <width>640</width>
               <height>41</height>
-              <texture border="5">menuitemNF.png</texture>
+              <texture border="5"></texture>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
@@ -230,7 +246,7 @@
               <top>0</top>
               <width>580</width>
               <height>40</height>
-              <font>font13</font>
+              <font>FontSize_18</font>
               <align>left</align>
               <aligny>center</aligny>
               <selectedcolor>green</selectedcolor>
@@ -244,7 +260,7 @@
               <width>640</width>
               <height>41</height>
               <visible>!Control.HasFocus(451)</visible>
-              <texture border="5">menuitemNF.png</texture>
+              <texture border="5"></texture>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
@@ -253,7 +269,7 @@
               <width>640</width>
               <height>41</height>
               <visible>Control.HasFocus(451)</visible>
-              <texture border="5">listfilemanagerFO.png</texture>
+              <texture border="5"></texture>
               <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
@@ -269,7 +285,7 @@
               <top>0</top>
               <width>580</width>
               <height>40</height>
-              <font>cirrus_20</font>
+              <font>FontSize_18</font>
               <align>left</align>
               <aligny>center</aligny>
               <selectedcolor>green</selectedcolor>
@@ -278,10 +294,10 @@
           </focusedlayout>
         </control>
         <control type="scrollbar" id="60">
-          <left>650</left>
+          <left>850</left>
           <top>120</top>
-          <width>25</width>
-          <height>320</height>
+          <width>5</width>
+          <height>520</height>
           <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
           <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
           <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -294,27 +310,27 @@
         </control>
         <control type="label">
           <description>Page label</description>
-          <left>100</left>
+          <left>620</left>
           <top>680</top>
           <width>560</width>
           <height>30</height>
           <align>right</align>
           <aligny>center</aligny>
           <textcolor>grey</textcolor>
-          <font>cirrus_16</font>
-          <label>([COLOR=accent]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=accent]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+          <font>FontSize_22</font>
+          <label>([COLOR=white]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=white]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
           <visible>!Control.IsVisible(451)</visible>
         </control>
         <control type="label">
           <description>Page label</description>
-          <left>100</left>
+          <left>620</left>
           <top>680</top>
           <width>560</width>
           <height>30</height>
           <align>right</align>
           <aligny>center</aligny>
           <textcolor>grey</textcolor>
-          <font>font12</font>
+          <font>FontSize_22</font>
           <label>([COLOR=blue]$INFO[Container(451).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR])</label>
           <visible>Control.IsVisible(451)</visible>
         </control>

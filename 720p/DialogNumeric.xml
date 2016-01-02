@@ -2,36 +2,53 @@
 <window id="109">
     <defaultcontrol always="true">21</defaultcontrol>
     <include>dialogeffect</include>
+	
     <coordinates>
         <system>2</system>
         <left>480</left>
-        <top>145</top>
+        <top>200</top>
     </coordinates>
     <controls>
+
+<!--         <control type="image">
+            <left>-480</left>
+            <top>-200</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>mask_black90.png</texture>
+        </control> -->
+		
+		<control type="multiimage">
+				<animation effect="slide" start="0" end="0,-200" time="600" tween="back" easing="inout" condition="System.IdleTime(3)">conditional</animation>
+				 <left>-480</left>
+				  <top>-200</top>
+				  <width>1920</width>
+				  <height>1080</height>
+					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+             	 <timeperimage>48000</timeperimage>
+				<randomize>true</randomize> 
+				 <fadetime>10</fadetime>
+                  <imagepath background="true">test_dark</imagepath>
+            </control>
+		
         <control type="image">
-            <left>0</left>
-            <top>0</top>
-            <width>320</width>
-            <height>430</height>
-            <texture border="40">videoinfoback.png</texture>
-        </control>
-        <control type="image">
-            <left>30</left>
-            <top>70</top>
-            <width>260</width>
-            <height>50</height>
+            <left>50</left>
+            <top>120</top>
+            <width>160</width>
+            <height>1</height>
             <aspectratio>stretch</aspectratio>
-            <texture border="20">KeyboardEditArea.png</texture>
+            <texture></texture>
         </control>
         <control type="label" id="4">
             <description>Edit Text</description>
+				<animation effect="slide" start="-400,0" end="0,0" tween="sine" time="300">WindowOpen</animation>
             <left>35</left>
             <top>70</top>
             <width>250</width>
             <height>50</height>
-            <font>font13</font>
-            <textcolor>selected</textcolor>
-            <disabledcolor>grey2</disabledcolor>
+            <font>font30</font>
+             <textcolor>grey2</textcolor>
+             <disabledcolor>white</disabledcolor>
             <align>center</align>
             <aligny>center</aligny>
         </control>
@@ -41,7 +58,7 @@
             <top>20</top>
             <width>280</width>
             <height>40</height>
-            <font>font13_title</font>
+            <font>FontSize_22</font>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
             <align>center</align>
@@ -57,11 +74,11 @@
                 <top>0</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
-                <texturefocus border="25,25,5,5">KeyboardCornerTop.png</texturefocus>
+                <!-- <texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus> -->
+                <!-- <texturefocus border="25,25,5,5">KeyboardCornerTop.png</texturefocus> -->
                 <label>12311</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>23</onleft>
@@ -75,11 +92,11 @@
                 <top>0</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12312</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>11</onleft>
@@ -93,11 +110,11 @@
                 <top>0</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->> -->
+                <!-- <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> --> -->
                 <label>12313</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>12</onleft>
@@ -111,11 +128,11 @@
                 <top>0</top>
                 <width>60</width>
                 <height>120</height>
-                <font>font12</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
-                <texturefocus flipx="true" border="5,35,25,5">KeyboardCornerTop.png</texturefocus>
+                <!-- <texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus> -->
+                <!-- <texturefocus flipx="true" border="5,35,25,5">KeyboardCornerTop.png</texturefocus> -->
                 <textwidth>120</textwidth>
                 <label>20181</label>
                 <focusedcolor>black</focusedcolor>
@@ -131,11 +148,11 @@
                 <top>60</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12314</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>23</onleft>
@@ -149,11 +166,11 @@
                 <top>60</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12315</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>14</onleft>
@@ -167,11 +184,11 @@
                 <top>60</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12316</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>15</onleft>
@@ -185,11 +202,11 @@
                 <top>120</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12317</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>21</onleft>
@@ -203,11 +220,11 @@
                 <top>120</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12318</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>17</onleft>
@@ -221,11 +238,11 @@
                 <top>120</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12319</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>18</onleft>
@@ -239,11 +256,11 @@
                 <top>120</top>
                 <width>60</width>
                 <height>120</height>
-                <font>font12</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus flipx="true" border="5,5,25,25">KeyboardCornerBottomNF.png</texturenofocus>
-                <texturefocus flipx="true" border="5,30,25,25">KeyboardCornerBottom.png</texturefocus>
+                <!-- <texturenofocus flipx="true" border="5,5,25,25">KeyboardCornerBottomNF.png</texturenofocus> -->
+                <!-- <texturefocus flipx="true" border="5,30,25,25">KeyboardCornerBottom.png</texturefocus> -->
                 <textwidth>120</textwidth>
                 <label>20177</label>
                 <focusedcolor>black</focusedcolor>
@@ -264,8 +281,8 @@
                 <focusedcolor>black</focusedcolor>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
-                <texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>
+                <!-- <texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus> -->
+                <!-- <texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus> -->
                 <onleft>21</onleft>
                 <onright>10</onright>
                 <onup>17</onup>
@@ -277,11 +294,11 @@
                 <top>180</top>
                 <width>60</width>
                 <height>60</height>
-                <font>font13</font>
+                <font>font30</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <label>12310</label>
                 <focusedcolor>black</focusedcolor>
                 <onleft>20</onleft>
@@ -300,8 +317,8 @@
                 <focusedcolor>black</focusedcolor>
                 <align>center</align>
                 <aligny>center</aligny>
-                <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-                <texturefocus border="5">KeyboardKey.png</texturefocus>
+                <!-- <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus> -->>
+                <!-- <texturefocus border="5">KeyboardKey.png</texturefocus> -->
                 <onleft>10</onleft>
                 <onright>21</onright>
                 <onup>19</onup>
