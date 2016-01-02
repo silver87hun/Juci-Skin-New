@@ -877,6 +877,16 @@
               <textcolor>grey2</textcolor>
               <shadowcolor />
             </control>
+				  			<control type="largeimage">
+					<description>TV Show Image</description>
+					<posx>200r</posx>
+					<posy>263</posy> 
+					<width>200</width>
+					<height>112</height>
+					<texture fallback="blank.png">$INFO[Player.FolderPath]../clearart.png</texture>
+					<aspectratio>keep</aspectratio>
+					<!-- <visible>Skin.HasSetting(clearart) + VideoPlayer.Content(episodes)</visible> -->
+				</control>
             <control type="label">
               <visible>Skin.HasSetting(pathininfo)</visible>
               <left>75</left>

@@ -4,47 +4,40 @@
   <coordinates>
     <system>1</system>
     <left>240</left>
-    <top>420</top>
+    <top>15</top>
   </coordinates>
   <include>dialogeffect</include>
   <controls>
     <control type="group">
       <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
-	  <animation effect="slide" start="0,200" end="0,0" tween="sine" time="500">WindowOpen</animation>
-<!--        <control type="image">
-        <description>background image</description>
-        <left>-310</left>
-        <top>-80</top>
-        <width>1800</width>
-        <height>590</height>
-        <texture>osd/osdsettings.png</texture>
-      </control>  -->
+
+	  
+	  
       <control type="label">
         <description>header label</description>
         <left>10</left>
-        <top>25</top>
+        <top>18</top>
         <width>760</width>
         <height>30</height>
-        <font>DialogInfo-Label</font>
+        <font>FontSize_30</font>
         <label>$LOCALIZE[3] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
-        <textcolor>black</textcolor>
-
+        <textcolor>white</textcolor>      
         <visible>Window.IsVisible(123)</visible>
       </control>
       <control type="label">
         <description>header label</description>
         <left>10</left>
-        <top>25</top>
+        <top>18</top>
         <width>760</width>
         <height>30</height>
-        <font>DialogInfo-Label</font>
+        <font>FontSize_30</font>
         <label>$LOCALIZE[292] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
-        <textcolor>black</textcolor>
-
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
         <visible>Window.IsVisible(osdaudiosettings)</visible>
       </control>
       <control type="grouplist" id="5">
@@ -52,7 +45,7 @@
         <left>40</left>
         <top>65</top>
         <width>720</width>
-        <height>220</height>
+        <height>500</height>
         <itemgap>-1</itemgap>
         <pagecontrol>60</pagecontrol>
         <onleft>60</onleft>
@@ -60,11 +53,11 @@
         <onup>5</onup>
         <ondown>5</ondown>
       </control>
-      <!-- <control type="scrollbar" id="60">
-        <left>760</left>
-        <top>65</top>
-        <width>25</width>
-        <height>390</height>
+      <control type="scrollbar" id="60">
+        <left>800</left>
+        <top>75</top>
+        <width>5</width>
+        <height>500</height>
         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
         <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
         <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -76,15 +69,15 @@
         <onup>61</onup>
         <showonepage>false</showonepage>
         <orientation>vertical</orientation>
-      </control> -->
+      </control>
     </control>
     <control type="sliderex" id="13">
       <description>Default Slider</description>
-      <height>25</height>
+      <height>40</height>
       <texturefocus border="0,2,0,2"></texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
-      <font>DialogInfo-Label-Small</font>
-      <textcolor>black</textcolor>
+      <font>FontSize_18</font>
+      <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <width>300</width>
     </control>
@@ -92,9 +85,9 @@
       <description>Default Button</description>
       <left>0</left>
       <top>0</top>
-      <height>25</height>
-      <font>DialogInfo-Label-Small</font>
-      <textcolor>black</textcolor>
+      <height>40</height>
+      <font>FontSize_18</font>
+      <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2"></texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
@@ -104,9 +97,9 @@
       <description>Default RadioButton</description>
       <left>0</left>
       <top>0</top>
-      <height>25</height>
-      <font>DialogInfo-Label-Small</font>
-      <textcolor>black</textcolor>
+      <height>40</height>
+      <font>FontSize_18</font>
+      <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2"></texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
@@ -115,9 +108,9 @@
       <description>Default SpinControlex</description>
       <left>0</left>
       <top>0</top>
-      <height>25</height>
-      <font>DialogInfo-Label-Small</font>
-      <textcolor>black</textcolor>
+      <height>40</height>
+      <font>FontSize_18</font>
+      <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2"></texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
@@ -125,10 +118,10 @@
       <reverse>yes</reverse>
       <width>300</width>
     </control>
-<!--     <control type="image" id="11">
+    <control type="image" id="11">
       <description>separator image</description>
       <height>2</height>
       <texture>separator2.png</texture>
-    </control> -->
+    </control>
   </controls>
 </window>

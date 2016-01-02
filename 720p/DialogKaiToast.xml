@@ -11,24 +11,26 @@
     </coordinates>
     <controls>
          <control type="group">
-                <control type="image">
-				 <left>0</left>
-				  <top>750</top>
-				  <width>1920</width>
-				  <height>500</height>
-                <texture>black.jpeg</texture>
-            </control>
-				<control type="multiimage">
-				 <left>0</left>
-				  <top>750</top>
-				  <width>1920</width>
-				  <height>1080</height>
-					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>50</fadetime>
-                  <imagepath background="true">test_light</imagepath>
 
+			
+			 <control type="image">
+				
+				 <left>0</left>
+				  <top>550</top>
+				  <width>1920</width>
+				  <height>400</height>
+                <texture>fadeOutBottom.png</texture>
+<!-- 				<colordiffuse>black</colordiffuse> -->
+            </control>
+			
+			 <control type="image">
+				
+				 <left>0</left>
+				  <top>550</top>
+				  <width>1920</width>
+				  <height>400</height>
+                <texture>fadeOutBottom.png</texture>
+<!-- 				<colordiffuse>black</colordiffuse> -->
             </control>
 
 <!-- 			<control type="group">
@@ -50,8 +52,8 @@
                 <top>880</top>
                 <width>1000</width>
                 <height>18</height>
-                <font>font16</font>
-                <textcolor>black</textcolor>
+                <font>FontSize_28</font>
+                <textcolor>white</textcolor>
                 <align>center</align>
                 <aligny>center</aligny>
                 <scrollout>false</scrollout>
@@ -65,8 +67,8 @@
                 <top>910</top>
                 <width>1000</width>
                 <height>20</height>
-                <font>font14</font>
-                <textcolor>black</textcolor>
+                <font>FontSize_24</font>
+                <textcolor>grey</textcolor>
                 <align>center</align>
                 <aligny>center</aligny>
                 <scrollout>false</scrollout>

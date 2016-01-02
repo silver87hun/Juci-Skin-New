@@ -5,12 +5,12 @@
   <coordinates>
     <system>1</system>
     <left>300</left>
-    <top>180</top>
+    <top>0</top>
   </coordinates>
   <controls>
  
  		<control type="image">
-			  <animation effect="slide" start="0" end="0,1000" time="10" condition="System.IdleTime(10)">conditional</animation>
+			  
         <left>-300</left>
         <top>-300</top>
         <width>1920</width>
@@ -18,43 +18,16 @@
         <texture>mask_black50.png</texture>
 		   </control>
 		  <control type="label">
-		  	  <animation effect="slide" start="0" end="0,800" time="200" condition="System.IdleTime(10)">conditional</animation>
-		  	<animation effect="zoom" start="60" end="100" center="-60,-80" time="300">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
-		<animation effect="zoom" start="100" end="0" center="-75,-85" time="300">WindowClose</animation>
+		  	  
             <left>-100</left>
-            <top>-120</top>
+            <top>65</top>
             <label>1036</label>
-			<font>Charms-Date-Big2</font>
+			<font>FontSize_38</font>
             <align>left</align>
 			<textcolor>white</textcolor>
           </control>
     <control type="group">
-<animation effect="slide" start="0" end="0,600" time="200" condition="System.IdleTime(10)">conditional</animation>
-    			<animation effect="slide" start="0,400" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>	
- 					        <control type="image">
-        <left>-300</left>
-        <top>200</top>
-        <width>1920</width>
-        <height>500</height>
-                            <aspectratio>stretch</aspectratio>
-                            <texture>black.jpeg</texture>
-                        </control>
-	  <control type="multiimage">
-        <left>-300</left>
-        <top>200</top>
-        <width>1920</width>
-        <height>500</height>
-				
 
- 			 <visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>4000</fadetime>
-                  <imagepath background="true">test_light</imagepath>
-                <visible>!Skin.HasSetting(cleanHome) | !Skin.HasSetting(homeNoClock)</visible>
-                <visible>!Skin.HasSetting(originalcirrusclock)</visible>
-            </control> 
 
 <!-- - <control type="image">
         <left>350r</left>
@@ -95,20 +68,16 @@
 		  
 
       <control type="image">
-	  		  	<animation effect="zoom" start="80" end="100" center="-60,-80" time="600">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
-	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="750">WindowOpen</animation>
-     <animation effect="slide" start="0,0" end="0,800" tween="sine" time="750">WindowClose</animation>
-		  		  	<animation effect="zoom" start="100" end="0" center="-60,-80" time="600">WindowClose</animation>
-        <left>0</left>
-        <top>230</top>
-        <width>180</width>
-        <height>280</height>
-        <aspectratio align="center">keep</aspectratio>
+
+        <left>-200</left>
+        <top>180</top>
+        <width>350</width>
+        <height>450</height>
+        <aspectratio align="right">keep</aspectratio>
         <fadetime>IconCrossfadeTime</fadetime>
         <texture>$INFO[ListItem.Icon]</texture>
         <!-- <bordertexture border="10">mask_black20.png</bordertexture> -->
-        <bordersize>8</bordersize>
+        <!-- <bordersize>8</bordersize> -->
       </control>
 
 <!-- 	                  <control type="image" id="11">
@@ -121,17 +90,14 @@
                     <texture>separator2.png</texture>
                 </control> -->
       <control type="list" id="450">
-	  	  		  	<animation effect="zoom" start="80" end="100" center="150,150" time="600" delay="300">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="600" delay="300" >WindowOpen</animation>
-	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="800" delay="300">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,800" tween="sine" time="800" delay="200">WindowClose</animation>
-        <left>300</left>
+
+        <left>400</left>
         <top>240</top>
         <width>500</width>
         <height>360</height>
         <onup>450</onup>
         <onleft>Dialog.Close(Favourites)</onleft>
-        <onright>450</onright>
+        <onright>Dialog.Close(Favourites)</onright>
         <ondown>450</ondown>
         <pagecontrol>-</pagecontrol>
         <scrolltime>200</scrolltime>
@@ -146,10 +112,10 @@
           <control type="label">
             <left>25</left>
             <top>5</top>
-            <width>300</width>
+            <width>400</width>
             <height>40</height>
-            <font>Keyboard-Label</font>
-			<textcolor>black</textcolor>
+            <font>FontSize_30</font>
+			<textcolor>white</textcolor>
             <align>center</align>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
@@ -179,9 +145,9 @@
           <control type="label">
             <left>25</left>
             <top>5</top>
-            <width>300</width>
+            <width>400</width>
             <height>40</height>
-            <font>Keyboard-Label</font>
+            <font>FontSize_30b</font>
 			<textcolor>white</textcolor>
             <align>center</align>
             <aligny>center</aligny>
@@ -191,9 +157,8 @@
         </focusedlayout>
       </control>
 	            	  <control type="image">
-			  	  		  	<animation effect="slide" start="0,800" end="0,0" tween="sine" time="800">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,800" tween="sine" time="800">WindowClose</animation>
-                        <left>280</left>
+			  	  	
+                        <left>350</left>
                         <top>220</top>
                         <height>300</height>
                         <width>1</width>
@@ -207,18 +172,18 @@
             <texture>mask_black50.png</texture>
             <aspectratio>stretch</aspectratio>
           </control> -->
-<!--       <control type="label">
+       <control type="label">
         <description>Page label</description>
-        <left>900</left>
-        <top>690</top>
+        <left>520</left>
+        <top>110</top>
         <width>350</width>
         <height>30</height>
         <align>right</align>
         <aligny>center</aligny>
-        <font>Context-List</font>
-        <textcolor>grey</textcolor>
-        <label>([COLOR=accent]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=accent]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
-      </control> -->
+        <font>FontSize_18</font>
+        <textcolor>grey3</textcolor>
+        <label>([COLOR=grey2]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=grey2]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+      </control>
 
     </control>
   </controls>

@@ -2,115 +2,101 @@
 <window type="dialog" id="2901">
     <defaultcontrol always="true">602</defaultcontrol>
     <controls>
-        <control type="group">
-		<top>665</top>
-<!--             <animation effect="slide" start="0,-145" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-            <animation effect="slide" start="0,0" end="0,-145" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation> -->
-			<animation effect="slide" start="0,250" end="0,0" tween="sine" time="500">WindowOpen</animation>
-			<!-- <animation effect="slide" start="0,0" end="0,250" tween="sine" time="500">WindowClose</animation> -->
-            <animation effect="slide" start="0,0" end="0,250" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation>
-            	 <control type="image">
-	 	 <animation effect="slide" start="0" end="0,-480" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(videoosdsettings.xml)">Conditional</animation>
-	 	 <animation effect="slide" start="0" end="0,-480" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(videoosdbookmarks.xml)">Conditional</animation>
-	 	 <animation effect="slide" start="0" end="0,-480" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(DialogSubtitles.xml)">Conditional</animation>
+	
+	
+	 	<control type="image">
+
 				 <left>0</left>
 				  <top>0</top>
+				  <width>1290</width>
+				  <height>720</height>
+                <texture>bg_vignette.png</texture>
+            </control>
+	
+	 <control type="image">
+				
+				 <left>0</left>
+				  <top>220</top>
 				  <width>1920</width>
 				  <height>500</height>
-                <texture>black.jpeg</texture>
+                <texture>fadeOutBottom.png</texture>
+<!-- 				<colordiffuse>black</colordiffuse> -->
             </control>
-				<control type="multiimage">
-	 	 <animation effect="slide" start="0" end="0,-480" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(videoosdsettings.xml)">Conditional</animation>
-	 	 <animation effect="slide" start="0" end="0,-480" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(videoosdbookmarks.xml)">Conditional</animation>
-	 	 <animation effect="slide" start="0" end="0,-480" time="500" tween="quadratic" easing="out" condition="Window.IsVisible(DialogSubtitles.xml)">Conditional</animation>
+			
+			 <control type="image">
+				
 				 <left>0</left>
-				  <top>0</top>
+				  <top>220</top>
 				  <width>1920</width>
-				  <height>1080</height>
-					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
-				<randomize>true</randomize> 
-				 <fadetime>1000</fadetime>
-                  <imagepath background="true">test_light</imagepath>
-
+				  <height>500</height>
+                <texture>fadeOutBottom.png</texture>
+<!-- 				<colordiffuse>black</colordiffuse> -->
             </control>
+	
+        <control type="group">
+            <animation effect="slide" start="0,800" end="0,600" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+            <!-- <animation effect="slide" start="0,0" end="0,-145" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation> -->
+<!--             <animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation> -->
+
             <!-- SETTINGS GROUP (Bookmarks audio video) -->
             <control type="group" id="200">
-                <left>720</left>
-                <top>10</top>
-				 <!-- <animation effect="zoom" start="70" end="80" center="auto" time="500" tween="cubic" easing="inout" pulse="true"condition="Window.IsVisible(100)">Conditional</animation> -->
-                 <control type="button" id="700">
-				 				<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
-                    <left>-650</left>
+                <left>1050</left>
+                <top>70</top>
+                <control type="button" id="700">
+                    <left>0</left>
                     <top>0</top>
-                    <width>150</width>
-                    <height>30</height>
+                    <width>40</width>
+                    <height>28</height>
                     <label>298</label>
-                    <font>FontSize_16b</font>
-					<textcolor>black</textcolor>
-					<align>center</align>
-                    <texturefocus>-</texturefocus>
-                    <texturenofocus>-</texturenofocus>
-                    <onleft>706</onleft>
+                    <font>-</font>
+                    <texturefocus>OSDBookMarksFO.png</texturefocus>
+                    <texturenofocus>OSDBookMarksNF.png</texturenofocus>
+                    <onleft>605</onleft>
                     <onright>701</onright>
                     <ondown>500</ondown>
                     <onclick>ActivateWindow(125)</onclick>
                 </control>
                 <control type="button" id="701">
-								<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
-				<!-- <animation effect="zoom" start="100" end="105" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
-                    <left>-490</left>
+                    <left>50</left>
                     <top>0</top>
-                    <width>250</width>
-                    <height>30</height>
+                    <width>40</width>
+                    <height>28</height>
                     <label>13396</label>
-                    <font>FontSize_16b</font>
-					<textcolor>black</textcolor>
-					<align>center</align>
-                    <texturefocus>-</texturefocus>
-                    <texturenofocus>-</texturenofocus>
+                    <font>-</font>
+                    <texturefocus>OSDAudioFO.png</texturefocus>
+                    <texturenofocus>OSDAudioNF.png</texturenofocus>
                     <onleft>700</onleft>
-                    <onright>600</onright>
+                    <onright>702</onright>
                     <ondown>500</ondown>
                     <onclick>ActivateWindow(osdaudiosettings)</onclick>
                 </control>
                 <control type="button" id="702">
-				<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
-                    <left>130</left>
+                    <left>100</left>
                     <top>0</top>
-                    <width>150</width>
-                    <height>30</height>
+                    <width>40</width>
+                    <height>28</height>
                     <label>13395</label>
-                    <font>FontSize_16b</font>
-					<textcolor>black</textcolor>
-					<align>center</align>
-                    <texturefocus>-</texturefocus>
-                    <texturenofocus>-</texturenofocus>
-                    <onleft>605</onleft>
+                    <font>-</font>
+                    <texturefocus>OSDVideoFO.png</texturefocus>
+                    <texturenofocus>OSDVideoNF.png</texturenofocus>
+                    <onleft>701</onleft>
                     <onright>703</onright>
                     <ondown>500</ondown>
                     <onclick>ActivateWindow(123)</onclick>
                 </control>
                 <control type="button" id="703">
-				<animation effect="zoom" start="100" end="120" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Unfocus</animation>
-                    <left>310</left>
+                    <left>150</left>
                     <top>0</top>
-                    <width>130</width>
-                    <height>30</height>
+                    <width>40</width>
+                    <height>28</height>
                     <label>31356</label>
-                    <font>FontSize_16b</font>
-					<textcolor>black</textcolor>
-					<align>center</align>
-                    <texturefocus>-</texturefocus>
-                    <texturenofocus>-</texturenofocus>
+                    <font>-</font>
+                    <texturefocus>OSDSubtitlesFO.png</texturefocus>
+                    <texturenofocus>OSDSubtitlesNF.png</texturenofocus>
                     <onleft>702</onleft>
-                    <onright>700</onright>
+                    <onright>704</onright>
                     <ondown>500</ondown>
-                    <!-- <onclick>Close</onclick> -->
+                    <onclick>Close</onclick>
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
                 <control type="button" id="704">
@@ -197,105 +183,97 @@
             </control>
             <!-- GROUP FOR PLAYER CONTROLS -->
             <control type="group" id="100">
-                <left>590</left>
-                <top>20</top>
+                <left>700</left>
+                <top>70</top>
                 <control type="button" id="600">
-				<animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-                    <left>-110</left>
-                    <top>-6</top>
-                    <width>25</width>
-                    <height>25</height>
-                   <!--  <label>210</label> -->
+                    <left>0</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>28</height>
+                    <label>210</label>
                     <font>-</font>
-					<texturefocus>osd/osd/fast20.png</texturefocus>
-                    <texturenofocus>osd/osd/fast20.png</texturenofocus>
-                    <onleft>701</onleft>
+                    <texturefocus>OSDPrevTrackFO.png</texturefocus>
+                    <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
+                    <onleft>707</onleft>
                     <onright>601</onright>
                     <ondown>500</ondown>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="601">
-				<animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-                    <left>-50</left>
-                    <top>-5</top>
-                    <width>22</width>
-                    <height>22</height>
-                    <!-- <label>31354</label> -->
+                    <left>50</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>28</height>
+                    <label>31354</label>
                     <font>-</font>
-					<texturefocus>osd/osd/forw.png</texturefocus>
-                    <texturenofocus>osd/osd/forw.png</texturenofocus>
-<!--                     <texturefocus>OSDRewindFO.png</texturefocus>
-                    <texturenofocus>OSDRewindNF.png</texturenofocus> -->
+                    <texturefocus>OSDRewindFO.png</texturefocus>
+                    <texturenofocus>OSDRewindNF.png</texturenofocus>
                     <onleft>600</onleft>
                     <onright>602</onright>
                     <ondown>500</ondown>
                     <onclick>PlayerControl(Rewind)</onclick>
                 </control>
                 <control type="togglebutton" id="602">
-				 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-                    <left>10</left>
-                    <top>-4</top>
-                    <width>20</width>
-                    <height>20</height>
-                    <!-- <label>31351</label>
-                    <altlabel>208</altlabel> -->
+                    <left>100</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>28</height>
+                    <label>31351</label>
+                    <altlabel>208</altlabel>
                     <font>-</font>
-                    <texturefocus>osd/osd/pause52.png</texturefocus>
-                    <texturenofocus>osd/osd/pause52.png</texturenofocus>
+                    <texturefocus>OSDPauseFO.png</texturefocus>
+                    <texturenofocus>OSDPauseNF.png</texturenofocus>
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                    <alttexturefocus>osd/osd/play128.png</alttexturefocus>
-                    <alttexturenofocus>osd/osd/play128.png</alttexturenofocus>
+                    <alttexturefocus>OSDPlayFO.png</alttexturefocus>
+                    <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
                     <onleft>601</onleft>
                     <onright>603</onright>
                     <ondown>500</ondown>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
                 <control type="button" id="603">
-					 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation> 
-                    <left>70</left>
-                    <top>-3</top>
-                    <width>19</width>
-                    <height>19</height>
-                    <!-- <label>31352</label> -->
+                    <left>150</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>28</height>
+                    <label>31352</label>
                     <font>-</font>
-                    <texturefocus>osd/osd/stop4.png</texturefocus>
-                    <texturenofocus>osd/osd/stop4.png</texturenofocus>
+                    <texturefocus>OSDStopFO.png</texturefocus>
+                    <texturenofocus>OSDStopNF.png</texturenofocus>
                     <onleft>602</onleft>
                     <onright>604</onright>
                     <ondown>500</ondown>
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="604">
-				 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-                    <left>130</left>
-                    <top>-5</top>
-                    <width>22</width>
-                    <height>22</height>
-                    <!-- <label>31353</label> -->
+                    <left>200</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>28</height>
+                    <label>31353</label>
                     <font>-</font>
-					<texturefocus>osd/osd/forw1.png</texturefocus>
-                    <texturenofocus>osd/osd/forw1.png</texturenofocus>
+                    <texturefocus>OSDForwardFO.png</texturefocus>
+                    <texturenofocus>OSDForwardNF.png</texturenofocus>
                     <onleft>603</onleft>
                     <onright>605</onright>
                     <ondown>500</ondown>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="605">
-				 <animation effect="zoom" start="100" end="140" center="auto" time="200" tween="cubic" easing="inout" pulse="true">Focus</animation>
-                    <left>190</left>
-                    <top>-6</top>
-                    <width>25</width>
-                    <height>25</height>
-                    <!-- <label>209</label> -->
+                    <left>250</left>
+                    <top>0</top>
+                    <width>40</width>
+                    <height>28</height>
+                    <label>209</label>
                     <font>-</font>
-                    <texturefocus>osd/osd/fast19.png</texturefocus>
-                    <texturenofocus>osd/osd/fast19.png</texturenofocus>
+                    <texturefocus>OSDNextTrackFO.png</texturefocus>
+                    <texturenofocus>OSDNextTrackNF.png</texturenofocus>
                     <onleft>604</onleft>
-                    <onright>702</onright>
+                    <onright>606</onright>
                     <ondown>500</ondown>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
-<!--                 <control type="button" id="606">
+                <control type="button" id="606">
                     <left>300</left>
                     <top>0</top>
                     <width>40</width>
@@ -310,8 +288,8 @@
                     <onclick>PlayerControl(ShowVideoMenu)</onclick>
                     <enable>VideoPlayer.HasMenu</enable>
                     <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
-                </control> -->
-<!--                 <control type="image" id="11">
+                </control>
+    <!--             <control type="image" id="11">
                     <description>separator image</description>
                     <left>-400</left>
                     <top>40</top>
@@ -321,67 +299,83 @@
                     <texture>separator2.png</texture>
                 </control> -->
             </control>
-<!--             <control type="label">
-                <left>20</left>
+            <control type="label">
+                <left>5</left>
                 <top>65</top>
-                <width>300</width>
+                <width>600</width>
                 <height>25</height>
                 <label>$INFO[VideoPlayer.Title]</label>
                 <scroll>true</scroll>
                 <align>left</align>
                 <aligny>center</aligny>
-                <font>cirrus_20</font>
-                <textcolor>accent</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control> -->
-           <!--  <control type="label">
-                <left>450</left>
-                <top>-22</top>
-                <width>380</width>
+                <font>Fontsize_60</font>
+                <textcolor>grey3</textcolor>
+				        <visible>VideoPlayer.Content(Episodes)</visible>
+        <visible>!Skin.HasSetting(slimseek)</visible>
+            </control>
+			 <control type="label">
+			   <left>5</left>
+        <top>-50</top>
+        <width>1080</width>
+        <height>30</height>
+        <label>$INFO[VideoPlayer.TVShowTitle] | [COLOR=grey3]$LOCALIZE[20373][/COLOR]: $INFO[VideoPlayer.Season]  [COLOR=grey3]$LOCALIZE[20359]:[/COLOR] $INFO[VideoPlayer.Episode]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <scroll>true</scroll>
+        <font>FontSize_60</font>
+        <textcolor>grey3</textcolor>
+        <visible>VideoPlayer.Content(Episodes)</visible>
+        <visible>!Skin.HasSetting(slimseek)</visible>
+      </control>
+			
+            <control type="label">
+                <left>150</left>
+                <top>20</top>
+                <width>1080</width>
                 <height>20</height>
                 <label>$INFO[System.CurrentControl]</label>
                 <scroll>true</scroll>
-                <align>center</align>
+                <align>right</align>
                 <aligny>center</aligny>
-                <font>cirrus_18</font>
+                <font>Fontsize_38</font>
                 <textcolor>grey</textcolor>
                 <shadowcolor>black</shadowcolor>
             </control>
-            <control type="label">
-                <left>800</left>
-                <top>-25</top>
+           <!--  <control type="label">
+                <left>-25</left>
+                <top>85</top>
                 <width>460</width>
                 <height>25</height>
                 <label>$INFO[VideoPlayer.Time] - $INFO[VideoPlayer.Duration]</label>
                 <scroll>true</scroll>
                 <align>right</align>
                 <aligny>center</aligny>
-                <font>cirrus_20</font>
-                <textcolor>grey</textcolor>
+                <font>Fontsize_18</font>
+                <textcolor>grey3</textcolor>
                 <shadowcolor>black</shadowcolor>
             </control>
             <control type="progress">
                 <description>Progressbar</description>
-                <left>440</left>
-                <top>-22</top>
+                <left>40</left>
+                <top>82</top>
                 <width>400</width>
-                <height>12</height>
+                <height>3</height>
                 <info>Player.Progress</info>
-            </control>
-            <control type="slider" id="500">
+            </control> -->
+<!--             <control type="slider" id="500">
                 <description>Seek Slider</description>
-                <left>440</left>
-                <top>-22</top>
+                <left>40</left>
+                <top>62</top>
                 <width>400</width>
-                <height>12</height>
+                <height>6</height>
                 <action>seek</action>
                 <ondown>602</ondown>
                 <onup>602</onup>
                 <texturesliderbar>seekslider.png</texturesliderbar>
-                <textureslidernib>osd_seeknf.png</textureslidernib>
-                <textureslidernibfocus>osd_seek.png</textureslidernibfocus>
+        <textureslidernib>gps36.png</textureslidernib>
+        <textureslidernibfocus>gps36.png</textureslidernibfocus>
             </control> -->
-            <!-- <include>Clock</include> -->
+<!--             <include>Clock</include> -->
         </control>
     </controls>
 </window>
