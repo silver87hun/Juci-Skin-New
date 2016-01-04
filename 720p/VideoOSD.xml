@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="2901">
     <defaultcontrol always="true">602</defaultcontrol>
-    <controls>
 	
+    <controls>
+	<visible>DialogSubtitle.xml</visible>
 	
 	 	<control type="image">
 
@@ -299,7 +300,7 @@
                     <texture>separator2.png</texture>
                 </control> -->
             </control>
-            <control type="label">
+            <!-- <control type="label">
                 <left>5</left>
                 <top>65</top>
                 <width>600</width>
@@ -312,8 +313,8 @@
                 <textcolor>grey3</textcolor>
 				        <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
-            </control>
-			 <control type="label">
+            </control> -->
+			 <!-- <control type="label">
 			   <left>5</left>
         <top>-50</top>
         <width>1080</width>
@@ -326,7 +327,7 @@
         <textcolor>grey3</textcolor>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
-      </control>
+      </control> -->
 			
             <control type="label">
                 <left>150</left>

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window id="123">
   <defaultcontrol>5</defaultcontrol>
+  	  			<animation effect="slide" start="0,-400" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-400" time="400" tween="quadratic" easing="out">WindowClose</animation> 
   <coordinates>
     <system>1</system>
     <left>240</left>
@@ -11,15 +13,22 @@
     <control type="group">
       <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 
-	  
+	  	 <control type="image">
+				
+				 <left>-240</left>
+				  <top>-15</top>
+				  <width>1920</width>
+				  <height>300</height>
+                <texture>white_layer10.png</texture>
+            </control>
 	  
       <control type="label">
         <description>header label</description>
         <left>10</left>
-        <top>18</top>
+        <top>10</top>
         <width>760</width>
         <height>30</height>
-        <font>FontSize_30</font>
+        <font>FontSize_24</font>
         <label>$LOCALIZE[3] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
@@ -32,7 +41,7 @@
         <top>18</top>
         <width>760</width>
         <height>30</height>
-        <font>FontSize_30</font>
+        <font>FontSize_24</font>
         <label>$LOCALIZE[292] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
@@ -45,7 +54,7 @@
         <left>40</left>
         <top>65</top>
         <width>720</width>
-        <height>500</height>
+        <height>200</height>
         <itemgap>-1</itemgap>
         <pagecontrol>60</pagecontrol>
         <onleft>60</onleft>
@@ -57,7 +66,7 @@
         <left>800</left>
         <top>75</top>
         <width>5</width>
-        <height>500</height>
+        <height>200</height>
         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
         <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
         <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -73,8 +82,8 @@
     </control>
     <control type="sliderex" id="13">
       <description>Default Slider</description>
-      <height>40</height>
-      <texturefocus border="0,2,0,2"></texturefocus>
+      <height>35</height>
+      <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
       <font>FontSize_18</font>
       <textcolor>grey2</textcolor>
@@ -85,11 +94,11 @@
       <description>Default Button</description>
       <left>0</left>
       <top>0</top>
-      <height>40</height>
+      <height>35</height>
       <font>FontSize_18</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturefocus border="0,2,0,2"></texturefocus>
+      <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
       <width>300</width>
     </control>
@@ -97,22 +106,22 @@
       <description>Default RadioButton</description>
       <left>0</left>
       <top>0</top>
-      <height>40</height>
+      <height>35</height>
       <font>FontSize_18</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturefocus border="0,2,0,2"></texturefocus>
+      <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
     </control>
     <control type="spincontrolex" id="9">
       <description>Default SpinControlex</description>
       <left>0</left>
       <top>0</top>
-      <height>40</height>
+      <height>35</height>
       <font>FontSize_18</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturefocus border="0,2,0,2"></texturefocus>
+      <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
       <aligny>center</aligny>
       <reverse>yes</reverse>
@@ -120,7 +129,7 @@
     </control>
     <control type="image" id="11">
       <description>separator image</description>
-      <height>2</height>
+      <height>1</height>
       <texture>separator2.png</texture>
     </control>
   </controls>

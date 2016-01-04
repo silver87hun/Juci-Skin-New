@@ -8,43 +8,26 @@
     </coordinates>
     <controls>
         <control type="group">
-<!-- 		 <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="40" end="100" center="640,360" easing="out" tween="back" time="800" />
-        <effect type="fade" start="0" end="100" time="300" />
-      </animation>
-      <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="40" center="640,360" easing="in" tween="back" time="800" />
-        <effect type="fade" start="100" end="0" time="300" />
-      </animation> -->
+  	  			<animation effect="slide" start="0,-400" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-400" time="400" tween="quadratic" easing="out">WindowClose</animation> 
  <control type="group">	 
-<!-- 	 <control type="image">
-
-
-		<left>0</left>
-        <top>0</top>
-        <width>1920</width>
-        <height>1080</height>
-                <texture>black.jpeg</texture>
-            </control>  -->
-		 <control type="multiimage">
-
-
-                <!-- background -->
-		<left>0</left>
-        <top>0</top>
-        <width>1920</width>
-        <height>1080</height>
-                <aspectratio>stretch</aspectratio>
-				<timeperimage>46000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>100</fadetime>
-										<pauseatend>0</pauseatend>
-			<loop>true</loop>
-                <imagepath background="true">test_dark</imagepath>
-				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-              <!--   <texture flipy="true">OSDbackground.png</texture> -->
-                <!-- flip y when up the top -->
-            </control></control>
+	  	 <control type="image">
+				
+				 <left>-240</left>
+				  <top>-15</top>
+				  <width>1920</width>
+				  <height>300</height>
+                <texture>white_layer10.png</texture>
+            </control>
+				  	 <control type="image">
+				
+				 <left>-240</left>
+				  <top>-15</top>
+				  <width>1920</width>
+				  <height>300</height>
+                <texture>white_layer10.png</texture>
+            </control>
+		</control>
 		
             <control type="group" id="250">
 			
@@ -107,7 +90,7 @@
                     <aspectratio align="right">keep</aspectratio>
                 </control>
 				
-								<control type="label">
+				<control type="label">
                     <description>number of files/pages in list text label</description>
                     <left>530</left>
                     <top>10</top>
@@ -120,12 +103,12 @@
                 </control>
 				<control type="label">
                     <description>number of files/pages in list text label</description>
-                    <left>530</left>
-                    <top>90</top>
+                    <left>1050</left>
+                    <top>250</top>
                     <width>210</width>
                     <height>40</height>
-                    <font>Fontsize_18</font>
-                    <align>center</align>
+                    <font>Fontsize_20</font>
+                    <align>right</align>
                     <textcolor>grey</textcolor>
                     <label>$INFO[Container(120).NumItems,, $LOCALIZE[31025]]$INFO[Container(120).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(120).NumPages,/,)]</label>
                 </control>
@@ -140,7 +123,7 @@
                     <textcolor>black</textcolor>
                     <label>$INFO[Container(120).NumItems,, $LOCALIZE[31025]]$INFO[Container(120).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(120).NumPages,/,)]</label>
                 </control> -->
-<!--                  <control type="label" id="100">
+                 <control type="label" id="100">
                     <description>number subtitles found</description>
                     <left>750</left>
                     <top>530</top>
@@ -148,15 +131,14 @@
                     <height>40</height>
                     <font>Fontsize_18</font>
                     <align>left</align>
-                    <textcolor>white</textcolor>
-                </control>  -->
+                    <textcolor>black</textcolor>
+                </control> 
                 <control type="image">
                     <left>1150</left>
                     <top>350</top>
                     <width>55</width>
                     <height>55</height>
                     <texture>arrow395.png</texture>
-					<colordiffuse>grey</colordiffuse>
                     <visible>!Control.HasFocus(150)</visible>
                 </control> 
                 <control type="group">
@@ -191,7 +173,7 @@
                 <!-- ** Required ** Do not change <id>or<type>-->
                 <control type="list" id="120">
                     <left>200</left>
-                    <top>180</top>
+                    <top>80</top>
                     <width>1601</width>
                     <height>490</height>
                     <onleft>121</onleft>
@@ -215,7 +197,7 @@
                             <top>0</top>
                             <width>200</width>
                             <height>36</height>
-                            <textcolor>white</textcolor>
+                            <textcolor>grey</textcolor>
                             <aligny>center</aligny>
                             <font>Fontsize_18</font>
                             <info>ListItem.Label</info>
@@ -245,7 +227,7 @@
                             <height>36</height>
                             <font>Fontsize_18</font>
                             <aligny>center</aligny>
-                            <textcolor>white</textcolor>
+                            <textcolor>grey</textcolor>
                             <selectedcolor></selectedcolor>
                             <align>left</align>
                             <info>ListItem.Label2</info>
@@ -377,17 +359,17 @@
                     <texture>mask_black20.png</texture>
                 </control>
 
-                <control type="label">
+<!--                 <control type="label">
                     <description>XBMC Subtitles label</description>
                     <left>1025</left>
                     <top>100</top>
                     <width>294</width>
                     <height>20</height>
                     <label>[B]$LOCALIZE[24018][/B]</label>
-                    <font>FontSize_18</font>
+                    <font>Fontsize_18</font>
                     <align>center</align>
                     <textcolor>black</textcolor>
-                </control>
+                </control> -->
                 <control type="list" id="150">
                     <left>1055</left>
                     <top>160</top>
@@ -419,7 +401,7 @@
                             <top>6</top>
                             <width>230</width>
                             <height>30</height>
-                            <texture>white_layer40.png</texture>
+                            <texture>progresswhite.png</texture>
                             <visible>Control.HasFocus(150)</visible>
                             <aspectratio>stretch</aspectratio>
                         </control>
@@ -430,7 +412,6 @@
                             <height>38</height>
                             <font>Fontsize_18</font>
                             <aligny>center</aligny>
-							<align>center</align>
                             <textcolor>grey</textcolor>
                             <selectedcolor>black</selectedcolor>
                             <align>left</align>

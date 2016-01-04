@@ -8,14 +8,14 @@
             <width>75</width>
             <height>28</height>
             <aspectratio>keep</aspectratio>
-            <texture colordiffuse="$VAR[FlagColor]">$INFO[ListItem.VideoResolution,special://skin/extras/flagging/video/,.png]</texture>
+            <texture colordiffuse="$VAR[black]">$INFO[ListItem.VideoResolution,special://skin/extras/flagging/video/,.png]</texture>
         </control>
         <control type="image">
             <description>VideoCodecFlagging</description>
             <width>75</width>
             <height>28</height>
             <aspectratio>keep</aspectratio>
-            <texture colordiffuse="$VAR[FlagColor]">$INFO[ListItem.VideoCodec,special://skin/extras/flagging/video/,.png]</texture>
+            <texture colordiffuse="$VAR[black]">$INFO[ListItem.VideoCodec,special://skin/extras/flagging/video/,.png]</texture>
         </control>
     </include>
 
@@ -27,14 +27,14 @@
             <width>75</width>
             <height>28</height>
             <aspectratio>keep</aspectratio>
-            <texture colordiffuse="$VAR[FlagColor]">$INFO[ListItem.AudioCodec,special://skin/extras/flagging/audio/,.png]</texture>
+            <texture colordiffuse="$VAR[black]">$INFO[ListItem.AudioCodec,special://skin/extras/flagging/audio/,.png]</texture>
         </control>
         <control type="image">
             <description>Audio Channels Image</description>
             <width>75</width>
             <height>28</height>
             <aspectratio align="left">keep</aspectratio>
-            <texture colordiffuse="$VAR[FlagColor]">$INFO[ListItem.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
+            <texture colordiffuse="$VAR[black]">$INFO[ListItem.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
         </control>
     </include>
 
@@ -45,7 +45,7 @@
             <width>75</width>
             <height>28</height>
             <aspectratio>keep</aspectratio>
-            <texture colordiffuse="$VAR[FlagColor]">$INFO[ListItem.VideoAspect,special://skin/extras/flagging/aspectratio/,.png]</texture>
+            <texture colordiffuse="$VAR[black]">$INFO[ListItem.VideoAspect,special://skin/extras/flagging/aspectratio/,.png]</texture>
         </control>
     </include>
 
@@ -550,7 +550,7 @@
                 <width>75</width>
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/audiolanguage/frame.png</texture>
+                <texture colordiffuse="$VAR[black]">special://skin/extras/flagging/audiolanguage/frame.png</texture>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
         </control>
@@ -575,7 +575,7 @@
                 <width>75</width>
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/audiolanguage/frame.png</texture>
+                <texture colordiffuse="$VAR[black]">special://skin/extras/flagging/audiolanguage/frame.png</texture>
                 <visible>Skin.HasSetting(showlanflag)</visible>
                 <visible>!IsEmpty(ListItem.AudioLanguage)</visible>
             </control>

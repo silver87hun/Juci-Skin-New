@@ -245,7 +245,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20389][/B]   $INFO[ListItem.label][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   [B]$LOCALIZE[20389][/B]   $INFO[ListItem.label][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -259,7 +259,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20343][/B]  $INFO[ListItem.TVShowTitle][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   [B]$LOCALIZE[20343][/B]  $INFO[ListItem.TVShowTitle][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -272,7 +272,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20342][/B][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   [B]$LOCALIZE[20342][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -285,7 +285,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[135][/B][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   [B]$LOCALIZE[135][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -298,7 +298,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[652][/B][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   [B]$LOCALIZE[652][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -311,7 +311,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[344][/B][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   [B]$LOCALIZE[344][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -324,7 +324,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   [B]$LOCALIZE[20348][/B][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   [B]$LOCALIZE[20348][/B][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -337,7 +337,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   $LOCALIZE[31007][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   $LOCALIZE[31007][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -350,7 +350,7 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <left>0</left>
-                <label>[COLOR=black]$INFO[System.Time]   $LOCALIZE[31021][/COLOR]</label>
+                <label>[COLOR=grey]$INFO[System.Time]   $LOCALIZE[31021][/COLOR]</label>
                 <visible>!Skin.HasSetting(nobreadcrumb)</visible>
             </control>
         </control>
@@ -384,7 +384,7 @@
                 <top>0</top>
                 <width>820</width>
                 <height>720</height>
-                <texture>mask_black20.png</texture>
+                <texture>mask_black90.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
 <!--             <control type="image">
@@ -400,12 +400,12 @@
                 <top>50</top>
                 <control type="label">
                     <description>View options</description>
-                    <left>0</left>
+                    <left>10</left>
                     <top>0</top>
                     <width>250</width>
                     <height>30</height>
-                    <font>FontSize_24</font>
-                    <textcolor>black</textcolor>
+                    <font>FontSize_26</font>
+                    <textcolor>grey</textcolor>
 <!--                     <shadowcolor>black</shadowcolor> -->
                     <scroll>true</scroll>
                     <align>left</align>

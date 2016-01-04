@@ -3,12 +3,12 @@
 <!--       <animation effect="slide" start="600,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
       <animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out">WindowClose</animation> -->
 	        <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="40" end="100" center="auto" easing="out" tween="back" time="300" />
-        <effect type="fade" start="0" end="100" time="300" />
+        <!-- <effect type="zoom" start="40" end="100" center="auto" easing="out" tween="back" time="300" /> -->
+        <effect type="fade" start="0" end="100" time="100" />
       </animation>
       <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="40" center="auto" easing="in" tween="back" time="300" />
-        <effect type="fade" start="100" end="0" time="300" />
+        <!-- <effect type="zoom" start="100" end="40" center="auto" easing="in" tween="back" time="300" /> -->
+        <effect type="fade" start="100" end="0" time="100" />
       </animation>
   <defaultcontrol always="true">3</defaultcontrol>
   <coordinates>
@@ -20,34 +20,20 @@
   <include>dialogeffect</include>
   <controls>
   				   		
-  <control type="image">
-      <description>background image</description>
-      <left>-780</left>
-      <top>-35</top>
-      <width>1920</width>
-      <height>1080</height>
-      <texture border="10">black.jpeg</texture>
-    </control>
+
 			         <control type="multiimage">
 				 <left>-780</left>
 				  <top>-35</top>
 				  <width>1720</width>
 				  <height>1080</height>
 					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-             	 <timeperimage>8000</timeperimage>
+             	 <timeperimage>48000</timeperimage>
 				<randomize>true</randomize> 
-				 <fadetime>1000</fadetime>
-                  <imagepath background="true">test_light</imagepath>
+				 <fadetime>100</fadetime>
+                  <imagepath background="true">test_dark</imagepath>
             </control> 
 
- 			    <control type="image">
-      <description>background image</description>
-      <left>-780</left>
-      <top>-35</top>
-      <width>1720</width>
-      <height>1080</height>
-      <texture border="10">mask_black50.png</texture>
-    </control> 
+
 	<control type="group">
 	      <left>-300</left>
 	     <!-- <control type="label">
@@ -62,7 +48,7 @@
                 <textcolor>black</textcolor>
                 <label> $INFO[System.Time] </label>
             </control> -->
-    <!-- <control type="button">
+    <control type="button">
       <description>Close Window button</description>
       <left>420</left>
       <top>90</top>
@@ -78,7 +64,7 @@
       <onup>10</onup>
       <ondown>10</ondown>
       <visible>system.getbool(input.enablemouse)</visible>
-    </control> -->
+    </control>
     <control type="label" id="1">
 <!-- 				<animation type="WindowOpen">
                         <effect type="fade" start="0" end="100" delay="300" tween="sine" easing="in" time="2300" />
@@ -89,19 +75,19 @@
                         <effect type="slide" start="100" end="0" delay="300" tween="cubic" easing="out" time="1600" />
                     </animation> -->
       <description>header label</description>
-      <left>100</left>
-            <top>50</top>
+      <left>30</left>
+            <top>30</top>
             <width>0</width>
             <height>0</height>
-            <font>font30</font>
+            <font>FontSize_24B</font>
       <label>$LOCALIZE[13406]</label>
       <align>center</align>
       <aligny>center</aligny>
-      <textcolor>black</textcolor>
+      <textcolor>white</textcolor>
     </control>
     <control type="list" id="3">
 				
-      <left>-100</left>
+      <left>-300</left>
       <top>100</top>
       <width>1050</width>
       <height>550</height>
@@ -123,49 +109,49 @@
         </control>
         <control type="label">
 
-          <left>20</left>
+          <left>120</left>
           <top>0</top>
-          <width>1050</width>
+          <width>650</width>
           <height>50</height>
-          <font>FontSize_20</font>
-          <textcolor>black</textcolor>
-          <selectedcolor>selected</selectedcolor>
-          <align>left</align>
+          <font>FontSize_18b</font>
+          <textcolor>grey</textcolor>
+          <selectedcolor>black</selectedcolor>
+          <align>center</align>
           <aligny>center</aligny>
           <label>$INFO[ListItem.Label]</label>
         </control>
       </itemlayout>
       <focusedlayout height="50" width="570">
-        <control type="image">
-          <left>10</left>
-          <top>0</top>
-          <width>1050</width>
-          <height>50</height>
-<!--           <texture border="0,2,0,2" flipx="true">listwhitegradient.png</texture> -->
-          <visible>!Control.HasFocus(3)</visible>
-          <include>VisibleFadeEffect</include>
-          <aspectratio>stretch</aspectratio>
-        </control>
 <!--         <control type="image">
           <left>10</left>
           <top>0</top>
-          <width>400</width>
+          <width>1050</width>
           <height>50</height>
-          <texture border="0,2,0,2" flipx="true">select4.png</texture>
-          <visible>Control.HasFocus(3)</visible>
+           <texture>listwhitegradient.png</texture>
+          <visible>!Control.HasFocus(3)</visible>
           <include>VisibleFadeEffect</include>
           <aspectratio>stretch</aspectratio>
         </control> -->
+         <control type="image">
+          <left>120</left>
+          <top>0</top>
+          <width>650</width>
+          <height>50</height>
+          <texture>focus.png</texture>
+          <visible>Control.HasFocus(3)</visible>
+          <include>VisibleFadeEffect</include>
+          <aspectratio>stretch</aspectratio>
+        </control>
         <control type="label">
 
-          <left>20</left>
+          <left>120</left>
           <top>0</top>
-          <width>1050</width>
+          <width>650</width>
           <height>50</height>
-          <font>FontSize_28</font>
+          <font>FontSize_20b</font>
           <textcolor>black</textcolor>
           <selectedcolor>selected</selectedcolor>
-          <align>left</align>
+          <align>center</align>
           <aligny>center</aligny>
           <label>$INFO[ListItem.Label]</label>
         </control>
@@ -287,7 +273,7 @@
       </focusedlayout>
     </control>
     <control type="scrollbar" id="61">
-      <left>500</left>
+      <left>700</left>
       <top>100</top>
       <width>10</width>
       <height>550</height>
@@ -296,7 +282,7 @@
       <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
       <textureslidernib>ScrollBarNib.png</textureslidernib>
       <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-	  <colordiffuse>black</colordiffuse>
+	  <colordiffuse>white</colordiffuse>
       <onleft>3</onleft>
       <onright>3</onright>
       <ondown>61</ondown>
@@ -320,8 +306,8 @@
     </control>
     <control type="label">
       <description>number of files/pages in list text label</description>
-      <left>250</left>
-      <top>650</top>
+      <left>50</left>
+      <top>50</top>
       <width>400</width>
       <height>35</height>
       <font>Context-List</font>
