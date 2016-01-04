@@ -63,11 +63,11 @@
             <height>60</height>
             <label>107</label>
             <font>FontSize_22</font>
-            <textcolor>grey3</textcolor>
-            <focusedcolor>white</focusedcolor>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>black</focusedcolor>
             <align>center</align>
 <!--             <texturenofocus border="5">menuitemNF.png</texturenofocus> -->
-            <texturefocus>white_layer40.png</texturefocus>
+            <texturefocus>focus.png</texturefocus>
             <onleft>10</onleft>
             <onright>10</onright>
             <onup>10</onup>
@@ -81,11 +81,11 @@
             <height>60</height>
             <label>106</label>
             <font>FontSize_22</font>
-            <textcolor>grey3</textcolor>
-            <focusedcolor>white</focusedcolor>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>black</focusedcolor>
             <align>center</align>
 <!--             <texturenofocus border="5">menuitemNF.png</texturenofocus> -->
-            <texturefocus>white_layer40.png</texturefocus>
+            <texturefocus>focus.png</texturefocus>
             <onleft>11</onleft>
             <onright>11</onright>
             <onup>11</onup>

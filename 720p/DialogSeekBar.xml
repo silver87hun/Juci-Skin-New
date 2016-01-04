@@ -313,7 +313,20 @@
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
-	  
+            <!-- <control type="label">
+                <left>5</left>
+                <top>65</top>
+                <width>600</width>
+                <height>25</height>
+                <label>$INFO[VideoPlayer.Title]</label>
+                <scroll>true</scroll>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>Fontsize_60</font>
+                <textcolor>grey3</textcolor>
+				        <visible>VideoPlayer.Content(Episodes)</visible>
+        <visible>!Skin.HasSetting(slimseek)</visible>
+            </control> -->
 	        <control type="label">
  <!-- <animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation> -->
  <animation effect="slide" start="0,0" end="0,-200" time="800" condition="System.IdleTime(6)">conditional</animation>
@@ -432,7 +445,7 @@
         <top>440</top>
         <width>550</width>
         <height>30</height>
-        <label>[COLOR=grey2]$LOCALIZE[20373][/COLOR]: $INFO[VideoPlayer.Season]  [COLOR=grey2]$LOCALIZE[20359]:[/COLOR] $INFO[VideoPlayer.Episode]</label>
+        <label>[COLOR=grey2]$LOCALIZE[20373][/COLOR]: $INFO[VideoPlayer.Season]  [COLOR=grey2]$LOCALIZE[20359]:[/COLOR] $INFO[VideoPlayer.Episode] | $INFO[VideoPlayer.Title]</label>
         <align>left</align>
         <aligny>center</aligny>
         <scroll>true</scroll>
@@ -521,14 +534,14 @@
       <control type="label">
 	  <animation effect="slide" start="0" end="0,-200" time="800" condition="System.IdleTime(6)">conditional</animation>
         <left>-120</left>
-        <top>445</top>
+        <top>443</top>
         <width>550</width>
         <height>30</height>
         <label>$INFO[VideoPlayer.Year]</label>
         <scroll>true</scroll>
         <align>left</align>
         <aligny>center</aligny>
-        <font>font16</font>
+        <font>FontSize_20</font>
         <textcolor>grey2</textcolor>
         <visible>VideoPlayer.Content(Movies)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
@@ -600,7 +613,7 @@
         <align>center</align>
         <aligny>center</aligny>
         <font>FontSize_50</font>
-        <textcolor>grey2</textcolor>
+        <textcolor>grey3</textcolor>
         <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
         <visible>!VideoPlayer.Content(episodes)</visible>
       </control>
@@ -627,14 +640,14 @@
       <control type="label">
 	  <animation effect="slide" start="0" end="0,-200" time="800" condition="System.IdleTime(6)">conditional</animation>
         <left>-120</left>
-        <top>445</top>
+        <top>443</top>
         <width>550</width>
         <height>30</height>
         <label>$INFO[VideoPlayer.Year]</label>
         <scroll>true</scroll>
         <align>left</align>
         <aligny>center</aligny>
-        <font>font16</font>
+        <font>FontSize_20</font>
         <textcolor>grey2</textcolor>
         <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
         <visible>!VideoPlayer.Content(episodes)</visible>
@@ -693,9 +706,9 @@
 		        <control type="textbox">
 			  <animation effect="slide" start="0" end="0,-200" time="800" condition="System.IdleTime(6)">conditional</animation>
           <left>-240</left>
-          <top>380</top>
+          <top>475</top>
           <width>800</width>
-          <height>250</height>
+          <height>60</height>
           <align>left</align>
           <aligny>center</aligny>
           <label>$INFO[VideoPlayer.Plot ]</label>

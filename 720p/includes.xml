@@ -345,15 +345,15 @@
         <height>30</height>
         <width>250</width>
         <textoffsetx>10</textoffsetx>
-        <textwidth>215</textwidth>
+        <textwidth>200</textwidth>
         <aligny>left</aligny>
         <aligny>center</aligny>
-        <font>FontSize_20</font>
-		<textcolor>black</textcolor>
+        <font>FontSize_18</font>
+		<textcolor>grey2</textcolor>
 		<!-- Kijelölés -->
         <texturefocus border="0" flipx="true"></texturefocus>
-        <texturenofocus>black</texturenofocus>
-        <focusedcolor>grey2</focusedcolor>
+        <texturenofocus>grey2</texturenofocus>
+        <focusedcolor>white</focusedcolor>
         <pulseonselect>false</pulseonselect>
     </include>
     <include name="ButtonMediaSubCommonValues">
