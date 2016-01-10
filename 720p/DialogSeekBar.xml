@@ -1172,6 +1172,65 @@
         </control>
 		
       </control>
+	  
+	  
+	   <!-- CAST PANEL -->
+        <control type="panel" id="50">
+          <visible>!Control.HasFocus(12)</visible>
+          <left>655</left>
+          <top>232</top>
+          <width>450</width>
+          <height>65</height>
+          <onleft>105</onleft>
+          <onright>105</onright>
+          <onup>50</onup>
+          <ondown>50</ondown>
+          <viewtype>list</viewtype>
+          <pagecontrol>61</pagecontrol>
+          <scrolltime>200</scrolltime>
+          <orientation>vertical</orientation>
+          <itemlayout height="22" width="530">
+            <control type="label">
+              <left>10</left>
+              <top>0</top>
+              <width>410</width>
+              <height>21</height>
+              <font>cirrus_20</font>
+              <align>left</align>
+              <aligny>center</aligny>
+              <textcolor>grey</textcolor>
+              <info>ListItem.Label</info>
+            </control>
+          </itemlayout>
+          <focusedlayout height="22" width="530">
+            <control type="label">
+              <left>10</left>
+              <top>0</top>
+              <width>410</width>
+              <height>21</height>
+              <font>cirrus_20_Bold</font>
+              <align>left</align>
+              <aligny>center</aligny>
+              <textcolor>accent</textcolor>
+              <info>ListItem.Label</info>
+            </control>
+          </focusedlayout>
+        </control>
+        <control type="label">
+          <left>105</left>
+          <top>10</top>
+          <width>410</width>
+          <height>21</height>
+          <font>cirrus_20</font>
+          <align>left</align>
+          <aligny>center</aligny>
+          <textcolor>accent</textcolor>
+          <label>41285</label>
+          <visible>Control.HasFocus(50) + System.HasAddon(script.metadata.actors)</visible>
+        </control>
+	  
+	  
+	  
       <control type="group">
         <left>-500</left>
         <top>85</top>
