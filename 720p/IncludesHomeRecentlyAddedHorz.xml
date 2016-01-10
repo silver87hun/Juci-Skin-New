@@ -6,7 +6,7 @@
     <include name="HomeRecentlyAddedInfoHorz">
         <control type="group" id="8004">
 		<animation effect="slide" start="0" end="0,600" time="200" condition="System.IdleTime(10)">conditional</animation>		
-		<animation effect="slide" start="0" end="0,-100" time="600" condition="Window.IsVisible(DialogProgress.xml)">Conditional</animation>
+		<!-- <animation effect="slide" start="0" end="0,-100" time="600" condition="Window.IsVisible(DialogProgress.xml)">Conditional</animation> -->
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowonhome)</visible>
             <visible>!Window.IsVisible(Favourites)</visible>
             <visible>!Window.IsVisible(114)</visible>
@@ -59,15 +59,15 @@
 				<texture>mask_black50.png</texture>
 		   </control>	 -->	
 		   
- 		<control type="image">
+<!--  		<control type="image">
 			<left>0</left>
 			<top>440</top>
 			<width>1920</width>
 			<height>400</height>
 			<texture>white_layer40.png</texture>
-			</control>
+			</control> -->
 			
-<!-- 					<control type="multiimage">
+					<control type="multiimage">
 			<left>0</left>
 			<top>300</top>
 			<width>1920</width>
@@ -80,7 +80,7 @@
 			<loop>true</loop>
                 <imagepath background="true">fade_vignette_low</imagepath>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-			</control> -->
+			</control>
 			
 <!-- 		<control type="multiimage">
 		<left>0</left>
@@ -183,18 +183,31 @@
         <control type="label">
             <description>Title label</description>
             <left>350</left>
-            <top>-10</top>
+            <top>230</top>
             <height>20</height>
             <width>800</width>
             <label>$INFO[Container(8000).ListItem.Label]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <font>FontSize_20b</font>
+            <font>FontSize_24</font>
             <textcolor>black</textcolor>
             <visible>Control.HasFocus(8000)</visible>
 				</control>
 				
-				
+							<!-- Logo mellett -->
+			       <!--  <control type="label">
+            <description>Title label</description>
+            <left>300</left>
+            <top>-380</top>
+            <height>20</height>
+            <width>800</width>
+            <label>$INFO[Container(8000).ListItem.Label]</label>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>FontSize_38</font>
+            <textcolor>white</textcolor>
+            <visible>Control.HasFocus(8000)</visible>
+				</control>	 -->	
 
 	  
 <!-- 				        <control type="label">
@@ -1111,9 +1124,9 @@
     </control>
     <!-- RECENTLY ADDED TV SHOWS -->
     <control type="group">
-			<animation effect="slide" start="0" end="610,-100" time="500" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>		
-        <left>-80</left>
-        <top>560</top>
+			<animation effect="slide" start="0,-35" end="780,-80" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>		
+        <left>25</left>
+        <top>600</top>
         <visible>Library.HasContent(TVShows)</visible>
         <visible>Container(9000).Hasfocus(7)</visible>
         <visible>Skin.HasSetting(latestepisodes) | Skin.HasSetting(watchlisttvhorizontal) | System.IdleTime(11)</visible>
@@ -1137,8 +1150,8 @@
                   <imagepath background="true">walls</imagepath>
         </control> -->
         <control type="wraplist" id="8001">
-            <left>225</left>
-            <top>-20</top>
+            <left>55</left>
+            <top>-45</top>
             <width>1280</width>
             <height>400</height>
             <onleft>8001</onleft>
@@ -1155,7 +1168,7 @@
             <itemlayout width="260" height="160">
                 <control type="image">
                     <left>0</left>
-                    <top>2</top>
+                    <top>0</top>
                     <width>260</width>
                     <height>160</height>
                     <texture background="true">$INFO[ListItem.ActualIcon]</texture>
@@ -1181,10 +1194,10 @@
                     <fadetime>IconCrossfadeTime</fadetime>
                     <aspectratio>stretch</aspectratio>
                     <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-<!--                      <bordertexture width="3">mask_black70.png</bordertexture> -->
+                      <!-- <bordertexture width="3">mask_black70.png</bordertexture> -->
                     <bordersize>5</bordersize>
-                      <animation reversible="false" effect="zoom" start="20,15,260,160" end="-115,-70,410,260" time="200">focus</animation>
-                    <animation reversible="false" effect="zoom" end="20,15,260,160" start="12,6,260,160" time="200">unfocus</animation> 
+                <animation reversible="false" effect="zoom" start="0,0,240,134" end="-105,-75,340,200" time="200">focus</animation>
+                <animation reversible="false" effect="zoom" end="0,0,260,160" start="-105,-75,340,200" time="200">unfocus</animation>
 <!-- 					<animation reversible="false" effect="zoom" start="2,16,110,160" end="-12,-8,138,200" time="200">focus</animation>
                     <animation reversible="false" effect="zoom" end="2,16,110,160" start="-12,-8,138,200" time="200">unfocus</animation> -->
                 </control>
@@ -1491,18 +1504,18 @@
         </control> 
         <control type="label">
             <description>Title label</description>
-            <left>500</left>
-            <top>-105</top>
+            <left>210</left>
+            <top>125</top>
             <height>20</height>
             <width>800</width>
-            <label>$INFO[Container(8001).ListItem.Label2] </label>
-            <align>left</align>
+            <label>$INFO[Container(8001).ListItem.Label2]: [COLOR=black]$INFO[Container(8001).ListItem.Property(EpisodeSeason)]  $INFO[Container(8001).ListItem.Property(EpisodeNumber)][/COLOR] | [COLOR=black]$INFO[Container(8001).ListItem.Label][/COLOR]</label>
+            <align>center</align>
             <aligny>center</aligny>
-            <font>FontSize_20b</font>
+            <font>FontSize_24</font>
             <textcolor>black</textcolor>
             <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
         </control>
-		        <control type="label">
+	<!-- 	        <control type="label">
             <description>Title label</description>
             <left>500</left>
             <top>-75</top>
@@ -1515,7 +1528,7 @@
             <textcolor>black</textcolor>
             <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
 			
-        </control>
+        </control> -->
 		
 <!-- 		    <control type="image">
             <left>190</left>
