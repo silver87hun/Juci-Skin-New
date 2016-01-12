@@ -8,17 +8,58 @@
 	
 	
 	
-	
-        <control type="image">
-            <!-- darken the background a bit -->
+	        <control type="image">
+            <!-- white background -->
             <left>0</left>
             <top>0</top>
             <width>1280</width>
             <height>720</height>
             <aspectratio>stretch</aspectratio>
-            <texture>black-back3.png</texture>
+            <texture>white_layer40.png</texture>
             <visible>Skin.HasSetting(VideoLibraryDimFanart) + !Control.IsVisible(55)</visible>
         </control>
+		
+        <control type="image">
+            <!-- white background -->
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>720</height>
+            <aspectratio>stretch</aspectratio>
+            <texture>white_layer40.png</texture>
+            <visible>Skin.HasSetting(VideoLibraryDimFanart) + !Control.IsVisible(55)</visible>
+        </control>
+		
+<!-- 		<control type="largeimage"> 
+                    <left>500</left> 
+                    <top>-350</top> 
+                    <width>700</width> 
+                    <height>980</height>
+                    <texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+                    <aspectratio scalediffuse="false" aligny="center" align="left">keep</aspectratio> 
+                    <visible>Skin.HasSetting(Clearart)</visible>
+                </control> -->
+		
+		            <control type="multiimage">
+                <left>0</left>
+                <top>0</top>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<pauseatend>0</pauseatend>
+				<loop>true</loop>
+                <imagepath background="true">fade_vignette_low</imagepath>
+                <include>global_kenburns_fanart</include>
+                <randomize>true</randomize>
+                <fadetime>FanartCrossfadeTime</fadetime>
+<!--                 <visible>Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(590) | Control.IsVisible(591)| Control.IsVisible(592) | Control.IsVisible(593) | Control.IsVisible(594) | Control.IsVisible(595)</visible>
+                <visible>Container.Content(Movies)</visible> -->
+                <visible>Skin.HasSetting(VideoLibraryColorFanart)</visible>
+            </control>
+		
         <control type="image">
             <!-- bottom bar background -->
             <left>0</left>

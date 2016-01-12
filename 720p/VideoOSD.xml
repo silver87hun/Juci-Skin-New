@@ -33,6 +33,21 @@
                 <texture>fadeOutBottom.png</texture>
 <!-- 				<colordiffuse>black</colordiffuse> -->
             </control>
+			
+						<!-- 	<control type="multiimage">
+				 <left>0</left>
+				  <top>550</top>
+				  <width>1920</width>
+				  <height>300</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+                <imagepath background="true">fade_vignette_low</imagepath>
+			</control> -->
 	
         <control type="group">
             <animation effect="slide" start="0,800" end="0,600" time="300" tween="quadratic" easing="out">WindowOpen</animation>

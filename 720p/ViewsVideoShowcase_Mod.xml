@@ -788,7 +788,7 @@
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <visible>Container.Content(Movies)</visible>
                     <visible>!Container(721).OnNext + !Container(721).OnPrevious + Container.Content(movies)</visible>
-
+					<visible>!Skin.HasSetting(VideoLibraryMovieClearart)</visible>
                     <visible>Control.IsVisible(721)</visible>
                 </control>
 
