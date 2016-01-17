@@ -296,7 +296,7 @@
       <left>515</left>
       <top>180</top>
      
-
+		<!-- sorozatcím fent -->
       <control type="label">
  <!-- <animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation> -->
  <animation effect="slide" start="0,0" end="0,-200" time="300" condition="System.IdleTime(6)">conditional</animation>
@@ -308,11 +308,44 @@
         <align>center</align>
         <aligny>center</aligny>
         <scroll>true</scroll>
-        <font>FontSize_50</font>
+        <font>font30</font>
         <textcolor>grey2</textcolor>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
+	  
+	        <control type="label">
+<animation effect="slide" start="0,0" end="0,-200" time="300" condition="System.IdleTime(6)">conditional</animation>
+        <left>-150</left>
+        <top>-260</top>
+        <width>550</width>
+        <height>30</height>
+        <label>[COLOR=grey2]$LOCALIZE[20373][/COLOR]: $INFO[VideoPlayer.Season]  [COLOR=grey2]$LOCALIZE[20359]:[/COLOR] $INFO[VideoPlayer.Episode]</label>
+        <align>center</align>
+        <aligny>center</aligny>
+        <scroll>true</scroll>
+        <font>font14</font>
+        <textcolor>grey2</textcolor>
+        <visible>VideoPlayer.Content(Episodes)</visible>
+        <visible>!Skin.HasSetting(slimseek)</visible>
+      </control>
+	  
+<!-- 	  	        <control type="label">
+<animation effect="slide" start="0,0" end="0,-200" time="300" condition="System.IdleTime(6)">conditional</animation>
+        <left>-150</left>
+        <top>-260</top>
+        <width>550</width>
+        <height>30</height>
+        <label>$INFO[VideoPlayer.Title]</label>
+        <align>center</align>
+        <aligny>center</aligny>
+        <scroll>true</scroll>
+        <font>font14</font>
+        <textcolor>grey2</textcolor>
+        <visible>VideoPlayer.Content(Episodes)</visible>
+        <visible>!Skin.HasSetting(slimseek)</visible>
+      </control> -->
+	  
             <!-- <control type="label">
                 <left>5</left>
                 <top>65</top>
@@ -507,7 +540,7 @@
         <scroll>true</scroll>
         <align>center</align>
         <aligny>center</aligny>
-        <font>FontSize_50</font>
+        <font>font30</font>
         <textcolor>grey2</textcolor>
         <visible>VideoPlayer.Content(Movies)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>

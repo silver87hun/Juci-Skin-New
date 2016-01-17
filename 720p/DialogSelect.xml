@@ -76,14 +76,14 @@
                     </animation> -->
       <description>header label</description>
       <left>30</left>
-            <top>30</top>
+            <top>50</top>
             <width>0</width>
             <height>0</height>
             <font>FontSize_24B</font>
       <label>$LOCALIZE[13406]</label>
       <align>center</align>
       <aligny>center</aligny>
-      <textcolor>white</textcolor>
+      <textcolor>black</textcolor>
     </control>
     <control type="list" id="3">
 				
@@ -109,14 +109,14 @@
         </control>
         <control type="label">
 
-          <left>120</left>
+          <left>250</left>
           <top>0</top>
           <width>650</width>
           <height>50</height>
           <font>FontSize_18b</font>
-          <textcolor>grey</textcolor>
+          <textcolor>white</textcolor>
           <selectedcolor>black</selectedcolor>
-          <align>center</align>
+          <align>left</align>
           <aligny>center</aligny>
           <label>$INFO[ListItem.Label]</label>
         </control>

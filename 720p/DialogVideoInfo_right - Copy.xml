@@ -88,27 +88,27 @@
 			</control>  -->
 			
  			<control type="image">
-                <left>0</left>
+                <left>400</left>
                 <top>0</top>
                 <width>900</width>
                 <height>720</height>
-                <texture>fadeOutBottomleft.png</texture>
+                <texture>fadeOutBottomright.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
 						<control type="image">
-                <left>0</left>
+                <left>400</left>
                 <top>0</top>
                 <width>900</width>
                 <height>720</height>
-                <texture>fadeOutBottomleft.png</texture>
+                <texture>fadeOutBottomright.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
 									<control type="image">
-                <left>0</left>
+                <left>400</left>
                 <top>0</top>
                 <width>900</width>
                 <height>720</height>
-                <texture>fadeOutBottomleft.png</texture>
+                <texture>fadeOutBottomright.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
 			
@@ -298,17 +298,16 @@
                             <!-- Film STUDIO FLAG -->
                             <width>120</width>
                             <height>69</height>
-                            <left>300</left>
+                            <left>390</left>
                             <top>630</top>
                             <aspectratio>keep</aspectratio>
                             <align>right</align>
                             <texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
                         </control>
-						<!-- film imdb -->
                         <control type="image">
                             <description>IMDB rating</description>
-                            <left>-10</left>
-                            <top>650</top>
+                            <left>400</left>
+                            <top>550</top>
                             <width>84</width>
                             <height>31</height>
                             <texture>imdb-logo.png</texture>
@@ -318,8 +317,8 @@
                         </control>
                         <control type="label">
                             <description>Rating value</description>
-                            <left>80</left>
-                            <top>650</top>
+                            <left>490</left>
+                            <top>550</top>
                             <width>183</width>
                             <height>25</height>
                             <textcolor>white</textcolor>
@@ -332,8 +331,8 @@
                         <control type="image">
                             <!-- STARS film csillag -->
                             <description>IMDB rating</description>
-                            <left>140</left>
-                            <top>650</top>
+                            <left>550</left>
+                            <top>550</top>
                             <width>150</width>
                             <height>31</height>
                             <info>ListItem.StarRating</info>
@@ -372,7 +371,7 @@
 						<!-- flim logo -->
                         <control type="image">
                             <left>-20</left>
-                            <top>20</top>
+                            <top>480</top>
                             <width>400</width>
                             <height>200</height>
                             <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -401,13 +400,13 @@
                         </control> -->
                         <control type="label">
                             <description>genre label</description>
-                            <left>-490</left>
-                            <top>220</top>
+                            <left>30</left>
+                            <top>510</top>
                             <width>570</width>
                             <height>30</height>
                             <font>FontSize_22</font>
                             <label>$INFO[Listitem.Genre]</label>
-                            <align>center</align>
+                            <align>left</align>
                             <aligny>center</aligny>
                             <textcolor>grey</textcolor>
                             <shadowcolor />
@@ -462,8 +461,8 @@
                     </control>
                     <!-- year, runtime, director, writer, cast (cast label only) -->
                     <control type="list" id="49">
-                        <left>305</left>
-                        <top>400</top>
+                        <left>565</left>
+                        <top>20</top>
                         <width>600</width>
                         <height>266</height>
                         <itemlayout height="30">
@@ -1115,10 +1114,10 @@
                 <control type="textbox" id="400">
                     <description>Description Value for Movies</description>
                     <visible>!Control.HasFocus(12)</visible>
-                    <left>40</left>
-                    <top>400</top>
-                    <width>350</width>
-                    <height>250</height>
+                    <left>450</left>
+                    <top>620</top>
+                    <width>800</width>
+                    <height>50</height>
                     <font>FontSize_18</font>
                     <align>justify</align>
                     <textcolor>grey2</textcolor>
@@ -1147,7 +1146,7 @@
                 <control type="panel" id="50">
                     <visible>!Control.HasFocus(12)</visible>
                     <left>900</left>
-                    <top>532</top>
+                    <top>192</top>
                     <width>350</width>
                     <height>136</height>
                     <onleft>105</onleft>
