@@ -34,19 +34,23 @@
 <!-- 				<colordiffuse>black</colordiffuse> -->
             </control>
 			
-						<!-- 	<control type="multiimage">
+			
+			
+			<control type="multiimage">
+				<animation effect="slide" start="0,-100" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,300" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation>
 				 <left>0</left>
-				  <top>550</top>
+				  <top>-500</top>
 				  <width>1920</width>
-				  <height>300</height>
+				  <height>500</height>
                 <aspectratio>stretch</aspectratio>
-				<timeperimage>16000</timeperimage>
+				<timeperimage>46000</timeperimage>
 				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
+				<fadetime>100</fadetime>
 										<pauseatend>0</pauseatend>
 			<loop>true</loop>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-                <imagepath background="true">fade_vignette_low</imagepath>
+                <imagepath background="true">test_light</imagepath>
 			</control> -->
 	
         <control type="group">

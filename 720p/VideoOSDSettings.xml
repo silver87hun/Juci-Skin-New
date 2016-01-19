@@ -13,14 +13,14 @@
     <control type="group">
       <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 
-	  	 <control type="image">
+<!-- 	  	 <control type="image">
 				
 				 <left>-240</left>
 				  <top>-15</top>
 				  <width>1920</width>
 				  <height>300</height>
                 <texture>white_layer10.png</texture>
-            </control>
+            </control> -->
 	  
       <control type="label">
         <description>header label</description>
@@ -32,7 +32,7 @@
         <label>$LOCALIZE[3] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
-        <textcolor>white</textcolor>      
+        <textcolor>black</textcolor>      
         <visible>Window.IsVisible(123)</visible>
       </control>
       <control type="label">
@@ -45,8 +45,8 @@
         <label>$LOCALIZE[292] - $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
+        <textcolor>black</textcolor>
+        <!-- <shadowcolor>black</shadowcolor> -->
         <visible>Window.IsVisible(osdaudiosettings)</visible>
       </control>
       <control type="grouplist" id="5">
@@ -64,14 +64,15 @@
       </control>
       <control type="scrollbar" id="60">
         <left>800</left>
-        <top>75</top>
+        <top>60</top>
         <width>5</width>
-        <height>200</height>
+        <height>210</height>
         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
         <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
         <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
         <textureslidernib>ScrollBarNib.png</textureslidernib>
         <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+		<colordiffuse>black</colordiffuse>
         <onleft>5</onleft>
         <onright>5</onright>
         <ondown>61</ondown>
@@ -86,8 +87,8 @@
       <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
       <font>FontSize_18</font>
-      <textcolor>grey2</textcolor>
-      <focusedcolor>white</focusedcolor>
+      <textcolor>black</textcolor>
+      <focusedcolor>black</focusedcolor>
       <width>300</width>
     </control>
     <control type="button" id="7">
@@ -96,8 +97,8 @@
       <top>0</top>
       <height>35</height>
       <font>FontSize_18</font>
-      <textcolor>grey2</textcolor>
-      <focusedcolor>white</focusedcolor>
+      <textcolor>black</textcolor>
+      <focusedcolor>black</focusedcolor>
       <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
       <width>300</width>
@@ -108,8 +109,8 @@
       <top>0</top>
       <height>35</height>
       <font>FontSize_18</font>
-      <textcolor>grey2</textcolor>
-      <focusedcolor>white</focusedcolor>
+      <textcolor>black</textcolor>
+      <focusedcolor>black</focusedcolor>
       <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
     </control>
@@ -119,8 +120,8 @@
       <top>0</top>
       <height>35</height>
       <font>FontSize_18</font>
-      <textcolor>grey2</textcolor>
-      <focusedcolor>white</focusedcolor>
+      <textcolor>black</textcolor>
+      <focusedcolor>black</focusedcolor>
       <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus border="0,2,0,2"></texturenofocus>
       <aligny>center</aligny>
