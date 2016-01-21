@@ -36,7 +36,7 @@
 			
 			
 			
-			<control type="multiimage">
+<!--			<control type="multiimage">
 				<animation effect="slide" start="0,-100" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="0,300" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation>
 				 <left>0</left>
@@ -54,65 +54,74 @@
 			</control> -->
 	
         <control type="group">
-            <animation effect="slide" start="0,800" end="0,600" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+
             <!-- <animation effect="slide" start="0,0" end="0,-145" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation> -->
 <!--             <animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation> -->
 
             <!-- SETTINGS GROUP (Bookmarks audio video) -->
             <control type="group" id="200">
-                <left>1050</left>
-                <top>70</top>
+			             <animation effect="slide" start="0,0" end="0,130" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+                <left>50</left>
+                <top>-120</top>
                 <control type="button" id="700">
                     <left>0</left>
                     <top>0</top>
-                    <width>40</width>
+                    <width>340</width>
                     <height>28</height>
                     <label>298</label>
-                    <font>-</font>
-                    <texturefocus>OSDBookMarksFO.png</texturefocus>
-                    <texturenofocus>OSDBookMarksNF.png</texturenofocus>
+                    <font>FontSize_22</font>
+                    <texturefocus></texturefocus>
+                    <texturenofocus></texturenofocus>
+					      <textcolor>grey2</textcolor> 
+      <focusedcolor>white</focusedcolor>
                     <onleft>605</onleft>
                     <onright>701</onright>
                     <ondown>500</ondown>
                     <onclick>ActivateWindow(125)</onclick>
                 </control>
                 <control type="button" id="701">
-                    <left>50</left>
+                    <left>280</left>
                     <top>0</top>
-                    <width>40</width>
+                    <width>340</width>
                     <height>28</height>
                     <label>13396</label>
-                    <font>-</font>
-                    <texturefocus>OSDAudioFO.png</texturefocus>
-                    <texturenofocus>OSDAudioNF.png</texturenofocus>
+                    <font>FontSize_22</font>
+                    <texturefocus></texturefocus>
+                    <texturenofocus></texturenofocus>
+					      <textcolor>grey2</textcolor> 
+      <focusedcolor>white</focusedcolor>
                     <onleft>700</onleft>
                     <onright>702</onright>
                     <ondown>500</ondown>
                     <onclick>ActivateWindow(osdaudiosettings)</onclick>
                 </control>
                 <control type="button" id="702">
-                    <left>100</left>
+                    <left>680</left>
                     <top>0</top>
-                    <width>40</width>
+                    <width>420</width>
                     <height>28</height>
                     <label>13395</label>
-                    <font>-</font>
-                    <texturefocus>OSDVideoFO.png</texturefocus>
-                    <texturenofocus>OSDVideoNF.png</texturenofocus>
+                    <font>FontSize_22</font>
+                    <texturefocus></texturefocus>
+                    <texturenofocus></texturenofocus>
+					      <textcolor>grey2</textcolor> 
+      <focusedcolor>white</focusedcolor>
                     <onleft>701</onleft>
                     <onright>703</onright>
                     <ondown>500</ondown>
                     <onclick>ActivateWindow(123)</onclick>
                 </control>
                 <control type="button" id="703">
-                    <left>150</left>
+                    <left>1020</left>
                     <top>0</top>
-                    <width>40</width>
+                    <width>350</width>
                     <height>28</height>
                     <label>31356</label>
-                    <font>-</font>
-                    <texturefocus>OSDSubtitlesFO.png</texturefocus>
-                    <texturenofocus>OSDSubtitlesNF.png</texturenofocus>
+                    <font>FontSize_22</font>
+                     <texturefocus></texturefocus>
+                    <texturenofocus></texturenofocus>
+					      <textcolor>grey2</textcolor> 
+      <focusedcolor>white</focusedcolor>
                     <onleft>702</onleft>
                     <onright>704</onright>
                     <ondown>500</ondown>
@@ -203,7 +212,8 @@
             </control>
             <!-- GROUP FOR PLAYER CONTROLS -->
             <control type="group" id="100">
-                <left>700</left>
+			<animation effect="slide" start="0,800" end="0,600" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+                <left>500</left>
                 <top>70</top>
                 <control type="button" id="600">
                     <left>0</left>
@@ -289,11 +299,11 @@
                     <texturefocus>OSDNextTrackFO.png</texturefocus>
                     <texturenofocus>OSDNextTrackNF.png</texturenofocus>
                     <onleft>604</onleft>
-                    <onright>606</onright>
+                    <onright>700</onright>
                     <ondown>500</ondown>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
-                <control type="button" id="606">
+<!--                 <control type="button" id="606">
                     <left>300</left>
                     <top>0</top>
                     <width>40</width>
@@ -308,7 +318,7 @@
                     <onclick>PlayerControl(ShowVideoMenu)</onclick>
                     <enable>VideoPlayer.HasMenu</enable>
                     <animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
-                </control>
+                </control> -->
     <!--             <control type="image" id="11">
                     <description>separator image</description>
                     <left>-400</left>
@@ -348,7 +358,7 @@
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control> -->
 			
-            <control type="label">
+<!--             <control type="label">
                 <left>150</left>
                 <top>20</top>
                 <width>1080</width>
@@ -360,7 +370,7 @@
                 <font>Fontsize_38</font>
                 <textcolor>grey</textcolor>
                 <shadowcolor>black</shadowcolor>
-            </control>
+            </control> -->
            <!--  <control type="label">
                 <left>-25</left>
                 <top>85</top>

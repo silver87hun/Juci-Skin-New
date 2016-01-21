@@ -393,7 +393,7 @@
                     <top>50</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_48</font>
+                    <font>FontSize_60</font>
                     <textcolor>grey3</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -413,7 +413,7 @@
                     <top>370</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_48</font>
+                    <font>FontSize_60</font>
                     <textcolor>grey3</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -423,10 +423,10 @@
             <focusedlayout condition="!Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>50</top>
+                    <top>45</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_48</font>
+                    <font>FontSize_70</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -436,10 +436,10 @@
             <focusedlayout condition="Skin.HasSetting(horzLowHomeMenu)" width="430">
                 <control type="label">
                     <left>0</left>
-                    <top>370</top>
+                    <top>365</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_48</font>
+                    <font>FontSize_70</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>

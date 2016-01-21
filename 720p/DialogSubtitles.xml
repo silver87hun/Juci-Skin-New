@@ -17,34 +17,17 @@
         <effect type="fade" start="100" end="0" time="300" />
       </animation> -->
  <control type="group">	 
-<!-- 	 <control type="image">
+ 	 <control type="image">
 
 
 		<left>0</left>
         <top>0</top>
         <width>1920</width>
         <height>1080</height>
-                <texture>black.jpeg</texture>
-            </control>  -->
-		 <control type="multiimage">
-
-
-                <!-- background -->
-		<left>0</left>
-        <top>0</top>
-        <width>1920</width>
-        <height>1080</height>
-                <aspectratio>stretch</aspectratio>
-				<timeperimage>46000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>100</fadetime>
-										<pauseatend>0</pauseatend>
-			<loop>true</loop>
-                <imagepath background="true">test_light</imagepath>
-				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-              <!--   <texture flipy="true">OSDbackground.png</texture> -->
-                <!-- flip y when up the top -->
-            </control></control>
+                <texture>mask_black70.png</texture>
+            </control>
+			
+		</control>
 		
             <control type="group" id="250">
 			
@@ -155,8 +138,8 @@
                     <top>350</top>
                     <width>55</width>
                     <height>55</height>
-                    <texture>arrow395.png</texture>
-					<colordiffuse>grey</colordiffuse>
+                    <texture>arrow.png</texture>
+					<colordiffuse>white</colordiffuse>
                     <visible>!Control.HasFocus(150)</visible>
                 </control> 
                 <control type="group">
@@ -215,7 +198,7 @@
                             <top>0</top>
                             <width>200</width>
                             <height>36</height>
-                            <textcolor>white</textcolor>
+                            <textcolor>grey</textcolor>
                             <aligny>center</aligny>
                             <font>Fontsize_18</font>
                             <info>ListItem.Label</info>
@@ -245,7 +228,7 @@
                             <height>36</height>
                             <font>Fontsize_18</font>
                             <aligny>center</aligny>
-                            <textcolor>white</textcolor>
+                            <textcolor>grey</textcolor>
                             <selectedcolor></selectedcolor>
                             <align>left</align>
                             <info>ListItem.Label2</info>
@@ -274,7 +257,7 @@
                             <top>0</top>
                             <width>200</width>
                             <height>36</height>
-                            <textcolor>black</textcolor>
+                            <textcolor>white</textcolor>
                             <aligny>center</aligny>
                             <font>Fontsize_18</font>
                             <info>ListItem.Label</info>
@@ -312,7 +295,7 @@
                             <height>36</height>
                             <font>Fontsize_18</font>
                             <aligny>center</aligny>
-                            <textcolor>black</textcolor>
+                            <textcolor>white</textcolor>
                             <align>left</align>
                             <info>ListItem.Label2</info>
                         </control>
@@ -374,10 +357,10 @@
                     <top>0</top>
                     <width>400</width>
                     <height>1920</height>
-                    <texture>mask_black20.png</texture>
+                    <texture>mask_black50.png</texture>
                 </control>
 
-                <control type="label">
+<!--                 <control type="label">
                     <description>XBMC Subtitles label</description>
                     <left>1025</left>
                     <top>100</top>
@@ -387,10 +370,10 @@
                     <font>FontSize_18</font>
                     <align>center</align>
                     <textcolor>black</textcolor>
-                </control>
+                </control> -->
                 <control type="list" id="150">
                     <left>1055</left>
-                    <top>160</top>
+                    <top>80</top>
                     <width>250</width>
                     <height>220</height>
                     <onleft>120</onleft>
@@ -408,7 +391,7 @@
                             <font>Fontsize_18</font>
                             <aligny>center</aligny>
                             <textcolor>grey</textcolor>
-                            <selectedcolor>black</selectedcolor>
+                            <selectedcolor>grey3</selectedcolor>
                             <align>left</align>
                             <info>ListItem.Label</info>
                         </control>
@@ -430,9 +413,9 @@
                             <height>38</height>
                             <font>Fontsize_18</font>
                             <aligny>center</aligny>
-							<align>center</align>
-                            <textcolor>grey</textcolor>
-                            <selectedcolor>black</selectedcolor>
+							<align>left</align>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>grey</selectedcolor>
                             <align>left</align>
                             <info>ListItem.Label</info>
                         </control>
@@ -450,8 +433,8 @@
 
                 <control type="button" id="160">
                     <description>Manual search button</description>
-                    <left>1140</left>
-                    <top>650</top>
+                    <left>1220</left>
+                    <top>700</top>
                     <width>45</width>
 					<height>45</height>
                     <onleft>120</onleft>
@@ -460,8 +443,8 @@
                     <ondown>150</ondown>
 					<texturefocus>search.png</texturefocus>
                     <texturenofocus>searchb.png</texturenofocus>
-<!--                     <font>Fontsize_18</font>
-					<textcolor>black</textcolor> -->
+<!--                     <font>Fontsize_18</font> -->
+					<colordiffuse>grey</colordiffuse>
                     <include>ButtonVideoInfoCommonValues</include>
 
 <!--                     <label>$LOCALIZE[24120]</label> -->
