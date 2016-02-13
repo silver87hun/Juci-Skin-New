@@ -4,8 +4,16 @@
     <!-- ================================= FANART VIEW ID 508 ================================ -->
     <!-- ====================== Movies, TV Shows, Seasons, Episodes only ===================== -->
     <include name="Fanart">
-	
-	
+<!-- 	
+			                 <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>1300</width>
+                    <height>720</height>
+                    <aspectratio>stretch</aspectratio>
+                    <fadetime>FanartCrossfadeTime</fadetime>
+                    <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+                </control> -->
 	
 	
 	        <control type="image">
@@ -52,6 +60,7 @@
 				<pauseatend>0</pauseatend>
 				<loop>true</loop>
                 <imagepath background="true">fade_vignette_low</imagepath>
+				
                 <include>global_kenburns_fanart</include>
                 <randomize>true</randomize>
                 <fadetime>FanartCrossfadeTime</fadetime>
@@ -60,20 +69,50 @@
                 <visible>Skin.HasSetting(VideoLibraryColorFanart)</visible>
             </control>
 		
-        <control type="image">
-            <!-- bottom bar background -->
+       <control type="image">
             <left>0</left>
-            <top>232r</top>
+            <top>200</top>
             <width>1280</width>
-            <height>700</height>
+            <height>300</height>
             <aspectratio>stretch</aspectratio>
-            <texture>rightlistbackground.png</texture>
+            <texture>fadeOutBottom.png</texture>
+            <visible>Control.IsVisible(508)</visible>
+        </control>
+		
+		       <control type="image">
+            <left>0</left>
+            <top>200</top>
+            <width>1280</width>
+            <height>300</height>
+            <aspectratio>stretch</aspectratio>
+            <texture>fadeOutBottom.png</texture>
             <visible>Control.IsVisible(508)</visible>
         </control>
 		
 		
 		
+		<control type="multiimage">
+            <left>0</left>
+            <top>232r</top>
+            <width>1280</width>
+            <height>700</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<pauseatend>0</pauseatend>
+				<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
+				
+                <include>global_kenburns_fanart</include>
+                <randomize>true</randomize>
+                <fadetime>FanartCrossfadeTime</fadetime>
+<!--                 <visible>Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(590) | Control.IsVisible(591)| Control.IsVisible(592) | Control.IsVisible(593) | Control.IsVisible(594) | Control.IsVisible(595)</visible>
+                <visible>Container.Content(Movies)</visible> -->
+                <visible>Control.IsVisible(508)</visible>
+            </control>
 		
+
 		
         <control type="group">
             <visible>Control.IsVisible(508)</visible>
@@ -115,7 +154,7 @@
                         <height>175</height>
                         <aspectratio>stretch</aspectratio>
                         <texture background="true">$INFO[ListItem.Icon]</texture>
-                        <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+                        <bordertexture border="6">-</bordertexture>
                         <bordersize>6</bordersize>
                     </control>
                     <control type="image">
@@ -142,7 +181,7 @@
                             <height>175</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>black-back.png</texture>
-                            <bordertexture>ContentPanelvertical.png</bordertexture>
+                            <bordertexture>-</bordertexture>
                             <bordersize>6</bordersize>
                         </control>
                         <control type="image">
@@ -177,7 +216,7 @@
                             <height>112</height>
                             <aspectratio>stretch</aspectratio>
                             <texture background="true">$INFO[ListItem.Icon]</texture>
-                            <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+                            <bordertexture border="6">-</bordertexture>
                             <bordersize>6</bordersize>
                         </control>
                     </control>
@@ -205,7 +244,7 @@
                             <height>112</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>black-back.png</texture>
-                            <bordertexture border="6">ContentPanelvertical.png</bordertexture>
+                            <bordertexture border="6">-</bordertexture>
                             <bordersize>6</bordersize>
                         </control>
                         <control type="image">
@@ -269,12 +308,13 @@
                 <left>80</left>
                 <top>20</top>
                 <visible>Control.IsVisible(508) + Container.Content(Movies)</visible>
+				<!-- Film cím title -->
                 <control type="fadelabel">
                     <left>-60</left>
-                    <top>-20</top>
+                    <top>290</top>
                     <width>1280</width>
                     <height>30</height>
-                    <font>cirrus_30</font>
+                    <font>FontSize_38</font>
                     <textcolor>white</textcolor>
                     <scroll>true</scroll>
                     <align>left</align>
@@ -285,16 +325,16 @@
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
                 </control>
                 <control type="label">
-                    <left>-60</left>
-                    <top>50</top>
+                    <left>60</left>
+                    <top>330</top>
                     <width>600</width>
                     <height>30</height>
-                    <font>cirrus_24</font>
+                    <font>FontSize_18</font>
                     <textcolor>white</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>$INFO[ListItem.Genre,[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</label>
+                    <label>$INFO[ListItem.Genre,[COLOR=grey]$LOCALIZE[515]:[/COLOR] ]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
@@ -315,16 +355,16 @@
                     <visible>Skin.HasSetting(Smallwindowhidden)</visible>
                 </control>
                 <control type="fadelabel">
-                    <left>-60</left>
-                    <top>90</top>
+                    <left>460</left>
+                    <top>330</top>
                     <width>470</width>
                     <height>30</height>
-                    <font>cirrus_24</font>
+                    <font>FontSize_18</font>
                     <textcolor>white</textcolor>
                     <scroll>true</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+                    <label>[COLOR=white]$INFO[ListItem.Year][/COLOR]  $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                     <visible>!ListItem.IsFolder</visible>
@@ -398,32 +438,21 @@
             </control>
             <control type="group">
                 <left>-60</left>
-                <control type="image">
+<!--                 <control type="image">
                     <left>700</left>
                     <top>40</top>
                     <width>540</width>
                     <height>303</height>
                     <aspectratio>stretch</aspectratio>
                     <texture>black-back.png</texture>
-                    <bordertexture border="8">ContentPanelvertical.png</bordertexture>
+                    <bordertexture border="8">-</bordertexture>
                     <bordersize>8</bordersize>
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!IsEmpty(ListItem.Thumb)</visible> 
-                </control>
-                <control type="image">
-                    <left>700</left>
-                    <top>40</top>
-                    <width>540</width>
-                    <height>303</height>
-                    <aspectratio>stretch</aspectratio>
-                    <fadetime>FanartCrossfadeTime</fadetime>
-                    <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
-                    <bordersize>8</bordersize>
-                    <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
-                    <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
-                </control>
-                <control type="multiimage">
+                </control> -->
+
+<!--                 <control type="multiimage">
                     <left>708</left>
                     <top>48</top>
                     <width>524</width>
@@ -436,8 +465,8 @@
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
                     <visible>!Skin.HasSetting(VideoLibraryMovieExtrathumbs)</visible>
-                </control>
-                <control type="videowindow" id="8">
+                </control> -->
+<!--                 <control type="videowindow" id="8">
                     <left>714</left>
                     <top>56</top>
                     <width>513</width>
@@ -445,7 +474,7 @@
                     <align>right</align>
                     <visible>Skin.Hassetting(videowindowglobal)</visible>
                     <visible>Control.IsVisible(508)</visible>
-                </control> 
+                </control>  -->
                 <control type="label">
                     <description>Title label</description>
                     <left>810</left>
@@ -474,7 +503,7 @@
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
                     <visible>!Skin.HasSetting(originalwatched)</visible>
                 </control>
-                <control type="image">
+<!--                 <control type="image">
                     <left>708</left>
                     <top>43</top>
                     <width>91</width>
@@ -485,7 +514,7 @@
                     <visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
-                </control>
+                </control> -->
                 <!-- Changes Ending -->
                 <control type="grouplist">
                     <description>Media Codec Flagging Images</description>
@@ -501,7 +530,7 @@
                     <include>AspectCodecFlaggingConditions</include>
                 </control>
             </control>
-            <control type="grouplist">
+<!--             <control type="grouplist">
                 <description>MPAA Rating Flagging Images</description>
                 <left>370</left>
                 <top>315</top>
@@ -513,7 +542,7 @@
                 <visible>!Skin.HasSetting(noMPAAStudioFlags)</visible>
                 <visible>!Skin.HasSetting(NewMPAAFlags)</visible>
                 <visible>!ListItem.IsFolder</visible>
-            </control>
+            </control> -->
             <control type="grouplist">
                 <description>MPAA NEW Rating Flagging Images</description>
                 <left>170</left>
@@ -542,11 +571,11 @@
             </control>
             <control type="image">
                 <description>Rating value</description>
-                <left>15</left>
-                <top>340</top>
+                <left>20</left>
+                <top>355</top>
                 <align>left</align>
-                <width>200</width>
-                <height>40</height>
+                <width>100</width>
+                <height>20</height>
                 <itemgap>0</itemgap>
                 <orientation>vertical</orientation>
                 <texture>$INFO[Listitem.StarRating]</texture>
@@ -578,10 +607,10 @@
                 <visible>!ListItem.IsFolder + !IsEmpty(Listitem.Rating)</visible>
             </control>
             <control type="image">
-                <width>150</width>
+                <width>1950</width>
                 <height>87</height>
                 <left>210</left>
-                <top>290</top>
+                <top>-90</top>
                 <aspectratio align="center">keep</aspectratio>
                 <texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
                 <visible>!Skin.HasSetting(NewMPAAFlags)</visible>
@@ -698,7 +727,7 @@
                     <height>303</height>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <texture>black-back.png</texture>
-                    <bordertexture border="8">ContentPanelvertical.png</bordertexture>
+                    <bordertexture border="8">-</bordertexture>
                     <bordersize>8</bordersize>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>
@@ -844,7 +873,7 @@
                     <height>106</height>
                     <aspectratio>stretch</aspectratio>
                     <texture background="true">$INFO[ListItem.Art(season.banner)]</texture>
-                    <bordertexture border="8">ContentPanelvertical.png</bordertexture>
+                    <bordertexture border="8">-</bordertexture>
                     <bordersize>8</bordersize>
                 </control>
                 <control type="fadelabel">
@@ -885,7 +914,7 @@
                     <height>303</height>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <texture>black-back.png</texture>
-                    <bordertexture border="8">ContentPanelvertical.png</bordertexture>
+                    <bordertexture border="8">-</bordertexture>
                     <bordersize>8</bordersize>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
@@ -1118,7 +1147,7 @@
                     <height>303</height>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <texture>black-back.png</texture>
-                    <bordertexture border="8">ContentPanelvertical.png</bordertexture>
+                    <bordertexture border="8">-</bordertexture>
                     <bordersize>8</bordersize>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>

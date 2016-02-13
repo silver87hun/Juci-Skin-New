@@ -393,8 +393,8 @@
                     <top>50</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_60</font>
-                    <textcolor>grey3</textcolor>
+                    <font>FontSize_50</font>
+                    <textcolor>grey2</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label]</label>
@@ -413,8 +413,8 @@
                     <top>370</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_60</font>
-                    <textcolor>grey3</textcolor>
+                    <font>FontSize_50</font>
+                    <textcolor>grey2</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label]</label>
@@ -426,7 +426,7 @@
                     <top>45</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_70</font>
+                    <font>FontSize_60</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -439,7 +439,7 @@
                     <top>365</top>
                     <width>430</width>
                     <height>40</height>
-                    <font>FontSize_70</font>
+                    <font>FontSize_60</font>
                     <textcolor>white</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>

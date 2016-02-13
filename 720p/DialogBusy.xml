@@ -14,7 +14,7 @@
 					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
              	 <timeperimage>48000</timeperimage>
 				<randomize>true</randomize> 
-				 <fadetime>1000</fadetime>
+				 <fadetime>100</fadetime>
                   <imagepath background="true">test_light</imagepath>
             </control>
         <control type="group">
@@ -32,7 +32,7 @@
 					<!-- <animation effect="slide" start="0" end="0,-280" time="400" tween="back" easing="inout" condition="System.IdleTime(15)">conditional</animation> -->
 					<!-- <animation effect="zoom" start="100" end="150" time="400" tween="back" easing="inout" condition="System.IdleTime(5)">conditional</animation> -->
                 <description>Busy animation</description>
-                <left>550</left>
+                <left>580</left>
                 <top>400</top>
                     <width>34</width>
                     <height>34</height>

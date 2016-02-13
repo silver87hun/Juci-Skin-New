@@ -33,6 +33,13 @@
                   <imagepath background="true">test_light</imagepath>
             </control> 
 
+			 	 <control type="image">
+				 <left>-780</left>
+				  <top>-35</top>
+				  <width>1720</width>
+				  <height>1080</height>
+                <texture>mask_black20.png</texture>
+            </control>
 
 	<control type="group">
 	      <left>-300</left>
@@ -57,7 +64,7 @@
       <label>-</label>
       <font>-</font>
       <onclick>PreviousMenu</onclick>
-      <texturefocus>DialogCloseButton-focus.png</texturefocus>
+      <texturefocus>DialogCloseButton-white_layer40.png</texturefocus>
       <texturenofocus>DialogCloseButton.png</texturenofocus>
       <onleft>10</onleft>
       <onright>10</onright>
@@ -113,7 +120,7 @@
           <top>0</top>
           <width>650</width>
           <height>50</height>
-          <font>FontSize_18b</font>
+          <font>FontSize_20</font>
           <textcolor>white</textcolor>
           <selectedcolor>black</selectedcolor>
           <align>left</align>
@@ -133,25 +140,25 @@
           <aspectratio>stretch</aspectratio>
         </control> -->
          <control type="image">
-          <left>120</left>
+          <left>20</left>
           <top>0</top>
-          <width>650</width>
+          <width>850</width>
           <height>50</height>
-          <texture>focus.png</texture>
+          <texture>white_layer40.png</texture>
           <visible>Control.HasFocus(3)</visible>
           <include>VisibleFadeEffect</include>
           <aspectratio>stretch</aspectratio>
         </control>
         <control type="label">
 
-          <left>120</left>
+          <left>250</left>
           <top>0</top>
           <width>650</width>
           <height>50</height>
-          <font>FontSize_20b</font>
+          <font>FontSize_20</font>
           <textcolor>black</textcolor>
           <selectedcolor>selected</selectedcolor>
-          <align>center</align>
+          <align>left</align>
           <aligny>center</aligny>
           <label>$INFO[ListItem.Label]</label>
         </control>
@@ -279,7 +286,7 @@
       <height>550</height>
       <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
       <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-      <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+      <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_white_layer40.png</texturesliderbarfocus>
       <textureslidernib>ScrollBarNib.png</textureslidernib>
       <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 	  <colordiffuse>white</colordiffuse>
@@ -330,7 +337,7 @@
       <focusedcolor>white</focusedcolor>
       <align>center</align>
 <!--       <texturenofocus border="5">menuitemNF.png</texturenofocus>
-      <texturefocus border="5">button-focus.png</texturefocus> -->
+      <texturefocus border="5">button-white_layer40.png</texturefocus> -->
       <onleft>61</onleft>
       <onright>3</onright>
       <onup>3</onup>

@@ -83,14 +83,14 @@
                         </control> -->
                 <control type="image" id="110">
                     <description>Service Logo</description>
-                    <left>480</left>
-                    <top>50</top>
+                    <left>520</left>
+                    <top>40</top>
                     <width>230</width>
-                    <height>30</height>
-                    <aspectratio align="right">keep</aspectratio>
+                    <height>40</height>
+                    <aspectratio align="center">keep</aspectratio>
                 </control>
 				
-								<control type="label">
+<!-- 								<control type="label">
                     <description>number of files/pages in list text label</description>
                     <left>530</left>
                     <top>10</top>
@@ -100,7 +100,7 @@
                     <align>center</align>
                     <textcolor>white</textcolor>
                     <label>31356</label>
-                </control>
+                </control> -->
 				<control type="label">
                     <description>number of files/pages in list text label</description>
                     <left>530</left>
@@ -159,15 +159,15 @@
                                 <height>30</height>
                                 <texture>icons/info38.png</texture>
                             </control> -->
-                            <control type="label">
+<!--                             <control type="label">
                                 <description>notification</description>
                                 <width>auto</width>
                                 <height>40</height>
                                 <font>Fontsize_18</font>
-                                <textcolor>black</textcolor>
+                                <textcolor>white</textcolor>
                                 <label>$LOCALIZE[31008]</label>
                                 <aligny>center</aligny>
-                            </control>
+                            </control> -->
                         </control>
                     </control>
                 </control>
@@ -390,14 +390,14 @@
                             <height>38</height>
                             <font>Fontsize_18</font>
                             <aligny>center</aligny>
-                            <textcolor>grey</textcolor>
+                            <textcolor>grey2</textcolor>
                             <selectedcolor>grey3</selectedcolor>
                             <align>left</align>
                             <info>ListItem.Label</info>
                         </control>
                     </itemlayout>
                     <focusedlayout width="900" height="36">
-                         <control type="image">
+<!--                          <control type="image">
                             <left>1</left>
                             <top>6</top>
                             <width>230</width>
@@ -405,7 +405,7 @@
                             <texture>white_layer40.png</texture>
                             <visible>Control.HasFocus(150)</visible>
                             <aspectratio>stretch</aspectratio>
-                        </control>
+                        </control> -->
                         <control type="label">
                             <left>20</left>
                             <top>0</top>
@@ -415,7 +415,7 @@
                             <aligny>center</aligny>
 							<align>left</align>
                             <textcolor>white</textcolor>
-                            <selectedcolor>grey</selectedcolor>
+                            <selectedcolor>white</selectedcolor>
                             <align>left</align>
                             <info>ListItem.Label</info>
                         </control>

@@ -14,7 +14,7 @@
                 <top>80</top>
                 <width>1350</width>
                 <height>35</height>
-                <texture>white_layer40.png</texture>
+                <texture>mask_black50.png</texture>
             </control>
 			
 
@@ -55,7 +55,7 @@
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
                             <font>FontSize_18</font>
-                            <textcolor>black</textcolor>
+                            <textcolor>grey3</textcolor>
                         </control>
                     </control>
                 </itemlayout>
@@ -136,7 +136,7 @@
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
                             <font>FontSize_18</font>
-                            <textcolor>black</textcolor>
+                            <textcolor>grey3</textcolor>
                         </control>
                     </control>
                 </itemlayout>
@@ -220,7 +220,7 @@
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
                             <font>FontSize_18</font>
-                            <textcolor>black</textcolor>
+                            <textcolor>grey3</textcolor>
                         </control>
                     </control>
                 </itemlayout>
@@ -306,7 +306,7 @@
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
                             <font>FontSize_18</font>
-                            <textcolor>black</textcolor>
+                            <textcolor>grey3</textcolor>
                         </control>
                     </control>
                 </itemlayout>
@@ -435,7 +435,7 @@
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
                             <font>FontSize_18</font>
-                            <textcolor>black</textcolor>
+                            <textcolor>grey3</textcolor>
                         </control>
                     </control>
                 </itemlayout>
@@ -641,7 +641,7 @@
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
                             <font>FontSize_18</font>
-                            <textcolor>black</textcolor>
+                            <textcolor>grey3</textcolor>
                         </control>
                     </control>
 					
