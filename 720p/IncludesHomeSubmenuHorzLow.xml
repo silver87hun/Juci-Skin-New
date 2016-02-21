@@ -11,16 +11,18 @@
             <control type="image">
                 <!-- background bar for horizontal submenus -->
                 <left>0</left>
-                <top>85</top>
+                <top>80</top>
                 <width>1350</width>
-                <height>40</height>
-                <texture>horzmenuback.png</texture>
+                <height>35</height>
+                <texture>mask_black50.png</texture>
             </control>
+			
+
 
             <animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
             <animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
             <animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
-            <animation effect="slide" end="0,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
+            <animation effect="slide" end="0,-580" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
             <animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
             <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
             <animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
@@ -52,7 +54,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>grey3</textcolor>
                         </control>
                     </control>
@@ -67,7 +69,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>white</textcolor>
                         </control>
                     </control>
@@ -133,7 +135,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>grey3</textcolor>
                         </control>
                     </control>
@@ -148,7 +150,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>white</textcolor>
                         </control>
                     </control>
@@ -217,7 +219,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>grey3</textcolor>
                         </control>
                     </control>
@@ -232,7 +234,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>white</textcolor>
                         </control>
                     </control>
@@ -303,7 +305,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>grey3</textcolor>
                         </control>
                     </control>
@@ -318,7 +320,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>white</textcolor>
                         </control>
                     </control>
@@ -432,7 +434,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>grey3</textcolor>
                         </control>
                     </control>
@@ -447,7 +449,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>white</textcolor>
                         </control>
                     </control>
@@ -638,10 +640,11 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>grey3</textcolor>
                         </control>
                     </control>
+					
                 </itemlayout>
                 <focusedlayout width="256">
                     <control type="group">	
@@ -653,7 +656,7 @@
                             <height>56</height>
                             <label>$INFO[ListItem.Label]</label>
                             <align>center</align>
-                            <font>cirrus_30</font>
+                            <font>FontSize_18</font>
                             <textcolor>white</textcolor>
                         </control>
                     </control>

@@ -16,9 +16,9 @@
 			 <control type="image">
 				
 				 <left>0</left>
-				  <top>550</top>
+				  <top>650</top>
 				  <width>1920</width>
-				  <height>400</height>
+				  <height>300</height>
                 <texture>fadeOutBottom.png</texture>
 <!-- 				<colordiffuse>black</colordiffuse> -->
             </control>
@@ -26,9 +26,9 @@
 			 <control type="image">
 				
 				 <left>0</left>
-				  <top>550</top>
+				  <top>650</top>
 				  <width>1920</width>
-				  <height>400</height>
+				  <height>300</height>
                 <texture>fadeOutBottom.png</texture>
 <!-- 				<colordiffuse>black</colordiffuse> -->
             </control>

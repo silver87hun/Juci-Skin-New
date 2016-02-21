@@ -16,17 +16,18 @@
     </coordinates>
     <include>dialogeffect</include>
     <controls>
-                          <control type="image">
+<!--                           <control type="image">
 				 <left>0</left>
 				  <top>-550</top>
 				  <width>1920</width>
 				  <height>1080</height>
                 <texture>mask_black50.png</texture>
-            </control>
+            </control> -->
 				<control type="multiimage">
-								<animation effect="slide" start="0" end="0,-550" time="400" tween="back" easing="inout" condition="System.IdleTime(15)">conditional</animation>
+				
+								<!-- <animation effect="slide" start="0" end="0,-550" time="400" tween="back" easing="inout" condition="System.IdleTime(1)">conditional</animation> -->
 				 <left>0</left>
-				  <top>0</top>
+				  <top>-550</top>
 				  <width>1920</width>
 				  <height>1080</height>
 					<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
@@ -37,15 +38,15 @@
             </control>
 
 			<control type="label" id="1">
-			<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
-											<animation effect="slide" start="0" end="0,-250" time="400" tween="back" easing="inout" condition="System.IdleTime(15)">conditional</animation>
+			<!-- <animation effect="slide" start="0" end="0,-550" time="800" tween="sine" easing="inout" >WindowOpen</animation> -->
+			<!-- <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation> -->
+											<!-- <animation effect="slide" start="0" end="0,-250" time="400" tween="back" easing="inout" condition="System.IdleTime(1)">WindowOpen</animation> -->
             <description>heading label</description>
             <left>360</left>
-            <top>60</top>
+            <top>-250</top>
             <width>560</width>
             <height>30</height>
-			<font>font16</font>
+			<font>font30</font>
 			<align>center</align>
 			<textcolor>black</textcolor>
             <visible>true</visible>
@@ -64,12 +65,12 @@
             <shadowcolor>black</shadowcolor>
         </control> -->
 		<control type="textbox" id="9">
-					<animation effect="slide" start="0,200" end="0,0" tween="sine" time="1000">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,200" tween="sine" time="1000">WindowClose</animation>
-			<animation effect="slide" start="0" end="0,-230" time="400" tween="back" easing="inout" condition="System.IdleTime(15)">conditional</animation>
+			<!-- <animation effect="slide" start="0" end="0,-550" time="800" tween="sine" easing="inout" >WindowOpen</animation> -->
+			<!-- <animation effect="slide" start="0,0" end="0,200" tween="sine" time="1000">WindowClose</animation> -->
+			<!-- <animation effect="slide" start="0" end="0,-230" time="400" tween="back" easing="inout" condition="System.IdleTime(1)">conditional</animation> -->
 			<description>text</description>
 			<left>140</left>
-			<top>100</top>
+			<top>-200</top>
 			<width>1000</width>
 			<height>90</height>
 			<align>center</align>
@@ -82,11 +83,11 @@
 		<left>600</left>
 		<top>-20</top>
 		            <control type="image">
-					<animation effect="slide" start="0" end="0,-280" time="400" tween="back" easing="inout" condition="System.IdleTime(15)">conditional</animation>
+					<!-- <animation effect="slide" start="0" end="0,-280" time="400" tween="back" easing="inout" condition="System.IdleTime(1)">conditional</animation> -->
 					<!-- <animation effect="zoom" start="100" end="150" time="400" tween="back" easing="inout" condition="System.IdleTime(5)">conditional</animation> -->
                 <description>Busy animation</description>
                 <left>25</left>
-                <top>40</top>
+                <top>-100</top>
                     <width>34</width>
                     <height>34</height>
                     <texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/fillingcircles.gif">$INFO[Skin.String(busyloader)]</texture>

@@ -4,6 +4,12 @@
     <!-- ================================= FANART VIEW ID 52 From MiniMeedia by Waffa, all credits to him ================================ -->
     <!-- =========================================  Movies, TV Shows, Seasons, Episodes only ===================== -->
     <include name="Showcase">
+	
+	
+	
+	
+	
+	
         <control type="group">
             <visible>!Container(52).OnNext + !Container(52).OnPrevious + Container.Content(movies)</visible>
             <animation effect="slide" start="0,0" end="0,-100" time="500" delay="2000" reversible="false">Visible</animation>
