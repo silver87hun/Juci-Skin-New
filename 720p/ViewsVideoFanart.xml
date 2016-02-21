@@ -4,17 +4,65 @@
     <!-- ================================= FANART VIEW ID 508 ================================ -->
     <!-- ====================== Movies, TV Shows, Seasons, Episodes only ===================== -->
     <include name="Fanart">
-<!-- 	
+ 	
 			                 <control type="image">
                     <left>0</left>
-                    <top>0</top>
-                    <width>1300</width>
+                    <top>-100</top>
+                    <width>1280</width>
                     <height>720</height>
                     <aspectratio>stretch</aspectratio>
                     <fadetime>FanartCrossfadeTime</fadetime>
                     <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					            <visible>Control.IsVisible(508)</visible>
+                </control>
+<!-- 							                 <control type="image">
+                    <left>480</left>
+                    <top>0</top>
+                    <width>800</width>
+                    <height>900</height>
+                    <texture>fadeOutBottomright.png</texture>
+					            <visible>Control.IsVisible(508)</visible>
+                </control>
+										                 <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>800</width>
+                    <height>900</height>
+                    <texture>fadeOutBottomleft.png</texture>
+					            <visible>Control.IsVisible(508)</visible>
+                </control>
+								                 <control type="image">
+                    <left>480</left>
+                    <top>0</top>
+                    <width>800</width>
+                    <height>900</height>
+                    <texture>fadeOutBottomright.png</texture>
+					            <visible>Control.IsVisible(508)</visible>
+                </control>
+										                 <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>800</width>
+                    <height>900</height>
+                    <texture>fadeOutBottomleft.png</texture>
+					            <visible>Control.IsVisible(508)</visible>
+                </control>
+								                 <control type="image">
+                    <left>480</left>
+                    <top>0</top>
+                    <width>800</width>
+                    <height>900</height>
+                    <texture>fadeOutBottomright.png</texture>
+					            <visible>Control.IsVisible(508)</visible>
+                </control>
+										                 <control type="image">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>800</width>
+                    <height>900</height>
+                    <texture>fadeOutBottomleft.png</texture>
+					            <visible>Control.IsVisible(508)</visible>
                 </control> -->
-	
 	
 	        <control type="image">
             <!-- white background -->
@@ -54,7 +102,7 @@
                 <width>1280</width>
                 <height>720</height>
                 <aspectratio>stretch</aspectratio>
-				<timeperimage>16000</timeperimage>
+				<timeperimage>46000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<pauseatend>0</pauseatend>
@@ -97,9 +145,9 @@
             <width>1280</width>
             <height>700</height>
                 <aspectratio>stretch</aspectratio>
-				<timeperimage>16000</timeperimage>
+				<timeperimage>46000</timeperimage>
 				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
+				<fadetime>100</fadetime>
 				<pauseatend>0</pauseatend>
 				<loop>true</loop>
                 <imagepath background="true">test_light</imagepath>
@@ -334,7 +382,7 @@
                     <scroll>false</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>$INFO[ListItem.Genre,[COLOR=grey]$LOCALIZE[515]:[/COLOR] ]</label>
+                    <label>$INFO[ListItem.Year]     $INFO[ListItem.Genre,[COLOR=grey]$LOCALIZE[515]:[/COLOR] ]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
@@ -355,16 +403,16 @@
                     <visible>Skin.HasSetting(Smallwindowhidden)</visible>
                 </control>
                 <control type="fadelabel">
-                    <left>460</left>
+                    <left>700</left>
                     <top>330</top>
                     <width>470</width>
                     <height>30</height>
                     <font>FontSize_18</font>
                     <textcolor>white</textcolor>
                     <scroll>true</scroll>
-                    <align>left</align>
+                    <align>right</align>
                     <aligny>center</aligny>
-                    <label>[COLOR=white]$INFO[ListItem.Year][/COLOR]  $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+                    <label>[COLOR=white][/COLOR]  $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                     <visible>!ListItem.IsFolder</visible>
@@ -408,8 +456,7 @@
                     <visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(trailerflag) | Player.HasVideo</visible>
                     <visible>!ListItem.IsFolder</visible>
                 </control>
-                <control type="textbox">
-                    <!-- Plotoutline Mod -->
+<!--                 <control type="textbox">
                     <description>Movie Plot</description>
                     <left>-60</left>
                     <top>130</top>
@@ -421,7 +468,7 @@
                     <label>$INFO[ListItem.Plot]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
                     <visible>!Skin.HasSetting(plotoutline)</visible>
-                </control>
+                </control> -->
                 <control type="textbox">
                     <description>Movie PlotOutline</description>
                     <left>-60</left>
@@ -465,7 +512,7 @@
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
                     <visible>!Skin.HasSetting(VideoLibraryMovieExtrathumbs)</visible>
-                </control> -->
+                </control>
 <!--                 <control type="videowindow" id="8">
                     <left>714</left>
                     <top>56</top>

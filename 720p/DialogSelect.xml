@@ -64,7 +64,7 @@
       <label>-</label>
       <font>-</font>
       <onclick>PreviousMenu</onclick>
-      <texturefocus>DialogCloseButton-white_layer40.png</texturefocus>
+      <texturefocus>white_layer40.png</texturefocus>
       <texturenofocus>DialogCloseButton.png</texturenofocus>
       <onleft>10</onleft>
       <onright>10</onright>

@@ -42,7 +42,7 @@
         <width>1920</width>
         <height>1080</height>
                 <aspectratio>stretch</aspectratio>
-				<timeperimage>16000</timeperimage>
+				<timeperimage>46000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 										<pauseatend>0</pauseatend>
@@ -53,18 +53,23 @@
                 <!-- flip y when up the top -->
             </control>
 	  
-      <!-- <control type="image">
-        <description>LOGO</description>
-        <left>100</left>
-        <top>30</top>
-		
-        <width>160</width>
-        <height>160</height>
-         <texture>JUCI_LOGO_1.png</texture>    
+	  
+
+<!-- <control type="image">
+	    
+        <left>200</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+         <texture>mask_black20.png</texture>  	 
 		</control> -->
+		
+
+		
       <control type="list" id="9000">
-        <left>100</left>
-        <top>150</top>
+	    <animation effect="slide" start="-200,0" end="0,0" time="600" reversible="true">WindowOpen</animation>
+        <left>30</left>
+        <top>50</top>
         <width>260</width>
         <height>581</height>
         <onleft>9000</onleft>
@@ -84,35 +89,35 @@
           </control>
           <control type="label">
             <left>0</left>
-            <top>0</top>
+            <top>100</top>
             <width>260</width>
             <height>56</height>
             <font>FontSize_20</font>
             <textcolor>black</textcolor>
-            <align>left</align>
+            <align>center</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
         <focusedlayout height="55" width="260">
-<!--           <control type="image">
+           <control type="image">
             <left>0</left>
-            <top>0</top>
+            <top>110</top>
             <width>260</width>
-            <height>56</height>
-            <texture border="5">Notification3.png</texture>
+            <height>35</height>
+            <texture border="5">white_layer40.png</texture>
             <aspectratio>stretch</aspectratio>
-          </control> -->
+          </control>
           <control type="label">
 		  	<animation effect="zoom" start="100" end="110" center="-60,-80" time="300">WindowOpen</animation>
 <!-- 		<animation effect="zoom" start="100" end="120" center="auto" time="100" tween="cubic" easing="inout" pulse="true">Focus</animation> -->
             <left>0</left>
-            <top>0</top>
+            <top>100</top>
             <width>260</width>
             <height>56</height>
             <font>FontSize_20b</font>
             <textcolor>black</textcolor>
-            <align>left</align>
+            <align>center</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
@@ -122,57 +127,57 @@
             <label>480</label>
             <label2>31400</label2>
             <onclick>ActivateWindow(AppearanceSettings)</onclick>
-			<icon>special://skin/backgrounds/appearance.png</icon>
+			<icon>special://skin/backgrounds/settings/televisionw.png</icon>
           </item>
           <item id="2">
             <label>157</label>
             <label2>31401</label2>
             <onclick>ActivateWindow(VideosSettings)</onclick>
-             <icon>special://skin/backgrounds/video.png</icon> 
+             <icon>special://skin/backgrounds/settings/cinema.png</icon> 
           </item>
           <!-- PVR Butchabay -->
           <item id="10">
             <label>31502</label>
             <label2>31409</label2>
             <onclick>ActivateWindow(MyTVSettings)</onclick>
-             <icon>special://skin/backgrounds/tv.png</icon> 
+             <icon>special://skin/backgrounds/settings/television (2).png</icon> 
           </item>
           <!-- PVR Butchabay end -->
           <item id="3">
             <label>2</label>
             <label2>31402</label2>
             <onclick>ActivateWindow(MusicSettings)</onclick>
-             <icon>special://skin/backgrounds/music.png</icon> 
+             <icon>special://skin/backgrounds/settings/audio.png</icon> 
           </item>
           <item id="4">
             <label>1</label>
             <label2>31403</label2>
             <onclick>ActivateWindow(PicturesSettings)</onclick>
-             <icon>special://skin/backgrounds/photos.png</icon> 
+             <icon>special://skin/backgrounds/settings/pictures.png</icon> 
           </item>
           <item id="5">
             <label>8</label>
             <label2>31404</label2>
             <onclick>ActivateWindow(WeatherSettings)</onclick>
-            <icon>special://skin/backgrounds/weatherback.png</icon>
+            <icon>special://skin/backgrounds/settings/cloud-and-sun.png</icon>
           </item>
           <item id="6">
             <label>705</label>
             <label2>31405</label2>
             <onclick>ActivateWindow(ServiceSettings)</onclick>
-             <icon>special://skin/backgrounds/network.png</icon> 
+             <icon>special://skin/backgrounds/settings/wifi-connection-signal-symbol.png</icon> 
           </item>
           <item id="9">
             <label>24001</label>
             <label2>31408</label2>
             <onclick>ActivateWindow(AddonBrowser)</onclick>
-          <icon>special://skin/backgrounds/addons.png</icon>
+          <icon>special://skin/backgrounds/settings/shopping-cart-of-checkered-design.png</icon>
           </item>
           <item id="7">
             <label>13000</label>
             <label2>31406</label2>
             <onclick>ActivateWindow(SystemSettings)</onclick>
-            <icon>special://skin/backgrounds/settings.png</icon>
+            <icon>special://skin/backgrounds/settings/three-gears-of-configuration-tools.png</icon>
           </item>
         </content>
       </control>
@@ -183,7 +188,7 @@
         <height>636</height>
         <texture border="5">homesubbackground.png</texture>
       </control> -->
-      <control type="label">
+<!--       <control type="label">
         <description>header label</description>
         <left>270</left>
         <top>50</top>
@@ -195,25 +200,26 @@
         <aligny>center</aligny>
         <textcolor>black</textcolor>
 
-      </control>
+      </control> -->
+<!--        <control type="image">
+        <left>750</left>
+        <top>350</top>
+        <width>400</width>
+        <height>400</height>
+		         <aspectratio>stretch</aspectratio>
+        <texture border="5">$INFO[Container(9000).ListItem.Icon]</texture>
+		<colordiffuse>grey3</colordiffuse>
+      </control> -->
       <control type="image">
-        <left>270</left>
-        <top>60</top>
-        <width>800</width>
-        <height>450</height>
-        <texture border="5">button-nofocus.png</texture>
-      </control>
-      <control type="image">
-        <left>310</left>
-        <top>50</top>
-        <width>650</width>
-        <height>346</height>
+        <left>550</left>
+        <top>100</top>
+        <width>200</width>
+        <height>200</height>
         <aspectratio>stretch</aspectratio>
-        <fadetime>2</fadetime>
 		<colordiffuse>black</colordiffuse>
         <texture background="true">$INFO[Container(9000).ListItem.Icon]</texture>
       </control>
-      <control type="image">
+<!--       <control type="image">
         <left>270</left>
         <top>62</top>
         <width>600</width>
@@ -221,11 +227,11 @@
         <aspectratio>stretch</aspectratio>
         <texture>GlassOverlay.png</texture>
         <colordiffuse>AAFFFFFF</colordiffuse>
-      </control>
+      </control> -->
       <control type="textbox">
         <description>Appearance Description</description>
-        <left>390</left>
-        <top>400</top>
+        <left>400</left>
+        <top>350</top>
         <width>500</width>
         <height>700</height>
         <font>FontSize_22</font>

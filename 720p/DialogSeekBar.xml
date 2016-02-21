@@ -3,11 +3,13 @@
   <defaultcontrol>1</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <visible>Window.IsActive(fullscreenvideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsVisible(142) + !Window.IsVisible(2901) + !Window.IsVisible(subtitlesearch) + !Skin.HasSetting(noinfopaused)</visible>
+  
 <!--   <animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
   <animation effect="fade" start="100" end="0" time="200" delay="150" tween="quadratic" easing="out">WindowClose</animation> -->
  <!--  	 	<animation effect="slide" start="0,450" end="0,0" tween="sine" time="300">WindowOpen</animation>
     <animation effect="slide" start="0,0" end="0,450" tween="sine" time="300">WindowClose</animation> -->
 				  <!-- <animation effect="slide" start="0" end="0,-200" time="800" condition="System.IdleTime(6)" condition="Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation> -->
+				  
   <coordinates>
     <system>1</system>
     <left>0</left>
@@ -32,7 +34,7 @@
 				  <top>-165</top>
 				  <width>1290</width>
 				  <height>720</height>
-                <texture>mask_black70.png</texture>
+                <texture>mask_black50.png</texture>
             </control>
 	
 <!-- 	<control type="multiimage">
@@ -317,13 +319,12 @@
         <aligny>center</aligny>
         <scroll>true</scroll>
         <font>font30</font>
-        <textcolor>grey2</textcolor>
+        <textcolor>grey</textcolor>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
       </control>
 	  
-	        <control type="label">
-<!-- <animation effect="slide" start="0,0" end="0,-200" time="300" condition="System.IdleTime(6)">conditional</animation> -->
+<!-- 	        <control type="label">
         <left>-150</left>
         <top>-220</top>
         <width>550</width>
@@ -336,7 +337,7 @@
         <textcolor>grey2</textcolor>
         <visible>VideoPlayer.Content(Episodes)</visible>
         <visible>!Skin.HasSetting(slimseek)</visible>
-      </control>
+      </control> -->
 	  
 <!-- 	  	        <control type="label">
 <animation effect="slide" start="0,0" end="0,-200" time="300" condition="System.IdleTime(6)">conditional</animation>
@@ -484,7 +485,7 @@
         <top>440</top>
         <width>550</width>
         <height>30</height>
-        <label>[COLOR=grey2]$LOCALIZE[20373][/COLOR]: $INFO[VideoPlayer.Season]  [COLOR=grey2]$LOCALIZE[20359]:[/COLOR] $INFO[VideoPlayer.Episode] | $INFO[VideoPlayer.Title]</label>
+        <label>$INFO[VideoPlayer.Title] | [COLOR=grey2]$LOCALIZE[20373][/COLOR]: $INFO[VideoPlayer.Season]  [COLOR=grey2]$LOCALIZE[20359]:[/COLOR] $INFO[VideoPlayer.Episode]</label>
         <align>left</align>
         <aligny>center</aligny>
         <scroll>true</scroll>
@@ -539,11 +540,11 @@
       <control type="label">
 	  <!-- <animation effect="slide" start="0,-200" end="0,0" time="300">WindowOpen</animation> -->
 	  <!-- <animation effect="slide" start="0,0" end="0,-200" time="300" condition="System.IdleTime(6)">conditional</animation> -->
-        <left>-150</left>
+        <left>-350</left>
         <top>-260</top>
-        <width>550</width>
+        <width>950</width>
         <height>30</height>
-        <label>$INFO[VideoPlayer.Title]</label>
+        <label>$INFO[VideoPlayer.Title] | [COLOR=grey2]$LOCALIZE[20373][/COLOR]: $INFO[VideoPlayer.Season]  [COLOR=grey2]$LOCALIZE[20359]:[/COLOR] $INFO[VideoPlayer.Episode]</label>
         <scroll>true</scroll>
         <align>center</align>
         <aligny>center</aligny>
