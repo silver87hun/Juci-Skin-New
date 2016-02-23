@@ -65,7 +65,7 @@
         <control type="group">
 
             <!-- <animation effect="slide" start="0,0" end="0,-145" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation> -->
-<!--             <animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation> -->
+            <animation effect="fade" start="100" end="0" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation>
 
             <!-- SETTINGS GROUP (Bookmarks audio video) -->
             <control type="group" id="200">
@@ -73,24 +73,30 @@
                 <left>50</left>
                 <top>400</top>
                 <control type="button" id="700">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>340</width>
-                    <height>28</height>
-                    <!-- <label>298</label> -->
-                    <font>FontSize_22</font>
-                    <texturefocus></texturefocus>
-                    <texturenofocus></texturenofocus>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>
+                    <left>970</left>
+                    <top>100</top>
+                    <width>40</width>
+                    <height>40</height>
+                    <label>Media Info</label>
+                    <font></font>
+                    <texturefocus>OSD\button\infofo.png</texturefocus>
+                    <texturenofocus>OSD\button\info.png</texturenofocus>
 					      <textcolor>grey2</textcolor> 
       <focusedcolor>white</focusedcolor>
                     <onleft>605</onleft>
                     <onright>701</onright>
                     <ondown>500</ondown>
-                    <onclick>ActivateWindow(125)</onclick>
+                    <onclick>ActivateWindow(142)</onclick>
                 </control>
                 <control type="button" id="701">
-                    <left>570</left>
-                    <top>-190</top>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>
+                    <left>70</left>
+                    <top>100</top>
                     <width>40</width>
                     <height>40</height>
                     <label>13396</label>
@@ -106,8 +112,11 @@
                 </control>
 				                
                 <control type="button" id="702">
-                    <left>570</left>
-                    <top>-120</top>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>
+                    <left>170</left>
+                    <top>100</top>
                     <width>40</width>
                     <height>40</height>
                     <label>13395</label>
@@ -117,13 +126,16 @@
 					      <textcolor>grey2</textcolor> 
       <focusedcolor>white</focusedcolor>
                     <onleft>701</onleft>
-                    <onright>703</onright>
+                    <onright>600</onright>
                     <ondown>500</ondown>
                     <onclick>ActivateWindow(123)</onclick>
                 </control>
-                <control type="button" id="703">
-                    <left>570</left>
-                    <top>90</top>
+                <control type="button" id="703">				
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>			
+                    <left>460</left>
+                    <top>100</top>
                     <width>40</width>
                     <height>45</height>
                     <label>31356</label>
@@ -132,13 +144,16 @@
                     <texturenofocus>OSD\button\sub.png</texturenofocus>
 					      <textcolor>grey2</textcolor> 
       <focusedcolor>white</focusedcolor>
-                    <onleft>702</onleft>
-                    <onright>704</onright>
+                    <onleft>601</onleft>
+                    <onright>602</onright>
                     <ondown>500</ondown>
                     <onclick>Close</onclick>
                     <onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
                 <control type="button" id="704">
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>
                     <left>250</left>
                     <top>-5</top>
                     <width>40</width>
@@ -156,6 +171,9 @@
                     <visible>VideoPlayer.Content(LiveTV) + Player.CanRecord + !Player.Recording</visible>
                 </control>
                 <control type="button" id="704">
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>
                     <left>250</left>
                     <top>-5</top>
                     <width>40</width>
@@ -190,6 +208,9 @@
                     <visible>VideoPlayer.Content(LiveTV)</visible>
                 </control>
                 <control type="button" id="706">
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>
                     <left>350</left>
                     <top>-5</top>
                     <width>40</width>
@@ -226,22 +247,28 @@
                 <left>570</left>
                 <top>300</top>
                 <control type="button" id="600">
-                    <left>-90</left>
-                    <top>50</top>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>				
+                    <left>-250</left>
+                    <top>200</top>
                     <width>40</width>
                     <height>40</height>
                     <label>210</label>
                     <font>-</font>
                     <texturefocus>OSD\button\fleftfo.png</texturefocus>
                     <texturenofocus>OSD\button\fleft.png</texturenofocus>
-                    <onleft>707</onleft>
+                    <onleft>702</onleft>
                     <onright>601</onright>
-                    <ondown>603</ondown>
+                    <ondown>-</ondown>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="601">
-                    <left>-20</left>
-                    <top>50</top>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>				
+                    <left>-150</left>
+                    <top>200</top>
                     <width>40</width>
                     <height>40</height>
                     <label>31354</label>
@@ -249,13 +276,17 @@
                     <texturefocus>OSD\button\leftfo.png</texturefocus>
                     <texturenofocus>OSD\button\left.png</texturenofocus>
                     <onleft>600</onleft>
-                    <onright>602</onright>
-                    <ondown>603</ondown>
+                    <onright>703</onright>
+                    <ondown>-</ondown>
                     <onclick>PlayerControl(Rewind)</onclick>
                 </control>
                 <control type="togglebutton" id="602">
+				 <!-- <animation effect="slide" start="0,0" end="0,-50" time="600">WindowOpen</animation>  -->
+					<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>			
                     <left>50</left>
-                    <top>50</top>
+                    <top>200</top>
                     <width>40</width>
                     <height>40</height>
                     <label>31351</label>
@@ -266,45 +297,54 @@
                     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                     <alttexturefocus>OSD\button\playfo.png</alttexturefocus>
                     <alttexturenofocus>OSD\button\pause.png</alttexturenofocus>
-                    <onleft>601</onleft>
-                    <onright>604</onright>
-                    <ondown>603</ondown>
+                    <onleft>703</onleft>
+                    <onright>603</onright>
+                    <ondown>-</ondown>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
 				      
 				
                 <control type="button" id="603">
-                    <left>50</left>
-                    <top>120</top>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>			
+                    <left>150</left>
+                    <top>200</top>
                     <width>40</width>
                     <height>40</height>
                     <label>31352</label>
                     <font>-</font>
                     <texturefocus>OSD\button\stopfo.png</texturefocus>
                     <texturenofocus>OSD\button\stop.png</texturenofocus>
-                    <onleft>601</onleft>
+                    <onleft>602</onleft>
                     <onright>604</onright>
-                    <ondown>603</ondown>
-					<onup>602</onup>
+                    <ondown>-</ondown>
+					<onup>-</onup>
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="604">
-                    <left>120</left>
-                    <top>50</top>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>				
+                    <left>250</left>
+                    <top>200</top>
                     <width>40</width>
                     <height>40</height>
                     <label>31353</label>
                     <font>-</font>
                     <texturefocus>OSD\button\rightfo.png</texturefocus>
                     <texturenofocus>OSD\button\right.png</texturenofocus>
-                    <onleft>602</onleft>
+                    <onleft>603</onleft>
                     <onright>605</onright>
-                    <ondown>603</ondown>
+                    <ondown>-</ondown>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="605">
-                    <left>190</left>
-                    <top>50</top>
+									<animation effect="slide" start="0" end="0,-30" time="300">Focus</animation>
+					<animation effect="slide" start="0,-30" end="0,0" time="300">unFocus</animation>	
+					<animation effect="zoom" start="0" end="100" center="auto" time="300">WindowOpen</animation>			
+                    <left>350</left>
+                    <top>200</top>
                     <width>40</width>
                     <height>40</height>
                     <label>209</label>
@@ -313,7 +353,7 @@
                     <texturenofocus>OSD\button\fright.png</texturenofocus>
                     <onleft>604</onleft>
                     <onright>700</onright>
-                    <ondown>603</ondown>
+                    <ondown>-</ondown>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
 <!--                 <control type="button" id="606">
