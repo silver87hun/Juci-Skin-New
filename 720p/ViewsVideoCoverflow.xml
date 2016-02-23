@@ -11,8 +11,7 @@
                 <effect type="fade" start="100" end="0" time="300"/>
             </animation>      
             <visible>Control.IsVisible(555)</visible>
-            <control type="image">
-                <!-- bottom bar background -->
+<!--             <control type="image">
                 <left>0</left>
                 <top>155r</top>
                 <width>1280</width>
@@ -21,7 +20,6 @@
                 <texture>rightlistbackground.png</texture>
             </control>
             <control type="image">
-                <!-- bottom bar background -->
                 <left>0</left>
                 <top>50r</top>
                 <width>1280</width>
@@ -30,7 +28,7 @@
                 <texture>rightlistbackground.png</texture>
                 <visible>Container.Content(Movies) | Container.Content(Episodes)</visible>
                 <visible>!ListItem.IsFolder</visible>
-            </control>
+            </control> -->
         </control>
 
         <!-- ======== ANIMATIONS TO THE righT ============ -->
@@ -50,7 +48,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-4).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -63,7 +61,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-3).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -76,7 +74,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-2).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -91,7 +89,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(3).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -104,7 +102,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(2).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -117,7 +115,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(1).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -135,7 +133,7 @@
                         <width>300</width>
                         <height>440</height>
                         <texture background="true">$INFO[ListItem(0).Icon]</texture>
-                        <bordertexture border="8">ThumbBorder.png</bordertexture>
+                        <bordertexture border="8"></bordertexture>
                         <bordersize>8</bordersize>
                     </control>
                 </control>
@@ -149,7 +147,7 @@
                         <width>300</width>
                         <height>440</height>
                         <texture background="true">$INFO[ListItem(-1).Icon]</texture>
-                        <bordertexture border="8">ThumbBorder.png</bordertexture>
+                        <bordertexture border="8"></bordertexture>
                         <bordersize>8</bordersize>
                     </control>
                 </control>
@@ -174,7 +172,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(4).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -187,7 +185,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(3).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -200,7 +198,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(2).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -215,7 +213,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-3).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -228,7 +226,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-2).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -241,7 +239,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-1).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -259,7 +257,7 @@
                         <width>300</width>
                         <height>440</height>
                         <texture background="true">$INFO[ListItem(0).Icon]</texture>
-                        <bordertexture border="8">ThumbBorder.png</bordertexture>
+                        <bordertexture border="8"></bordertexture>
                         <bordersize>8</bordersize>
                     </control>
                 </control>
@@ -273,7 +271,7 @@
                         <width>300</width>
                         <height>440</height>
                         <texture background="true">$INFO[ListItem(1).Icon]</texture>
-                        <bordertexture border="8">ThumbBorder.png</bordertexture>
+                        <bordertexture border="8"></bordertexture>
                         <bordersize>8</bordersize>
                     </control>
                 </control>
@@ -293,7 +291,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-3).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -306,7 +304,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-2).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -319,7 +317,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(-1).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -332,7 +330,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(3).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -345,7 +343,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(2).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -358,7 +356,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem(1).Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                 </control>
             </control>
@@ -380,7 +378,7 @@
                     <width>300</width>
                     <height>440</height>
                     <texture background="true">$INFO[ListItem.Icon]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
+                    <bordertexture border="8"></bordertexture>
                     <bordersize>8</bordersize>
                     <visible>Control.HasFocus(555) | !Control.HasFocus(555)</visible>
                 </control>
@@ -500,32 +498,32 @@
                 <top>210</top>
                 <control type="label">
                     <description>Movie Title Label</description>
-                    <left>0</left>
+                    <left>330</left>
                     <top>0</top>
                     <width>550</width>
                     <height>25</height>
                     <label>$INFO[ListItem.Title]</label>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>center</aligny>
-                    <font>cirrus_30</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <font>font30</font>
+                    <textcolor>black</textcolor>
+                    <!-- <shadowcolor>black</shadowcolor> -->
                 </control>
                 <control type="textbox">
                     <description>plot</description>
                     <left>0</left>
                     <top>30</top>
-                    <width>950</width>
+                    <width>1220</width>
                     <height>68</height>
                     <label>$INFO[ListItem.Plot]</label>
                     <align>justify</align>
-                    <aligny>top</aligny>
-                    <font>cirrus_20</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <aligny>center</aligny>
+                    <font>font10</font>
+                    <textcolor>black</textcolor>
+                    <!-- <shadowcolor>black</shadowcolor> -->
                     <autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-                    <visible>!Skin.HasSetting(plotoutline)</visible>
-                    <visible>!Skin.HasSetting(newMPAAFlags) + !Skin.HasSetting(noMPAAStudioFlags)</visible>
+<!--                     <visible>!Skin.HasSetting(plotoutline)</visible>
+                    <visible>!Skin.HasSetting(newMPAAFlags) + !Skin.HasSetting(noMPAAStudioFlags)</visible> -->
                 </control>
                 <control type="textbox">
                     <description>plot</description>
@@ -616,9 +614,9 @@
                     <label>$INFO[ListItem.Year]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>cirrus_35</font>
-                    <textcolor>accent</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <font>font14</font>
+                    <textcolor>black</textcolor>
+                    <!-- <shadowcolor>black</shadowcolor> -->
                 </control>
                 <control type="label">
                     <description>Runtime label</description>
@@ -629,9 +627,8 @@
                     <label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>cirrus_35</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <font>font14</font>
+                    <textcolor>black</textcolor>
                     <visible>!ListItem.IsFolder</visible>
                 </control>
                 <control type="image">
@@ -674,14 +671,15 @@
             <control type="image">
                 <width>240</width>
                 <height>50</height>
-                <left>480</left>
+                <left>520</left>
                 <top>50r</top>
                 <aspectratio>keep</aspectratio>
                 <align>center</align>
                 <aligny>bottom</aligny>
-                <texture diffuse="maskflags.png">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+                <texture diffuse="black">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+				<colordiffuse>black</colordiffuse>
             </control>
-            <control type="grouplist">
+<!--             <control type="grouplist">
                 <description>MPAA Rating Flagging Images</description>
                 <left>280r</left>
                 <top>240</top>
@@ -708,7 +706,7 @@
                 <visible>Skin.HasSetting(NewMPAAFlags)</visible>
                 <visible>!Skin.HasSetting(noMPAAStudioFlags)</visible>
                 <visible>!ListItem.IsFolder</visible>
-            </control>
+            </control> -->
             <control type="grouplist">
                 <description>Media Codec Flagging Images</description>
                 <left>580r</left>

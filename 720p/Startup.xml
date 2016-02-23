@@ -33,12 +33,12 @@
         <width>1920</width>
         <height>1080</height>
                 <aspectratio>stretch</aspectratio>
-				<timeperimage>6000</timeperimage>
+				<timeperimage>800</timeperimage>
 				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
+				<fadetime>800</fadetime>
 										<pauseatend>0</pauseatend>
 			<loop>true</loop>
-                <imagepath background="true">test_dark</imagepath>
+                <imagepath background="true">test_light</imagepath>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
               <!--   <texture flipy="true">OSDbackground.png</texture> -->
                 <!-- flip y when up the top -->
@@ -56,14 +56,14 @@
 	  		 				<control type="image">
 <!-- 		<animation effect="slide" start="0,0" end="0,80" time="400" tween="quadratic" easing="out">WindowOpen</animation> -->
 <!--       <animation effect="slide" start="0,0" end="-350,-200" time="800" tween="quadratic" easing="out">WindowClose</animation> -->
-				 <left>550</left>
-				  <top>200</top>
-				  <width>160</width>
-				  <height>160</height>
-			<texture>juci_white.png</texture>
+				 <left>565</left>
+				  <top>300</top>
+				  <width>90</width>
+				  <height>70</height>
+			<texture>text.png</texture>
             </control>
 
-      <control type="image">
+<!--       <control type="image">
 	  	  <animation effect="slide" start="0,300" end="0,0" time="1400" tween="quadratic" easing="out">WindowOpen</animation>
 		<animation effect="zoom" start="0,0" end="0,300" time="1400" tween="quadratic" easing="out">WindowClose</animation>
         <description>Busy animation</description>
@@ -73,10 +73,20 @@
         <height>32</height>
         <texture>busy.png</texture>
         <animation effect="rotate" start="360" end="0" center="auto" time="500" loop="true" condition="Skin.HasSetting(EnableStartupAnimation)">conditional</animation>
-      </control>
-      <control type="label">
-	  	  <animation effect="slide" start="0,300" end="0,0" time="1000" tween="quadratic" easing="out">WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="0,300" time="1000" tween="quadratic" easing="out">WindowClose</animation>
+      </control> -->
+	  		            <control type="image">
+					<!-- <animation effect="slide" start="0" end="0,-280" time="400" tween="back" easing="inout" condition="System.IdleTime(15)">conditional</animation> -->
+					<!-- <animation effect="zoom" start="100" end="150" time="400" tween="back" easing="inout" condition="System.IdleTime(5)">conditional</animation> -->
+                <description>Busy animation</description>
+                <left>600</left>
+                <top>400</top>
+                    <width>30</width>
+                    <height>30</height>
+                    <texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/fillingcircles.gif">$INFO[Skin.String(busyloader)]</texture>
+                    <aspectratio>keep</aspectratio>
+					<colordiffuse>black</colordiffuse>
+            </control>
+   <!--    <control type="label">
         <description>Busy label</description>
         <left>360</left>
         <top>450</top>
@@ -86,10 +96,10 @@
         <textcolor>white</textcolor>
         <align>center</align>
         <label>[UPPERCASE]$LOCALIZE[31006][/UPPERCASE]</label>
-      </control>
+      </control> -->
       <control type="button" id="10">
-	  	  	  <animation effect="slide" start="80,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="80,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+<!-- 	  	  	  <animation effect="slide" start="80,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="80,0" time="400" tween="quadratic" easing="out">WindowClose</animation> -->
         <description>trigger</description>
         <onfocus>ReplaceWindow(Home)</onfocus>
         <texturenofocus>-</texturenofocus>
@@ -100,8 +110,8 @@
         <height>42</height>
       </control>
       <control type="button" id="10">
-	  	  	  <animation effect="slide" start="80,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="80,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+<!-- 	  	  	  <animation effect="slide" start="80,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="80,0" time="400" tween="quadratic" easing="out">WindowClose</animation> -->
         <description>trigger with startup Playlist</description>
         <onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
         <onfocus>ReplaceWindow(Home)</onfocus>

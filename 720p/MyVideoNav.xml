@@ -14,25 +14,7 @@
 		
 		
 		
-		 <control type="multiimage">
 
-
-                <!-- background -->
-		<left>0</left>
-        <top>0</top>
-        <width>1920</width>
-        <height>1080</height>
-                <aspectratio>stretch</aspectratio>
-				<timeperimage>16000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
-										<pauseatend>0</pauseatend>
-			<loop>true</loop>
-                <imagepath background="true">test_light</imagepath>
-				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-              <!--   <texture flipy="true">OSDbackground.png</texture> -->
-                <!-- flip y when up the top -->
-            </control>
 		
 		
             <control type="image">
@@ -60,22 +42,26 @@
                 <visible>Container.Content(Movies)</visible>
                 <visible>!Skin.HasSetting(VideoLibraryBlackFanart)</visible>
             </control>
-            <control type="image">
+            <control type="multiimage">
                 <left>0</left>
                 <top>0</top>
                 <width>1280</width>
                 <height>720</height>
-                <texture>special://skin/backgrounds/blackbackground.jpg</texture>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<pauseatend>0</pauseatend>
+				<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
                 <include>global_kenburns_fanart</include>
-                <timeperimage>8000</timeperimage>
                 <randomize>true</randomize>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <visible>Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(590) | Control.IsVisible(591)| Control.IsVisible(592) | Control.IsVisible(593) | Control.IsVisible(594) | Control.IsVisible(595)</visible>
                 <visible>Container.Content(Movies)</visible>
                 <visible>Skin.HasSetting(VideoLibraryBlackFanart)</visible>
             </control>
-			
-			
+	
 			
             <control type="multiimage">
                 <left>0</left>
@@ -133,20 +119,46 @@
                 <visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
                 <visible>!Skin.HasSetting(VideoLibraryBlackTVFanart)</visible>
             </control>
-            <control type="image">
+            <control type="multiimage">
                 <left>0</left>
                 <top>0</top>
                 <width>1280</width>
                 <height>720</height>
-                <texture>special://skin/backgrounds/blackbackground.jpg</texture>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<pauseatend>0</pauseatend>
+				<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
                 <include>global_kenburns_fanart</include>
-                <timeperimage>8000</timeperimage>
                 <randomize>true</randomize>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
                 <visible>Skin.HasSetting(VideoLibraryTVFanart)</visible>
                 <visible>Skin.HasSetting(VideoLibraryBlackTVFanart)</visible>
             </control>
+			
+<!-- 			
+			            <control type="multiimage">
+                <left>0</left>
+                <top>0</top>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<pauseatend>0</pauseatend>
+				<loop>true</loop>
+                <imagepath background="true">test_light</imagepath>
+                <include>global_kenburns_fanart</include>
+                <randomize>true</randomize>
+                <fadetime>FanartCrossfadeTime</fadetime>
+                <visible>Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(590) | Control.IsVisible(591)| Control.IsVisible(592) | Control.IsVisible(593) | Control.IsVisible(594) | Control.IsVisible(595)</visible>
+                <visible>Container.Content(Movies)</visible>
+                <visible>Skin.HasSetting(VideoLibraryBlackFanart)</visible>
+            </control> -->
             <control type="image">
                 <left>0</left>
                 <top>0</top>
@@ -530,7 +542,7 @@
                     <control type="radiobutton" id="2060">
                         <description>Toggle BlackFanart</description>
                         <include>ButtonCommonValues</include>
-                        <label>41203</label>
+                        <label>Random color</label>
                         <onclick>Skin.ToggleSetting(VideoLibraryBlackFanart)</onclick>
                         <selected>Skin.HasSetting(VideoLibraryBlackFanart)</selected>
                         <enable>Skin.HasSetting(VideoLibraryMovieFanart)</enable>
@@ -544,13 +556,30 @@
                         <selected>Skin.HasSetting(VideoLibraryMovieExtrathumbs)</selected>
                         <visible>Container.Content(Movies) + !Control.IsVisible(668) + [!Container.Content(TVShows) + !Container.Content(Seasons) | Control.IsVisible(666) | Control.IsVisible(721) | Control.IsVisible(508)]</visible>
                     </control>
-                    <control type="radiobutton" id="2059">
-                        <description>Toggle Dim Fanart</description>
+					                    <control type="radiobutton" id="2041">
+                        <description>Toggle Extrathumbs</description>
                         <include>ButtonCommonValues</include>
-                        <label>41202</label>
+                        <label>ClearArt</label>
+                        <onclick>Skin.ToggleSetting(VideoLibraryMovieClearart)</onclick>
+                        <selected>Skin.HasSetting(VideoLibraryMovieClearart)</selected>
+                        <visible>Container.Content(Movies) + !Control.IsVisible(668) + [!Container.Content(TVShows) + !Container.Content(Seasons) | Control.IsVisible(666) | Control.IsVisible(721) | Control.IsVisible(508)]</visible>
+                    </control>
+                    <control type="radiobutton" id="2059">
+                        <description>White layer</description>
+                        <include>ButtonCommonValues</include>
+                        <label>White layer</label>
                         <onclick>Skin.ToggleSetting(VideoLibraryDimFanart)</onclick>
                         <selected>Skin.HasSetting(VideoLibraryDimFanart)</selected>
                     </control>
+					<control type="radiobutton" id="2040">
+                        <description>Color fade layer</description>
+                        <include>ButtonCommonValues</include>
+                        <label>Color fade layer</label>
+                        <onclick>Skin.ToggleSetting(VideoLibraryColorFanart)</onclick>
+                        <selected>Skin.HasSetting(VideoLibraryColorFanart)</selected>
+                    </control>
+
+					
                     <control type="radiobutton" id="202">
                         <description>Toggle TVShow Fanart</description>
                         <include>ButtonCommonValues</include>
@@ -562,7 +591,7 @@
                     <control type="radiobutton" id="2061">
                         <description>Toggle TVShow BlackFanart</description>
                         <include>ButtonCommonValues</include>
-                        <label>41203</label>
+                        <label>Random color</label>
                         <onclick>Skin.ToggleSetting(VideoLibraryBlackTVFanart)</onclick>
                         <selected>Skin.HasSetting(VideoLibraryBlackTVFanart)</selected>
                         <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>

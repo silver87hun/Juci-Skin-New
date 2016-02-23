@@ -5,26 +5,26 @@
   <coordinates>
     <system>2</system>
     <left>180</left>
-    <top>145</top>
+    <top>320</top>
   </coordinates>
   <controls>
     <control type="group">
       <include>VisibleFadeEffect</include>
       <visible>!Window.IsVisible(numericinput)</visible>
       <control type="image">
-        <left>0</left>
+        <left>-180</left>
         <top>0</top>
-        <width>860</width>
+        <width>1920</width>
         <height>430</height>
-        <texture border="40">dialogbackground.png</texture>
+        <texture>mask_black90.png</texture>
       </control>
       <control type="image">
         <left>50</left>
-        <top>60</top>
+        <top>111</top>
         <width>760</width>
-        <height>50</height>
+        <height>1</height>
         <aspectratio>stretch</aspectratio>
-        <texture border="20">keyboardeditarea.png</texture>
+        <texture>white_layer40.png</texture>
       </control>
       <control type="edit" id="312">
         <description>Edit Text</description>
@@ -32,7 +32,7 @@
         <top>60</top>
         <width>750</width>
         <height>50</height>
-        <font>cirrus_24</font>
+        <font>Fontsize_24</font>
         <align>center</align>
         <aligny>center</aligny>
         <texturefocus>-</texturefocus>
@@ -44,9 +44,9 @@
         <top>20</top>
         <width>840</width>
         <height>30</height>
-        <font>cirrus_20</font>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
+        <font>Fontsize_22</font>
+        <textcolor>grey</textcolor>
+        <!-- <shadowcolor>black</shadowcolor> -->
         <align>center</align>
         <aligny>center</aligny>
       </control>
@@ -64,8 +64,8 @@
             <label>20177</label>
             <onup>300</onup>
             <ondown>302</ondown>
-            <texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
-            <texturefocus border="25,25,5,5">KeyboardCornerTop.png</texturefocus>
+            <texturenofocus border="25,25,5,5">-</texturenofocus>
+            <texturefocus border="25,25,5,5">white_layer40.png</texturefocus>
             <include>KeyboardButton</include>
           </control>
           <control type="button" id="100">
@@ -138,8 +138,8 @@
             <description>(0,11) key button</description>
             <onup>306</onup>
             <ondown>131</ondown>
-            <texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
-            <texturefocus flipx="true" border="5,25,25,5">KeyboardCornerTop.png</texturefocus>
+            <texturenofocus flipx="true" border="5,25,25,5">-</texturenofocus>
+            <texturefocus flipx="true" border="5,25,25,5">white_layer40.png</texturefocus>
             <include>KeyboardButton</include>
           </control>
         </control>
@@ -432,11 +432,11 @@
             <width>200</width>
             <height>50</height>
             <label>20177</label>
-            <font>font13</font>
+            <font>Fontsize_22</font>
             <onup>307</onup>
             <ondown>309</ondown>
-            <texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
-            <texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>
+            <texturenofocus border="25,5,25,5">-</texturenofocus>
+            <texturefocus border="25,5,25,5">white_layer40.png</texturefocus>
             <include>KeyboardButton</include>
           </control>
           <control type="button" id="32">
@@ -462,7 +462,7 @@
             <width>100</width>
             <height>50</height>
             <label>&lt;</label>
-            <font>font30</font>
+            <font>Fontsize_22</font>
             <onup>168</onup>
             <ondown>108</ondown>
             <include>KeyboardButton</include>
@@ -472,11 +472,11 @@
             <width>100</width>
             <height>50</height>
             <label>&gt;</label>
-            <font>font30</font>
+            <font>Fontsize_22</font>
             <onup>170</onup>
             <ondown>110</ondown>
-            <texturenofocus flipx="true" border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
-            <texturefocus flipx="true" border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>
+            <texturenofocus flipx="true" border="25,5,25,5">-</texturenofocus>
+            <texturefocus flipx="true" border="25,5,25,5">white_layer40.png</texturefocus>
             <include>KeyboardButton</include>
           </control>
         </control>

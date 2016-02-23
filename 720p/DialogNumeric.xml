@@ -28,7 +28,7 @@
              	 <timeperimage>48000</timeperimage>
 				<randomize>true</randomize> 
 				 <fadetime>10</fadetime>
-                  <imagepath background="true">test_dark</imagepath>
+                  <imagepath background="true">test_light</imagepath>
             </control>
 		
         <control type="image">

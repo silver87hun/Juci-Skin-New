@@ -1284,11 +1284,11 @@
     <include name="KeyboardButton">
         <width>50</width>
         <height>50</height>
-        <texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-        <texturefocus border="5">KeyboardKey.png</texturefocus>
+        <texturenofocus>-</texturenofocus>
+        <texturefocus>logo.png</texturefocus>
         <align>center</align>
         <aligny>center</aligny>
-        <font>font13</font>
+        <font>FontSize_22</font>
         <focusedcolor>black</focusedcolor>
     </include>
 	

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+
+
     <include name="HomeRecentlyAddedInfoHorz">
         <control type="group" id="8004">
 		<animation effect="slide" start="0" end="0,600" time="200" condition="System.IdleTime(10)">conditional</animation>		
-		<animation effect="slide" start="0" end="0,-100" time="600" condition="Window.IsVisible(DialogProgress.xml)">Conditional</animation>
+		<!-- <animation effect="slide" start="0" end="0,-100" time="600" condition="Window.IsVisible(DialogProgress.xml)">Conditional</animation> -->
             <visible>!Player.HasVideo | !Skin.HasSetting(videowindowonhome)</visible>
             <visible>!Window.IsVisible(Favourites)</visible>
             <visible>!Window.IsVisible(114)</visible>
@@ -12,6 +14,26 @@
             <include>VisibleFadeEffect</include>
             <animation effect="fade" time="300" delay="1000">WindowOpen</animation>
             <animation effect="fade" time="200">WindowClose</animation>
+			
+			
+<!-- 			 		<control type="multiimage">
+					<visible>Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)</visible>
+                <animation effect="slide" time="0" tween="cubic" easing="inout" end="0,0" condition="Skin.HasSetting(lowermainmenu) | Skin.HasSetting(Lockhomemenulow)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,0" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(Lockhomemenulow) + !Skin.HasSetting(HomeMenuNoMoviesButton) + Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)">Conditional</animation>
+		<left>0</left>
+        <top>0</top>
+        <width>550</width>
+        <height>1920</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">fade_vignette</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+            </control> -->
+			
 <!--             <control type="multiimage">
                 <description>media info background image</description>
                 <left>0</left>
@@ -27,25 +49,42 @@
                 <visible>Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)</visible>
                 <animation effect="slide" time="0" tween="cubic" easing="inout" end="0,0" condition="Skin.HasSetting(lowermainmenu) | Skin.HasSetting(Lockhomemenulow)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,0" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(Lockhomemenulow) + !Skin.HasSetting(HomeMenuNoMoviesButton) + Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(8010) | Control.HasFocus(8011)">Conditional</animation>
+				<!-- <animation effect="slide" start="0,0" end="0,-200" time="800" condition="System.IdleTime(6)">conditional</animation> -->
 			<control type="image">
-			  <animation effect="slide" start="0" end="0,1000" time="10" condition="System.IdleTime(10)">conditional</animation>
-				<left>-300</left>
-				<top>-300</top>
+			  <!-- <animation effect="slide" start="0" end="0,1000" time="10" condition="System.IdleTime(10)">conditional</animation> -->
+				<left>0</left>
+				<top>400</top>
 				<width>1920</width>
-				<height>1080</height>
-				<texture>mask_black50.png</texture>
-		   </control>		
+				<height>400</height>
+				<texture>fadeOutBottom.png</texture>
+		   </control>	
 		   
-		<control type="image">
+		   
+		   
+<!--  		<control type="image">
 			<left>0</left>
-			<top>430</top>
+			<top>440</top>
 			<width>1920</width>
-			<height>1080</height>
-			<texture>black.jpeg</texture>
-			</control> 
-		<control type="multiimage">
-
-                <!-- background -->
+			<height>400</height>
+			<texture>white_layer40.png</texture>
+			</control> -->
+			
+<!-- 					<control type="multiimage">
+			<left>0</left>
+			<top>300</top>
+			<width>1920</width>
+			<height>800</height>
+                <aspectratio>stretch</aspectratio>
+				<timeperimage>16000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+										<pauseatend>0</pauseatend>
+			<loop>true</loop>
+                <imagepath background="true">fade_vignette_low</imagepath>
+				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
+			</control> -->
+			
+<!-- 		<control type="multiimage">
 		<left>0</left>
         <top>430</top>
         <width>1920</width>
@@ -58,9 +97,9 @@
 			<loop>true</loop>
                 <imagepath background="true">test_light</imagepath>
 				<visible>!Skin.HasSetting(Menu_RandomCustom1)</visible>
-              <!--   <texture flipy="true">OSDbackground.png</texture> -->
-                <!-- flip y when up the top -->
-            </control></control>
+            </control> -->
+			
+			</control>
 		<!-- 	
 			 <control type="group">
 			                 <top>150</top>
@@ -117,19 +156,19 @@
                 <visible>Library.HasContent(Movies)</visible>
                 <visible>Container(9000).Hasfocus(1)</visible>
                 <visible>Skin.HasSetting(latestmovies) | Skin.HasSetting(moviesinprogress)</visible>
-                <control type="label">
+<!--                 <control type="label">
                     <description>Latest Movies</description>
-                    <left>165</left>
-                    <top>20</top>
+                    <left>260</left>
+                    <top>-40</top>
                     <height>20</height>
                     <width>850</width>
                     <label>31323</label>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>center</aligny>
-                    <font>Clock-Detail</font>
-                    <textcolor>white</textcolor>
+                    <font>font30</font>
+                    <textcolor>grey</textcolor>
                     <visible>!Control.HasFocus(8000) + Skin.HasSetting(latestmovies)</visible>
-                </control> 
+                </control>  -->
             <control type="label">
                 <description>Movies in Progress</description>
                 <left>35</left>
@@ -139,24 +178,38 @@
                 <label>41220</label>
                 <align>left</align>
                 <aligny>center</aligny>
-                <font>Clock-Detail</font>
+                <font>FontSize_18</font>
                 <textcolor>black</textcolor>
                 <visible>!Control.HasFocus(8000) + Skin.HasSetting(moviesinprogress)</visible>
             </control> 
         <control type="label">
             <description>Title label</description>
             <left>350</left>
-            <top>-10</top>
+            <top>220</top>
             <height>20</height>
             <width>800</width>
             <label>$INFO[Container(8000).ListItem.Label]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <font>Charms-Date</font>
-            <textcolor>white</textcolor>
+            <font>font30</font>
+            <textcolor>grey</textcolor>
             <visible>Control.HasFocus(8000)</visible>
 				</control>
 				
+							<!-- Logo mellett -->
+			       <!--  <control type="label">
+            <description>Title label</description>
+            <left>300</left>
+            <top>-380</top>
+            <height>20</height>
+            <width>800</width>
+            <label>$INFO[Container(8000).ListItem.Label]</label>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>FontSize_38</font>
+            <textcolor>white</textcolor>
+            <visible>Control.HasFocus(8000)</visible>
+				</control>	 -->	
 
 	  
 <!-- 				        <control type="label">
@@ -181,8 +234,10 @@
 			 <visible>Control.HasFocus(8000) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
             </control> -->
         <control type="list" id="8000">
-            <left>160</left>
-            <top>55</top>
+		 <animation effect="slide" start="0,80" end="0,0" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
+		 <animation effect="zoom" start="105" end="80" time="300" center="auto" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
+            <left>150</left>
+            <top>-40</top>
             <width>1280</width>
             <height>400</height>
             <onleft>8000</onleft>
@@ -198,7 +253,7 @@
 			
             <itemlayout width="120" height="200">
                 <control type="image">
-				<animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
+				<!-- <animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation> -->
                     <left>0</left>
                     <top>2</top>
                     <width>110</width>
@@ -211,7 +266,7 @@
 								
                 </control>
                 <control type="image">
-				<animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
+				<!-- <animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation> -->
                     <left>0</left>
                     <top>2</top>
                     <width>110</width>
@@ -225,7 +280,7 @@
             </itemlayout>
             <focusedlayout width="120" height="200">
                 <control type="image">
-				<animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
+				<!-- <animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation> -->
                     <left>0</left>
                     <top>2</top>
                     <width>110</width>
@@ -234,21 +289,21 @@
                     <animation reversible="false" effect="zoom" start="2,16,110,160" end="-12,-8,138,200" time="200">focus</animation>
                     <animation reversible="false" effect="zoom" end="2,16,110,160" start="-12,-8,138,200" time="200">unfocus</animation>
 <!--                     <bordertexture border="6">ContentPanelvertical.png</bordertexture> -->
-                    <bordersize>6</bordersize>
+                    <bordersize>4</bordersize>
                     <aspectratio>stretch</aspectratio>
                     <visible>!Skin.HasSetting(moviesinprogress)</visible>
                 </control>
                 <control type="image">
-				<animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>
+				<!-- <animation effect="slide" start="0" end="855,-70" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation> -->
                     <left>0</left>
-                    <top>2</top>
+                    <top>-2</top>
                     <width>110</width>
                     <height>160</height>
                     <texture background="true">$INFO[ListItem.Thumb]</texture>
                     <animation reversible="false" effect="zoom" start="2,16,110,160" end="-12,-8,138,200" time="200">focus</animation>
                     <animation reversible="false" effect="zoom" end="2,16,110,160" start="-12,-8,138,200" time="200">unfocus</animation>
 <!--                     <bordertexture border="6">ContentPanelvertical.png</bordertexture> -->
-                    <bordersize>6</bordersize>
+                    <bordersize>4</bordersize>
                     <aspectratio>stretch</aspectratio>
                     <visible>Skin.HasSetting(moviesinprogress)</visible>
                 </control>
@@ -533,7 +588,7 @@
             <label>31323</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_40</font>
+            <font>FontSize_18</font>
             <textcolor>grey</textcolor>
             <visible>!Control.HasFocus(8006) + Skin.HasSetting(latestmoviesplaylist1)</visible>
         </control>
@@ -546,7 +601,7 @@
             <label>$INFO[Container(8006).ListItem.Label]  [COLOR=accent]$INFO[Container(8006).ListItem.Property(Year)][/COLOR]</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>cirrus_24</font>
+            <font>font13</font>
             <textcolor>grey</textcolor>
             <shadowcolor>black</shadowcolor>
             <visible>Control.HasFocus(8006)</visible>
@@ -1073,9 +1128,9 @@
     </control>
     <!-- RECENTLY ADDED TV SHOWS -->
     <control type="group">
-			<animation effect="slide" start="0" end="610,-100" time="500" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>		
-        <left>-80</left>
-        <top>560</top>
+			<animation effect="slide" start="0,-35" end="780,-80" time="300" condition="!Control.HasFocus(8000) + !Control.HasFocus(8001)">Conditional</animation>		
+        <left>25</left>
+        <top>600</top>
         <visible>Library.HasContent(TVShows)</visible>
         <visible>Container(9000).Hasfocus(7)</visible>
         <visible>Skin.HasSetting(latestepisodes) | Skin.HasSetting(watchlisttvhorizontal) | System.IdleTime(11)</visible>
@@ -1099,8 +1154,8 @@
                   <imagepath background="true">walls</imagepath>
         </control> -->
         <control type="wraplist" id="8001">
-            <left>225</left>
-            <top>-20</top>
+            <left>55</left>
+            <top>-45</top>
             <width>1280</width>
             <height>400</height>
             <onleft>8001</onleft>
@@ -1117,7 +1172,7 @@
             <itemlayout width="260" height="160">
                 <control type="image">
                     <left>0</left>
-                    <top>2</top>
+                    <top>0</top>
                     <width>260</width>
                     <height>160</height>
                     <texture background="true">$INFO[ListItem.ActualIcon]</texture>
@@ -1143,10 +1198,10 @@
                     <fadetime>IconCrossfadeTime</fadetime>
                     <aspectratio>stretch</aspectratio>
                     <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-<!--                      <bordertexture width="3">mask_black70.png</bordertexture> -->
+                      <!-- <bordertexture width="3">mask_black70.png</bordertexture> -->
                     <bordersize>5</bordersize>
-                      <animation reversible="false" effect="zoom" start="20,15,260,160" end="-115,-70,410,260" time="200">focus</animation>
-                    <animation reversible="false" effect="zoom" end="20,15,260,160" start="12,6,260,160" time="200">unfocus</animation> 
+                <animation reversible="false" effect="zoom" start="0,0,240,134" end="-105,-75,340,200" time="200">focus</animation>
+                <animation reversible="false" effect="zoom" end="0,0,260,160" start="-105,-75,340,200" time="200">unfocus</animation>
 <!-- 					<animation reversible="false" effect="zoom" start="2,16,110,160" end="-12,-8,138,200" time="200">focus</animation>
                     <animation reversible="false" effect="zoom" end="2,16,110,160" start="-12,-8,138,200" time="200">unfocus</animation> -->
                 </control>
@@ -1427,15 +1482,15 @@
         </control>
 		        <control type="label">
             <description>Latest Episodes</description>
-            <left>230</left>
+            <left>290</left>
             <top>-50</top>
             <height>20</height>
             <width>450</width>
             <label>31324</label>
-            <align>left</align>
+            <align>right</align>
             <aligny>center</aligny>
-            <font>Clock-Detail</font>
-            <textcolor>white</textcolor>
+            <font>FontSize_18</font>
+            <textcolor>grey2</textcolor>
             <visible>!Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
         </control>
         <control type="label">
@@ -1447,36 +1502,37 @@
             <label>41219</label>
             <align>left</align>
             <aligny>center</aligny>
-            <font>Charms-Date-big</font>
+            <font>FontSize_18</font>
             <textcolor>white</textcolor>
             <visible>!Control.HasFocus(8001) + Skin.HasSetting(watchlisttvhorizontal)</visible>
         </control> 
         <control type="label">
             <description>Title label</description>
-            <left>350</left>
-            <top>-105</top>
+            <left>210</left>
+            <top>125</top>
             <height>20</height>
             <width>800</width>
-            <label>$INFO[Container(8001).ListItem.Label2] </label>
+            <label>$INFO[Container(8001).ListItem.Label2]: [COLOR=black]$INFO[Container(8001).ListItem.Property(EpisodeSeason)]  $INFO[Container(8001).ListItem.Property(EpisodeNumber)][/COLOR] | [COLOR=black]$INFO[Container(8001).ListItem.Label][/COLOR]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <font>Charms-Date</font>
-            <textcolor>white</textcolor>
+            <font>font16</font>
+            <textcolor>black</textcolor>
             <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
         </control>
-		        <control type="label">
+	<!-- 	        <control type="label">
             <description>Title label</description>
-            <left>600</left>
+            <left>500</left>
             <top>-75</top>
             <height>20</height>
-            <width>300</width>
-            <label>ep:[COLOR=white] $INFO[Container(8001).ListItem.Property(EpisodeNumber)][/COLOR] $INFO[Container(8001).ListItem.Property(EpisodeSeason)] </label>
-            <align>center</align>
+            <width>500</width>
+            <label>[COLOR=black]$INFO[Container(8001).ListItem.Label][/COLOR] | [COLOR=black]$INFO[Container(8001).ListItem.Property(EpisodeSeason)]  $INFO[Container(8001).ListItem.Property(EpisodeNumber)][/COLOR]</label>
+            <align>left</align>
             <aligny>center</aligny>
-            <font>Clock-Detail</font>
-            <textcolor>white</textcolor>
+            <font>FontSize_18b</font>
+            <textcolor>black</textcolor>
             <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
-        </control>
+			
+        </control> -->
 		
 <!-- 		    <control type="image">
             <left>190</left>
@@ -1486,7 +1542,7 @@
             <texture>OSD\Play_arrow_24.png</texture>
 			 <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
             </control> -->
-		<control type="label">
+<!-- 		<control type="label">
             <description>Title label</description>
             <left>600</left>
             <top>-50</top>
@@ -1495,10 +1551,10 @@
             <label>[COLOR=white]$INFO[Container(8001).ListItem.Label][/COLOR]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <font>Clock-Detail</font>
-            <textcolor>white</textcolor>
+            <font>FontSize_18</font>
+            <textcolor>black</textcolor>
             <visible>Control.HasFocus(8001) + !Skin.HasSetting(watchlisttvhorizontal)</visible>
-        </control>
+        </control> -->
 		
         <control type="label">
             <description>Title label</description>
