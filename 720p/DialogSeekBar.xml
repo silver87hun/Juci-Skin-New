@@ -187,10 +187,10 @@
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
           <visible>System.IdleTime(6)</visible>
         <description>TV Show Poster cover image</description>
-        <left>160</left>
-        <top>100</top>
-        <width>380</width>
-        <height>260</height>
+        <left>500</left>
+        <top>30</top>
+        <width>280</width>
+        <height>160</height>
         <fadetime>200</fadetime>
         <animation effect="fade" time="900">VisibleChange</animation>
         <texture fallback="blank.png">$INFO[VideoPlayer.Cover]</texture>
@@ -209,7 +209,7 @@
 	  	   <!-- <animation effect="zoom" start="80" end="100"  center="auto"  time="450" condition="System.IdleTime(6)">conditional</animation> -->
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
           <visible>System.IdleTime(6)</visible>
-        <left>555</left>
+        <left>595</left>
         <top>200</top>
         <width>90</width>
         <height>19</height>
@@ -737,15 +737,15 @@
 	 <animation effect="slide" start="0,0" end="0,-50" time="500" condition="System.IdleTime(6)">conditional</animation>
 	  	   <!-- <animation effect="zoom" start="80" end="100"  center="auto"  time="600" condition="System.IdleTime(6)">conditional</animation> -->
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
-          <left>40</left>
+          <left>-250</left>
           <top>50</top>
-          <width>550</width>
-          <height>108</height>
+          <width>800</width>
+          <height>200</height>
           <align>left</align>
           <aligny>top</aligny>
           <label>$INFO[VideoPlayer.Plot ]</label>
           <autoscroll time="3000" delay="1000" repeat="5000" />
-          <font>FontSize_20</font>
+          <font>FontSize_18b</font>
           <textcolor>grey3</textcolor>
 <!--           <visible>!VideoPlayer.Content(Files)</visible>
           <visible>!Skin.HasSetting(slimseek)</visible>
@@ -1161,13 +1161,13 @@
         <top>150</top>
         <align>center</align>
           <control type="label">
-				  	 <animation effect="slide" start="0,0" end="0,-50" time="350" condition="System.IdleTime(6)">conditional</animation>
+				  	 <animation effect="slide" start="0,0" end="0,-50" time="500" condition="System.IdleTime(6)">conditional</animation>
 	  	   <!-- <animation effect="zoom" start="80" end="100"  center="auto"  time="400" condition="System.IdleTime(6)">conditional</animation> -->
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
           <visible>System.IdleTime(6)</visible>
           <description>Paused Label</description>
           <left>-270</left>
-          <top>-230</top>
+          <top>180</top>
           <width>440</width>
           <height>35</height>
           <align>left</align>
@@ -1307,6 +1307,7 @@
       </control>
 	  
 	   <control type="grouplist">
+	   <left>-70</left>
 				  	 <animation effect="slide" start="0,0" end="0,-50" time="600" condition="System.IdleTime(6)">conditional</animation>
 	  	   <!-- <animation effect="zoom" start="80" end="100"  center="auto"  time="500" condition="System.IdleTime(6)">conditional</animation> -->
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
