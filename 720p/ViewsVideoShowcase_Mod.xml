@@ -483,6 +483,8 @@
 				
                 <!-- Film title cím -->
                 <control type="fadelabel">
+				<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
 <!-- 				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
 		  <animation effect="slide" start="0,0" end="200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
@@ -507,6 +509,8 @@
                 </control>
 
 				            <control type="label">
+											<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
 							               
 <!-- 				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
@@ -548,6 +552,8 @@
 				
 				<!-- FILM adatok rendbező, duration -->
           <control type="list" id="49">
+		  				<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
 <!-- 		  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
 		  <animation effect="slide" start="0,0" end="200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
@@ -633,6 +639,8 @@
 
 		  
                 <control type="image">
+								<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
                     <!-- Top250IMDB Mod 1.2 -->
                     <left>350</left>
                     <top>547</top>
@@ -646,6 +654,8 @@
                 </control>
 
 				<control type="label">
+								<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
                     <!-- Top250IMDB Mod 1.2 -->
                     <description>top250</description>
                     <left>348</left>
@@ -660,6 +670,8 @@
                 </control>
 
                 <control type="textbox">
+								<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
 <!-- 				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
 		  <animation effect="slide" start="0,0" end="200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
@@ -742,7 +754,8 @@
                 </control>
 				<!-- Film studio -->
                 <control type="image">
-				
+												<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
                     <width>120</width>
                     <height>60</height>
                     <left>240</left>
@@ -777,13 +790,14 @@
 		  <animation effect="slide" start="0,0" end="50,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="slide" start="0,0" end="-50,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation> -->
                     <!-- Movie Logo -->
+					<animation effect="slide" start="0" end="300,0" time="300" condition="System.IdleTime(1)">conditional</animation>
                     <description>Movie Logo</description>
-                    <left>640</left> 
+                    <left>340</left> 
                     <top>-350</top> 
                     <width>700</width> 
-                    <height>980</height>
+                    <height>978</height>
 					<!-- <animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">Visible</animation> -->
-					<animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation>
+					<!-- <animation effect="zoom" start="60" end="100" center="auto" time="500" tween="cubic" easing="inout" pulse="true">WindowOpen</animation> -->
                     <texture>$INFO[ListItem.Art(clearart)]</texture>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <visible>Container.Content(Movies)</visible>
@@ -811,6 +825,8 @@
 				
 				
                 <control type="label">
+								<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
                     <description>Movie Set Genre</description>
                     <left>1145</left>
                     <top>-3</top>
@@ -844,6 +860,8 @@
                 </control>
             </control>
             <control type="grouplist">
+							<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
 <!-- 				  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
 		  <animation effect="slide" start="0,0" end="200,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
@@ -872,6 +890,8 @@
 			
 			<!-- Film IMDB -->
             <control type="label">
+							<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
 <!-- 			  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
 		  <animation effect="slide" start="0,0" end="230,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
@@ -889,6 +909,8 @@
                 <visible>!IsEmpty(ListItem.Thumb)</visible> 
             </control>
             <control type="image">
+							<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
 <!-- 			  <animation effect="zoom" start="100" end="80" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 		  <animation effect="zoom" start="80" end="100" center="auto" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">WindowClose</animation>
 		  <animation effect="slide" start="0,0" end="260,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
@@ -1521,6 +1543,8 @@
                 </control>
             </control>
             <control type="image">
+											<animation effect="fade" start="0" end="100" time="700" condition="System.IdleTime(1)">WindowsOpen</animation>
+				<visible>System.IdleTime(1)</visible>
                 <width>150</width>
                 <height>50</height>
                 <left>30</left>

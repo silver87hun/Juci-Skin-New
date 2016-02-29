@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="107">
+	<animation effect="slide" start="0,250" end="0,0" tween="sine" time="500">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,250" tween="sine" time="500">WindowClose</animation>
+<!-- 	<animation effect="slide" start="0,0" end="10,0" time="100">WindowOpen</animation>
+    <animation effect="slide" start="10,0" end="0,0" time="100">WindowClose</animation> -->
+    <coordinates>
+        <system>1</system>
+        <left>0</left>
+        <top>-230</top>
+    </coordinates>
+    <controls>
+         <control type="group">
+
+			
+			 <control type="image">
+				
+				 <left>0</left>
+				  <top>650</top>
+				  <width>1920</width>
+				  <height>300</height>
+                <texture>fadeOutBottom.png</texture>
+<!-- 				<colordiffuse>black</colordiffuse> -->
+            </control>
+			
+			 <control type="image">
+				
+				 <left>0</left>
+				  <top>650</top>
+				  <width>1920</width>
+				  <height>300</height>
+                <texture>fadeOutBottom.png</texture>
+<!-- 				<colordiffuse>black</colordiffuse> -->
+            </control>
+
+<!-- 			<control type="group">
+                <control type="image">
+				 <left>0</left>
+				  <top>750</top>
+				  <width>1920</width>
+				  <height>500</height>
+                <texture>mask_black90.png</texture>
+            </control> -->
+			
+			
+            
+            <control type="fadelabel" id="401">
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="800">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="800">WindowClose</animation>
+                <description>Line 1 Label</description>
+                <left>140</left>
+                <top>880</top>
+                <width>1000</width>
+                <height>18</height>
+                <font>FontSize_28</font>
+                <textcolor>white</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <scrollout>false</scrollout>
+                <pauseatend>2000</pauseatend>
+            </control>
+            <control type="fadelabel" id="402">
+	<animation effect="slide" start="0,200" end="0,0" tween="sine" time="1000">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,200" tween="sine" time="1000">WindowClose</animation>
+                <description>Line 2 Label</description>
+                <left>140</left>
+                <top>910</top>
+                <width>1000</width>
+                <height>20</height>
+                <font>FontSize_24</font>
+                <textcolor>grey</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <scrollout>false</scrollout>
+                <pauseatend>2000</pauseatend>
+            </control>
+			
+			<control type="image" id="400">
+				<animation effect="zoom" start="50" end="100" center="auto" time="500">WindowOpen</animation>
+				<animation effect="slide" start="0,200" end="0,0" tween="sine" time="700">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,200" tween="sine" time="700">WindowClose</animation>
+				<description>avatar</description>
+                <left>590</left>
+                <top>760</top>
+                <width>105</width>
+                <height>105</height>
+                <aspectratio>keep</aspectratio>
+                <texture>push_notification_icon.png</texture>
+            </control>
+			
+<!-- 			<control type="image">
+				<animation effect="slide" start="0,200" end="0,0" tween="sine" time="500">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,200" tween="sine" time="500">WindowClose</animation>
+                <description>avatar</description>
+                <left>1240</left>
+                <top>770</top>
+                <width>25</width>
+                <height>25</height>
+                <aspectratio>keep</aspectratio>
+                <texture>Notifications_button_64.png</texture>
+            </control> -->
+        </control>
+    </controls>
+</window>
