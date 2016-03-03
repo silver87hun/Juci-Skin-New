@@ -7,7 +7,7 @@
     <coordinates>
         <system>1</system>
         <left>0</left>
-        <top>-180</top>
+        <top>-250</top>
     </coordinates>
     <controls>
         <control type="group">
@@ -75,20 +75,20 @@
                 <pauseatend>2000</pauseatend>
             </control>
 			
-			<control type="image" id="400">
+ 			<control type="image" id="400">
                 <description>avatar</description>
-                <left>600</left>
-                <top>-60</top>
-                <width>80</width>
-                <height>80</height>
+                <left>20</left>
+                <top>20</top>
+                <width>60</width>
+                <height>60</height>
                 <aspectratio>keep</aspectratio>
                 <texture>Chat_circular_outlined_interface_button_128 (1).png</texture>
             </control>
 			
-<!-- 			            <control type="image">
+<!--  			            <control type="image">
                 <description>avatar</description>
-                <left>1240</left>
-                <top>-20</top>
+                <left>590</left>
+                <top>10</top>
                 <width>20</width>
                 <height>20</height>
                 <aspectratio>keep</aspectratio>
