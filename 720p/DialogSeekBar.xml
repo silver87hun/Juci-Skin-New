@@ -27,15 +27,14 @@
             </control>
 
 
-			<control type="image">
-			<!-- <animation effect="zoom" start="0" end="100" center="auto" time="300" condition="System.IdleTime(6)">conditional</animation> -->
+			<!-- <control type="image">
 			<visible>System.IdleTime(6)</visible>
 				 <left>0</left>
 				  <top>-165</top>
 				  <width>1290</width>
 				  <height>720</height>
                 <texture>mask_black50.png</texture>
-            </control>
+            </control> -->
 	
 <!-- 	<control type="multiimage">
 				
@@ -737,9 +736,9 @@
 	 <animation effect="slide" start="0,0" end="0,-50" time="500" condition="System.IdleTime(6)">conditional</animation>
 	  	   <!-- <animation effect="zoom" start="80" end="100"  center="auto"  time="600" condition="System.IdleTime(6)">conditional</animation> -->
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
-          <left>-250</left>
-          <top>50</top>
-          <width>800</width>
+          <left>-150</left>
+          <top>150</top>
+          <width>600</width>
           <height>200</height>
           <align>left</align>
           <aligny>top</aligny>
@@ -859,12 +858,12 @@
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
           <visible>System.IdleTime(6)</visible>
           <description>Current Video End Time</description>
-          <left>40</left>
-          <top>220</top>
+          <left>-50</left>
+          <top>320</top>
           <width>310</width>
           <height>20</height>
           <label>[COLOR=grey2]$LOCALIZE[31049]:[/COLOR] $INFO[Player.FinishTime]</label>
-          <align>left</align>
+          <align>center</align>
           <aligny>center</aligny>
           <font>FontSize_20</font>
           <textcolor>grey2</textcolor>
@@ -1160,9 +1159,9 @@
         <left>310</left>
         <top>150</top>
         <align>center</align>
-          <control type="label">
+<!--           <control type="label">
 				  	 <animation effect="slide" start="0,0" end="0,-50" time="500" condition="System.IdleTime(6)">conditional</animation>
-	  	   <!-- <animation effect="zoom" start="80" end="100"  center="auto"  time="400" condition="System.IdleTime(6)">conditional</animation> -->
+	  	 
 	   <animation effect="fade" start="0" end="100" time="200" condition="System.IdleTime(6)">conditional</animation>
           <visible>System.IdleTime(6)</visible>
           <description>Paused Label</description>
@@ -1175,9 +1174,8 @@
           <font>FontSize_24</font>
           <textcolor>grey2</textcolor>
           <label>31043</label>
-<!--           <visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
-          <visible>!VideoPlayer.Content(Files) + !Skin.HasSetting(slimseek)</visible> -->
-        </control> 
+
+        </control>  -->
 		
 		     <!-- <control type="label">
 		 <animation effect="slide" start="0,0" end="0,-200" time="800" condition="System.IdleTime(6)">conditional</animation>
@@ -1237,7 +1235,7 @@
 	  
       <control type="group">
         <left>-500</left>
-        <top>85</top>
+        <top>0</top>
         <control type="grouplist">
 		 <!-- <animation effect="slide" start="0" end="500,0" time="800" condition="System.IdleTime(60)">conditional</animation> -->
           <visible>VideoPlayer.Content(Files)</visible>
@@ -1316,7 +1314,7 @@
           <visible>!Skin.HasSetting(slimosd)</visible> -->
           <description>Media Codec Flagging Images</description>
           <left>40</left>
-          <top>180</top>
+          <top>80</top>
           <width min="100" max="550">auto</width>
           <align>left</align>
           <itemgap>0</itemgap>
